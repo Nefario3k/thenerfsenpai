@@ -4,6 +4,9 @@
 	</section>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+	usePortfolioSeo();
+	useStructuredData();
+</script>
 
 <style></style>
