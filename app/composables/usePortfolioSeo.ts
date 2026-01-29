@@ -24,7 +24,9 @@ export const usePortfolioSeo = (options: UsePortfolioSeoOptions = {}) => {
 
 	const title = options.title ?? "TheNerfSenpai";
 	const description = options.description ?? DEFAULT_DESCRIPTION;
-	const keywords = options.keywords ?? DEFAULT_KEYWORDS;
+	const keywords = options.keywords
+		? `${DEFAULT_KEYWORDS}, ${options.keywords}`.trim()
+		: DEFAULT_KEYWORDS;
 
 	const ogImageRaw = options.ogImage ?? DEFAULT_OG_IMAGE_PATH;
 	const ogImageUrl =
