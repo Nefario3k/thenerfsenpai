@@ -1,5 +1,10 @@
 @import "tailwindcss" prefix(tw);
 
+:root {
+	font-size: 62.5%;
+}
+
+/* all variables in theme will have a tw- prefix at runtime  */
 @theme {
 	--font-display: "Satoshi", "sans-serif";
 	/* font size  */
@@ -109,6 +114,7 @@
 	--color-bc-stroke: #d9d9da;
 }
 
+/* dark mode variables */
 @media (prefers-color-scheme: dark) {
 	:root {
 		/* text colors */
@@ -122,8 +128,4 @@
 		--tw-color-bc-tertiary: #525154;
 		--tw-color-bc-stroke: #b4b4b666;
 	}
-}
-
-:root {
-	font-size: 62.5%;
 }
