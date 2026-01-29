@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     port: parseInt(process.env.PORT || '8500'),
   },
   modules: ['@nuxt/image', '@nuxt/scripts'],
-  css: ['./app/assets/css/variables.css'],
+  css: ['~/assets/css/variables.css', '~/assets/css/main.scss'],
   vite: {
     plugins: [
       tailwindcss(),

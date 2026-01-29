@@ -1,1 +1,129 @@
-@import "tailwindcss";
+@import "tailwindcss" prefix(tw);
+
+@theme {
+	--font-display: "Satoshi", "sans-serif";
+	/* font size  */
+	--text-xxs: 1rem;
+	--text-xs: 1.2rem;
+	--text-sm: 1.4rem;
+	--text-base: 1.6rem;
+	--text-lg: 1.8rem;
+	--text-xl: 2rem;
+	--text-2xl: 2.4rem;
+	--text-3xl: 3rem;
+	--text-4xl: 4rem;
+	--text-5xl: 5rem;
+	--text-6xl: 6rem;
+	--text-7xl: 7rem;
+	--text-8xl: 8rem;
+	--text-9xl: 9rem;
+	--text-10xl: 10rem;
+
+	/* break points */
+	--breakpoint-xs: 40rem;
+	--breakpoint-sm: 60rem;
+	--breakpoint-md: 96rem;
+	--breakpoint-lg: 120rem;
+	--breakpoint-xl: 144rem;
+	--breakpoint-2xl: 160rem;
+	--breakpoint-3xl: 192rem;
+	--breakpoint-4xl: 224rem;
+	--breakpoint-5xl: 256rem;
+	--breakpoint-6xl: 288rem;
+	--breakpoint-7xl: 320rem;
+	--breakpoint-8xl: 352rem;
+
+	/* spacing  */
+	--spacing-1: 0.4rem;
+	--spacing-1.5: 0.6rem;
+	--spacing-2: 0.8rem;
+	--spacing-2.5: 1rem;
+	--spacing-3: 1.2rem;
+	--spacing-3.5: 1.4rem;
+	--spacing-4: 1.6rem;
+	--spacing-4.5: 1.8rem;
+	--spacing-5: 2rem;
+	--spacing-5.5: 2.2rem;
+	--spacing-6: 2.4rem;
+	--spacing-6.5: 2.6rem;
+	--spacing-7: 2.8rem;
+	--spacing-7.5: 3rem;
+	--spacing-8: 3.2rem;
+	--spacing-9: 3.4rem;
+	--spacing-10: 3.6rem;
+	--spacing-11: 3.8rem;
+	--spacing-12: 4rem;
+	--spacing-13: 4.2rem;
+	--spacing-14: 4.4rem;
+	--spacing-15: 4.6rem;
+	--spacing-16: 4.8rem;
+	--spacing-17: 5rem;
+	--spacing-18: 5.2rem;
+	--spacing-19: 5.4rem;
+	--spacing-20: 5.6rem;
+	--spacing-21: 5.8rem;
+	--spacing-22: 6rem;
+	--spacing-23: 6.2rem;
+	--spacing-24: 6.4rem;
+	--spacing-25: 6.6rem;
+	--spacing-26: 6.8rem;
+	--spacing-27: 7rem;
+	--spacing-28: 7.2rem;
+	--spacing-29: 7.4rem;
+	--spacing-30: 7.6rem;
+	--spacing-31: 7.8rem;
+	--spacing-32: 8rem;
+	--spacing-33: 8.2rem;
+	--spacing-34: 8.4rem;
+	--spacing-35: 8.6rem;
+	--spacing-36: 8.8rem;
+	--spacing-37: 9rem;
+	--spacing-38: 9.2rem;
+	--spacing-39: 9.4rem;
+	--spacing-40: 9.6rem;
+	--spacing-41: 9.8rem;
+
+	/* radius */
+	--radius-0: 0;
+	--radius-1: 0.4rem;
+	--radius-2: 0.8rem;
+	--radius-3: 1.2rem;
+	--radius-4: 1.6rem;
+	--radius-5: 2rem;
+	--radius-6: 2.4rem;
+	--radius-7: 2.8rem;
+	--radius-8: 3.2rem;
+	--radius-9: 3.6rem;
+	--radius-10: 4rem;
+
+	/* colors */
+	/* text colors */
+	--color-tc-primary: #08070c;
+	--color-tc-secondary: #525255;
+	--color-tc-tertiary: #d9d9da;
+	--color-tc-link: #f22e16;
+	/* background colors */
+	--color-bc-primary: #f7f8fa;
+	--color-bc-secondary: #e2e7ea;
+	--color-bc-tertiary: #e2e7ea66;
+	--color-bc-stroke: #d9d9da;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		/* text colors */
+		--tw-color-tc-primary: #f7f8fa;
+		--tw-color-tc-secondary: #cfcfd0;
+		--tw-color-tc-tertiary: #525255;
+		--tw-color-tc-link: #a896ff;
+		/* background colors */
+		--tw-color-bc-primary: #08070c;
+		--tw-color-bc-secondary: #e2e7ea;
+		--tw-color-bc-tertiary: #525154;
+		--tw-color-bc-stroke: #b4b4b666;
+	}
+}
+
+:root {
+	font-size: 62.5%;
+}
