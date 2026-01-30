@@ -6,10 +6,15 @@
 	word-wrap: break-word;
 	white-space: normal;
 	scroll-behavior: smooth;
+	transition: all 0.3s ease-in-out;
 }
 
 body {
 	font-size: 1.6rem;
 	font-family: var(--tw-font-family);
 	background-color: var(--tw-color-bc-primary);
+}
+
+.max-container {
+	@apply tw:max-w-7xl tw:mx-auto;
 }

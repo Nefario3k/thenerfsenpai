@@ -8,6 +8,16 @@
 			height="{100}"
 			class="tw:w-full tw:h-11 tw:object-cover"
 		/>
+		<!-- sticky top -->
+		<header
+			class="tw:sticky tw:top-0 tw:left-0 tw:bg-bc-primary tw:px-3 tw:py-8 tw:w-full"
+		>
+			<div class="max-container">
+				<NuxtLink to="/" class="tw:text-tc-primary tw:text-2xl tw:font-bold">
+					TheNerfSenpai
+				</NuxtLink>
+			</div>
+		</header>
 	</section>
 </template>
 
