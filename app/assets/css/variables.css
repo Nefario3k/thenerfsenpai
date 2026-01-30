@@ -2,6 +2,11 @@
 
 :root {
 	font-size: 62.5%;
+	--header: url("/images/light-header.png");
+	--left-column: url("/images/light-left-column.png");
+	--right-column: url("/images/light-right-column.png");
+	--md-logo: url("/images/light-md-logo.png");
+	--lg-logo: url("/images/light-lg-logo.png");
 }
 
 /* all variables in theme will have a tw- prefix at runtime  */
@@ -127,5 +132,11 @@
 		--tw-color-bc-secondary: #e2e7ea;
 		--tw-color-bc-tertiary: #525154;
 		--tw-color-bc-stroke: #b4b4b666;
+
+		--header: url("/images/dark-header.png");
+		--left-column: url("/images/dark-left-column.png");
+		--right-column: url("/images/dark-right-column.png");
+		--md-logo: url("/images/dark-md-logo.png");
+		--lg-logo: url("/images/dark-lg-logo.png");
 	}
 }

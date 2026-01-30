@@ -1,7 +1,5 @@
 * {
 	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
 	word-break: break-word;
 	word-wrap: break-word;
 	white-space: normal;
@@ -17,4 +15,24 @@ body {
 
 .max-container {
 	@apply tw:max-w-7xl tw:mx-auto;
+}
+
+.bg-header {
+	background-image: var(--header);
+}
+
+.bg-left-column {
+	background-image: var(--left-column);
+}
+
+.bg-right-column {
+	background-image: var(--right-column);
+}
+
+.bg-md-logo {
+	background-image: var(--md-logo);
+}
+
+.bg-lg-logo {
+	background-image: var(--lg-logo);
 }
