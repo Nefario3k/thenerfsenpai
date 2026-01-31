@@ -13,10 +13,6 @@ body {
 	background-color: var(--tw-color-bc-primary);
 }
 
-.max-container {
-	@apply tw:max-w-7xl tw:mx-auto;
-}
-
 .bg-header {
 	background-image: var(--header);
 }
@@ -35,4 +31,36 @@ body {
 
 .bg-lg-logo {
 	background-image: var(--lg-logo);
+}
+
+.flex_center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.flex_between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.elipsis {
+	display: -webkit-box !important;
+	-webkit-line-clamp: 1;
+	line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-all;
+}
+
+.elipsis-2 {
+	display: -webkit-box !important;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-all;
 }

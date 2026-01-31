@@ -1,25 +1,115 @@
 <template>
-	<section>
-		<!-- nice image banner -->
-		<aside
-			class="bg-header tw:w-full tw:h-11 tw:bg-no-repeat tw:bg-cover"
-		></aside>
+	<!-- nice image banner -->
+	<aside
+		class="bg-header tw:w-full tw:h-11 tw:bg-no-repeat tw:bg-cover"
+	></aside>
 
-		<!-- sticky top -->
-		<header
-			class="tw:sticky tw:top-0 tw:left-0 tw:bg-bc-primary tw:px-3 tw:py-8 tw:w-full tw:border-b tw:border-bc-stroke tw:border-dashed"
-		>
-			<div class="max-container">
-				<NuxtLink to="/" class="tw:text-tc-primary tw:text-2xl tw:font-bold">
-					TheNerfSenpai
-				</NuxtLink>
-			</div>
-		</header>
-	</section>
+	<!-- sticky top -->
+	<header
+		class="tw:sticky tw:top-0 tw:left-0 tw:bg-bc-primary tw:px-3 tw:py-8 tw:w-full tw:border-b tw:border-bc-stroke tw:border-dashed tw:z-10"
+	>
+		<div class="max-container flex_between tw:gap-3">
+			<!-- home link -->
+			<NuxtLink
+				to="/"
+				class="tw:text-tc-primary tw:text-2xl tw:font-bold tw:w-full tw:h-11 tw:max-w-[20rem] tw:bg-no-repeat tw:bg-contain bg-md-logo tw:border-none tw:outline-none tw:focus:outline-none"
+			/>
+			<!-- right section -->
+			<section class="tw:flex tw:gap-8 tw:items-center">
+				<!-- navigation links -->
+				<ul class="tw:flex tw:gap-6 tw:items-center">
+					<!-- links -->
+					<template v-for="link in navigationLinks" :key="link.to">
+						<li>
+							<NuxtLink
+								:to="link.to"
+								class="tw:text-tc-secondary tw:text-sm tw:font-normal tw:hover:text-tc-link tw:hover:text-lg tw:hover:font-semibold"
+							>
+								{{ link.label }}
+							</NuxtLink>
+						</li>
+						<li
+							class="tw:w-1 tw:h-4 tw:border-r tw:border-bc-stroke tw:border-dashed"
+						></li>
+					</template>
+					<!-- dark mode changer -->
+					<li>
+						<button
+							title="Toggle Dark Mode"
+							class="tw:cursor-pointer tw:border-none tw:outline-none tw:focus:outline-none flex_center tw:p-0 tw:hover:scale-125"
+						>
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 20 20"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<mask
+									id="mask0_241_49162"
+									style="mask-type: alpha"
+									maskUnits="userSpaceOnUse"
+									x="0"
+									y="0"
+									width="20"
+									height="20"
+								>
+									<g clip-path="url(#clip0_241_49162)">
+										<path
+											d="M10.0996 20C8.71628 20 7.41628 19.7373 6.19961 19.212C4.98294 18.6867 3.92461 17.9743 3.02461 17.075C2.12461 16.1757 1.41228 15.1173 0.887611 13.9C0.362944 12.6827 0.100277 11.3827 0.0996106 10C0.098944 8.61733 0.361611 7.31733 0.887611 6.1C1.41361 4.88267 2.12594 3.82433 3.02461 2.925C3.92328 2.02567 4.98161 1.31333 6.19961 0.788C7.41761 0.262667 8.71761 0 10.0996 0C11.4816 0 12.7816 0.262667 13.9996 0.788C15.2176 1.31333 16.2759 2.02567 17.1746 2.925C18.0733 3.82433 18.7859 4.88267 19.3126 6.1C19.8393 7.31733 20.1016 8.61733 20.0996 10C20.0976 11.3827 19.8349 12.6827 19.3116 13.9C18.7883 15.1173 18.0759 16.1757 17.1746 17.075C16.2733 17.9743 15.2149 18.687 13.9996 19.213C12.7843 19.739 11.4843 20.0013 10.0996 20ZM11.0996 17.925C13.0829 17.675 14.7456 16.804 16.0876 15.312C17.4296 13.82 18.1003 12.0493 18.0996 10C18.0989 7.95067 17.4279 6.18 16.0866 4.688C14.7453 3.196 13.0829 2.325 11.0996 2.075V17.925Z"
+											fill="var(--tw-color-tc-primary)"
+										/>
+									</g>
+								</mask>
+								<g mask="url(#mask0_241_49162)">
+									<rect
+										width="20"
+										height="20"
+										fill="var(--tw-color-tc-primary)"
+									/>
+								</g>
+								<defs>
+									<clipPath id="clip0_241_49162">
+										<rect
+											width="20"
+											height="20"
+											fill="var(--tw-color-bc-primary)"
+										/>
+									</clipPath>
+								</defs>
+							</svg>
+						</button>
+					</li>
+					<li
+						class="tw:w-1 tw:h-4 tw:border-r tw:border-bc-stroke tw:border-dashed"
+					></li>
+				</ul>
+				<!-- qrcode -->
+				<SvgQRCode
+					class="tw:w-11 tw:h-11 tw:min-w-11 tw:block"
+					title="Scan to chat on whatsapp"
+				/>
+			</section>
+		</div>
+	</header>
 </template>
 
 <script lang="ts" setup>
 	const isDark = useDark();
+	const navigationLinks = [
+		{
+			label: "About",
+			to: "/",
+		},
+		{
+			label: "Projects",
+			to: "/",
+		},
+		{
+			label: "Contact",
+			to: "/",
+		},
+	];
 </script>
 
 <style></style>

@@ -3,10 +3,10 @@
 :root {
 	font-size: 62.5%;
 	--header: url("/images/light-header.png");
-	--left-column: url("/images/light-left-column.png");
-	--right-column: url("/images/light-right-column.png");
-	--md-logo: url("/images/light-md-logo.png");
-	--lg-logo: url("/images/light-lg-logo.png");
+	--left-column: url("/images/dark-left-column.png");
+	--right-column: url("/images/dark-right-column.png");
+	--md-logo: url("/images/dark-md-logo.png");
+	--lg-logo: url("/images/dark-lg-logo.png");
 }
 
 /* all variables in theme will have a tw- prefix at runtime  */
@@ -111,12 +111,16 @@
 	--color-tc-primary: #08070c;
 	--color-tc-secondary: #525255;
 	--color-tc-tertiary: #d9d9da;
-	--color-tc-link: #f22e16;
+	--color-tc-link: #a896ff;
 	/* background colors */
 	--color-bc-primary: #f7f8fa;
 	--color-bc-secondary: #e2e7ea;
 	--color-bc-tertiary: #e2e7ea66;
 	--color-bc-stroke: #d9d9da;
+}
+
+.max-container {
+	@apply tw:max-w-512 tw:mx-auto;
 }
 
 /* dark mode variables */
@@ -126,7 +130,7 @@
 		--tw-color-tc-primary: #f7f8fa;
 		--tw-color-tc-secondary: #cfcfd0;
 		--tw-color-tc-tertiary: #525255;
-		--tw-color-tc-link: #a896ff;
+		--tw-color-tc-link: #f22e16;
 		/* background colors */
 		--tw-color-bc-primary: #08070c;
 		--tw-color-bc-secondary: #e2e7ea;
@@ -136,7 +140,7 @@
 		--header: url("/images/dark-header.png");
 		--left-column: url("/images/dark-left-column.png");
 		--right-column: url("/images/dark-right-column.png");
-		--md-logo: url("/images/dark-md-logo.png");
+		--md-logo: url("/images/light-md-logo.png");
 		--lg-logo: url("/images/dark-lg-logo.png");
 	}
 }
