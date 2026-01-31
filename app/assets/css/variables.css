@@ -120,7 +120,7 @@
 }
 
 .max-container {
-	@apply tw:max-w-512 tw:mx-auto;
+	@apply tw:max-w-512 tw:mx-auto tw:w-full;
 }
 
 /* dark mode variables */
