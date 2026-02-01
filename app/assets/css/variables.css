@@ -123,24 +123,22 @@
 	@apply tw:max-w-512 tw:mx-auto tw:w-full;
 }
 
-/* dark mode variables */
-@media (prefers-color-scheme: dark) {
-	:root {
-		/* text colors */
-		--tw-color-tc-primary: #f7f8fa;
-		--tw-color-tc-secondary: #cfcfd0;
-		--tw-color-tc-tertiary: #525255;
-		--tw-color-tc-link: #f22e16;
-		/* background colors */
-		--tw-color-bc-primary: #08070c;
-		--tw-color-bc-secondary: #e2e7ea;
-		--tw-color-bc-tertiary: #525154;
-		--tw-color-bc-stroke: #b4b4b666;
+/* dark mode variables (class-based via layout section) */
+html:has(.DARK-MODE) {
+	/* text colors */
+	--tw-color-tc-primary: #f7f8fa;
+	--tw-color-tc-secondary: #cfcfd0;
+	--tw-color-tc-tertiary: #525255;
+	--tw-color-tc-link: #f22e16;
+	/* background colors */
+	--tw-color-bc-primary: #08070c;
+	--tw-color-bc-secondary: #e2e7ea;
+	--tw-color-bc-tertiary: #525154;
+	--tw-color-bc-stroke: #b4b4b666;
 
-		--header: url("/images/dark-header.png");
-		--left-column: url("/images/dark-left-column.png");
-		--right-column: url("/images/dark-right-column.png");
-		--md-logo: url("/images/light-md-logo.png");
-		--lg-logo: url("/images/dark-lg-logo.png");
-	}
+	--header: url("/images/dark-header.png");
+	--left-column: url("/images/dark-left-column.png");
+	--right-column: url("/images/dark-right-column.png");
+	--md-logo: url("/images/light-md-logo.png");
+	--lg-logo: url("/images/dark-lg-logo.png");
 }

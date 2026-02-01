@@ -5,7 +5,6 @@
 </template>
 
 <script lang="ts" setup>
-	const colorScheme = useDark();
 	usePortfolioSeo({
 		title: "Davies Okpeta",
 		description:
