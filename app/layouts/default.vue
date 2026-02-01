@@ -9,7 +9,7 @@
 				class="tw:max-w-[16rem] tw:w-full tw:min-w-0 tw:shrink tw:bg-cover tw:bg-no-repeat bg-left-column tw:absolute tw:top-0 tw:left-0 tw:h-full tw:-z-10 tw:border-l tw:border-bc-stroke tw:border-dashed"
 			/>
 			<main
-				class="max-container tw:border-x tw:border-dashed tw:border-bc-stroke tw:py-22 tw:bg-bc-primary tw:min-h-screen"
+				class="max-container tw:border-x tw:border-bc-stroke tw:py-22 tw:bg-bc-primary tw:min-h-screen"
 			>
 				<slot />
 			</main>
