@@ -20,7 +20,7 @@ export default defineNuxtConfig({
 			"Davies Okpeta — Senior Fullstack Web Developer portfolio. React, Next.js, Vue, Nuxt and modern web technologies.",
 		defaultLocale: "en",
 	},
-	css: ["~/assets/css/variables.css", "~/assets/css/main.scss"],
+	css: ["~/assets/css/variables.css", "~/assets/css/font.scss", "~/assets/css/main.scss"],
 	app: {
 		head: {
 			titleTemplate: "%s | TheNerfSenpai",

@@ -9,10 +9,9 @@
 
 body {
 	font-size: 1.6rem;
-	font-family: var(--tw-font-family);
+	font-family: var(--tw-font-display);
+	color: var(--tw-color-tc-primary);
 	background-color: var(--tw-color-bc-primary);
-	isolation: isolate;
-	position: relative;
 }
 
 .bg-header {

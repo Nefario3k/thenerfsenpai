@@ -11,7 +11,8 @@
 
 /* all variables in theme will have a tw- prefix at runtime  */
 @theme {
-	--font-display: "Satoshi", "sans-serif";
+	--font-display: "Space Grotesk", "sans-serif";
+	--font-zalando: "Zalando Sans", "sans-serif";
 	/* font size  */
 	--text-xxs: 1rem;
 	--text-xs: 1.2rem;
@@ -43,7 +44,7 @@
 	--breakpoint-7xl: 320rem;
 	--breakpoint-8xl: 352rem;
 
-	/* spacing  */
+	/* spacing (0.4rem base: 1 = 4px @ 62.5% root) */
 	--spacing-1: 0.4rem;
 	--spacing-1.5: 0.6rem;
 	--spacing-2: 0.8rem;
@@ -59,39 +60,41 @@
 	--spacing-7: 2.8rem;
 	--spacing-7.5: 3rem;
 	--spacing-8: 3.2rem;
-	--spacing-9: 3.4rem;
-	--spacing-10: 3.6rem;
-	--spacing-11: 3.8rem;
-	--spacing-12: 4rem;
-	--spacing-13: 4.2rem;
-	--spacing-14: 4.4rem;
-	--spacing-15: 4.6rem;
-	--spacing-16: 4.8rem;
-	--spacing-17: 5rem;
-	--spacing-18: 5.2rem;
-	--spacing-19: 5.4rem;
-	--spacing-20: 5.6rem;
-	--spacing-21: 5.8rem;
-	--spacing-22: 6rem;
-	--spacing-23: 6.2rem;
-	--spacing-24: 6.4rem;
-	--spacing-25: 6.6rem;
-	--spacing-26: 6.8rem;
-	--spacing-27: 7rem;
-	--spacing-28: 7.2rem;
-	--spacing-29: 7.4rem;
-	--spacing-30: 7.6rem;
-	--spacing-31: 7.8rem;
-	--spacing-32: 8rem;
-	--spacing-33: 8.2rem;
-	--spacing-34: 8.4rem;
-	--spacing-35: 8.6rem;
-	--spacing-36: 8.8rem;
-	--spacing-37: 9rem;
-	--spacing-38: 9.2rem;
-	--spacing-39: 9.4rem;
-	--spacing-40: 9.6rem;
-	--spacing-41: 9.8rem;
+	--spacing-8.5: 3.4rem;
+	--spacing-9: 3.6rem;
+	--spacing-9.5: 3.8rem;
+	--spacing-10: 4rem;
+	--spacing-11: 4.4rem;
+	--spacing-12: 4.8rem;
+	--spacing-13: 5.2rem;
+	--spacing-14: 5.6rem;
+	--spacing-15: 6rem;
+	--spacing-16: 6.4rem;
+	--spacing-17: 6.8rem;
+	--spacing-18: 7.2rem;
+	--spacing-19: 7.6rem;
+	--spacing-20: 8rem;
+	--spacing-21: 8.4rem;
+	--spacing-22: 8.8rem;
+	--spacing-23: 9.2rem;
+	--spacing-24: 9.6rem;
+	--spacing-25: 10rem;
+	--spacing-26: 10.4rem;
+	--spacing-27: 10.8rem;
+	--spacing-28: 11.2rem;
+	--spacing-29: 11.6rem;
+	--spacing-30: 12rem;
+	--spacing-31: 12.4rem;
+	--spacing-32: 12.8rem;
+	--spacing-33: 13.2rem;
+	--spacing-34: 13.6rem;
+	--spacing-35: 14rem;
+	--spacing-36: 14.4rem;
+	--spacing-37: 14.8rem;
+	--spacing-38: 15.2rem;
+	--spacing-39: 15.6rem;
+	--spacing-40: 16rem;
+	--spacing-41: 16.4rem;
 
 	/* radius */
 	--radius-0: 0;

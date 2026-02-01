@@ -1,96 +1,98 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-// Satoshi font-face declarations
+// Space Grotesk font-face declarations
 @font-face {
-	font-family: "Satoshi";
-	src: url("~/assets/font/satoshi/Fonts/OTF/Satoshi-Light.otf")
-		format("opentype");
+	font-family: "Space Grotesk";
+	src: url("~/assets/font/Space_Grotesk/static/SpaceGrotesk-Light.ttf")
+		format("truetype");
 	font-weight: 300;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: "Satoshi";
-	src: url("~/assets/font/satoshi/Fonts/OTF/Satoshi-LightItalic.otf")
-		format("opentype");
+	font-family: "Space Grotesk";
+	src: url("~/assets/font/Space_Grotesk/static/SpaceGrotesk-Regular.ttf")
+		format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Space Grotesk";
+	src: url("~/assets/font/Space_Grotesk/static/SpaceGrotesk-Medium.ttf")
+		format("truetype");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Space Grotesk";
+	src: url("~/assets/font/Space_Grotesk/static/SpaceGrotesk-SemiBold.ttf")
+		format("truetype");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Space Grotesk";
+	src: url("~/assets/font/Space_Grotesk/static/SpaceGrotesk-Bold.ttf")
+		format("truetype");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+// Zalando Sans font-face declarations
+@font-face {
+	font-family: "Zalando Sans";
+	src: url("~/assets/font/Zalando_Sans/static/ZalandoSans-Light.ttf")
+		format("truetype");
 	font-weight: 300;
-	font-style: italic;
+	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: "Satoshi";
-	src: url("~/assets/font/satoshi/Fonts/OTF/Satoshi-Regular.otf")
-		format("opentype");
+	font-family: "Zalando Sans";
+	src: url("~/assets/font/Zalando_Sans/static/ZalandoSans-Regular.ttf")
+		format("truetype");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: "Satoshi";
-	src: url("~/assets/font/satoshi/Fonts/OTF/Satoshi-Italic.otf")
-		format("opentype");
-	font-weight: 400;
-	font-style: italic;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Satoshi";
-	src: url("~/assets/font/satoshi/Fonts/OTF/Satoshi-Medium.otf")
-		format("opentype");
+	font-family: "Zalando Sans";
+	src: url("~/assets/font/Zalando_Sans/static/ZalandoSans-Medium.ttf")
+		format("truetype");
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: "Satoshi";
-	src: url("~/assets/font/satoshi/Fonts/OTF/Satoshi-MediumItalic.otf")
-		format("opentype");
-	font-weight: 500;
-	font-style: italic;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Satoshi";
-	src: url("~/assets/font/satoshi/Fonts/OTF/Satoshi-Bold.otf")
-		format("opentype");
-	font-weight: 700;
+	font-family: "Zalando Sans";
+	src: url("~/assets/font/Zalando_Sans/static/ZalandoSans-SemiBold.ttf")
+		format("truetype");
+	font-weight: 600;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: "Satoshi";
-	src: url("~/assets/font/satoshi/Fonts/OTF/Satoshi-BoldItalic.otf")
-		format("opentype");
+	font-family: "Zalando Sans";
+	src: url("~/assets/font/Zalando_Sans/static/ZalandoSans-Bold.ttf")
+		format("truetype");
 	font-weight: 700;
-	font-style: italic;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Satoshi";
-	src: url("~/assets/font/satoshi/Fonts/OTF/Satoshi-Black.otf")
-		format("opentype");
-	font-weight: 900;
 	font-style: normal;
 	font-display: swap;
 }
 
-@font-face {
-	font-family: "Satoshi";
-	src: url("~/assets/font/satoshi/Fonts/OTF/Satoshi-BlackItalic.otf")
-		format("opentype");
-	font-weight: 900;
-	font-style: italic;
-	font-display: swap;
-}
-
-// Font family variable
+// Font family variables (for non-Tailwind use)
 :root {
-	--font-family: "Satoshi", sans-serif;
+	--font-family: "Space Grotesk", sans-serif;
+	--font-family-zalando: "Zalando Sans", sans-serif;
 }
