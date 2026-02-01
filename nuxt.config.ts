@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 			siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://thenerfsenpai.com",
 		},
 	},
-	modules: ["@nuxt/image", "@nuxt/scripts", "@nuxtjs/seo", "@vueuse/nuxt"],
+	modules: ["@nuxt/image", "@nuxt/scripts", "@nuxtjs/seo", "@vueuse/nuxt", "@pinia/nuxt"],
 	site: {
 		url: process.env.NUXT_PUBLIC_SITE_URL || "https://thenerfsenpai.com",
 		name: "TheNerfSenpai",

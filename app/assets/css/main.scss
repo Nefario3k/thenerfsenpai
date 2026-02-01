@@ -65,3 +65,12 @@ body {
 	text-overflow: ellipsis;
 	word-break: break-all;
 }
+.elipsis-5 {
+	display: -webkit-box !important;
+	-webkit-line-clamp: 5;
+	line-clamp: 5;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-all;
+}
