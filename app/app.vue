@@ -1,7 +1,9 @@
 <template>
-	<NuxtLayout>
-		<NuxtPage />
-	</NuxtLayout>
+	<lenis :options="lenisOptions">
+		<NuxtLayout>
+			<NuxtPage />
+		</NuxtLayout>
+	</lenis>
 </template>
 <script setup lang="ts">
 	const { manifestHref } = useThemeManifest();
@@ -12,6 +14,17 @@
 	}
 	usePortfolioSeo();
 	useStructuredData();
+
+	const prefersReducedMotion = inject<Ref<boolean>>(
+		"prefersReducedMotion",
+		ref(false)
+	);
+	const lenisOptions = computed(() => ({
+		smooth: !prefersReducedMotion.value,
+		duration: 1.2,
+		autoRaf: true,
+		direction: "vertical" as const,
+	}));
 	useHead({
 		link: [{ rel: "manifest", href: manifestHref }],
 	});

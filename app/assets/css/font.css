@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-// Space Grotesk font-face declarations
+/* Space Grotesk font-face declarations */
 @font-face {
 	font-family: "Space Grotesk";
 	src: url("~/assets/font/Space_Grotesk/static/SpaceGrotesk-Light.ttf")
@@ -45,7 +45,7 @@
 	font-display: swap;
 }
 
-// Zalando Sans font-face declarations
+/* Zalando Sans font-face declarations */
 @font-face {
 	font-family: "Zalando Sans";
 	src: url("~/assets/font/Zalando_Sans/static/ZalandoSans-Light.ttf")
@@ -91,7 +91,7 @@
 	font-display: swap;
 }
 
-// Font family variables (for non-Tailwind use)
+/*Font family variables (for non-Tailwind use) */
 :root {
 	--font-family: "Space Grotesk", sans-serif;
 	--font-family-zalando: "Zalando Sans", sans-serif;

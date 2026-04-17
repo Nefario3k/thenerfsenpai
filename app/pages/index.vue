@@ -1,22 +1,26 @@
 <template>
 	<section>
 		<!-- top section -->
-		<section class="tw:sm:px-12 tw:px-8 tw:pb-12">
-			<div class="tw:flex tw:items-center tw:gap-3 tw:mb-66">
+		<section class="tw:sm:px-12 tw:px-4 tw:pb-12">
+			<div class="tw:flex tw:items-center tw:gap-3 tw:sm:mb-66 tw:mb-60">
 				<NuxtImg
 					src="/images/temp/user.jpg"
 					width="100"
 					height="100"
 					alt="TheNerfSenpai"
-					class="tw:w-24 tw:h-24 tw:min-w-24 tw:block tw:object-cover tw:object-center tw:rounded-4"
+					class="tw:sm:w-24 tw:sm:h-24 tw:w-16 tw:h-16 tw:block tw:object-cover tw:object-center tw:rounded-4 tw:aspect-square tw:shrink-0"
 				/>
 				<div>
 					<h3 class="tw:font-medium tw:text-lg">The Nerf Senpai</h3>
-					<h4 class="tw:font-medium tw:text-base">Creative Developer</h4>
+					<h4 class="tw:font-medium tw:text-base tw:text-tc-secondary">
+						Creative Developer
+					</h4>
 				</div>
 			</div>
 
-			<h1 class="tw:text-[6.4rem] tw:font-normal tw:font-zalando tw:leading-16">
+			<h1
+				class="tw:sm:text-[6.4rem] tw:text-8 tw:font-normal tw:font-zalando tw:leading-tight"
+			>
 				Building immersive digital<br />
 				interfaces with mastery<br />
 				and purposeful design.
@@ -31,44 +35,18 @@
 		>
 			More Projects →
 		</NuxtLink>
-		<svg
-			width="1118"
-			height="80"
-			viewBox="0 0 1118 80"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
-			class="tw:w-full tw:h-full tw:border-y tw:border-bc-stroke tw:block"
-		>
-			<g clip-path="url(#clip0_241_48166)">
-				<g clip-path="url(#clip1_241_48166)">
-					<path
-						d="M8.87048 0V80M15.8341 0V80M22.7978 0V80M29.7615 0V80M36.7251 0V80M43.6888 0V80M50.6525 0V80M57.6161 0V80M64.5798 0V80M71.5435 0V80M78.5071 0V80M85.4708 0V80M92.4345 0V80M99.3981 0V80M106.362 0V80M113.325 0V80M120.289 0V80M127.253 0V80M134.216 0V80M141.18 0V80M148.144 0V80M155.107 0V80M162.071 0V80M169.035 0V80M175.998 0V80M182.962 0V80M189.926 0V80M196.889 0V80M203.853 0V80M210.817 0V80M217.78 0V80M224.744 0V80M231.708 0V80M238.671 0V80M245.635 0V80M252.599 0V80M259.562 0V80M266.526 0V80M273.49 0V80M280.453 0V80M287.417 0V80M294.381 0V80M301.344 0V80M308.308 0V80M315.272 0V80M322.235 0V80M329.199 0V80M336.163 0V80M343.126 0V80M350.09 0V80M357.054 0V80M364.017 0V80M370.981 0V80M377.945 0V80M384.908 0V80M391.872 0V80M398.836 0V80M405.799 0V80M412.763 0V80M419.727 0V80M426.69 0V80M433.654 0V80M440.618 0V80M447.581 0V80M454.545 0V80M461.509 0V80M468.472 0V80M475.436 0V80M482.4 0V80M489.363 0V80M496.327 0V80M503.291 0V80M510.254 0V80M517.218 0V80M524.182 0V80M531.145 0V80M538.109 0V80M545.073 0V80M552.036 0V80M559 0V80M565.964 0V80M572.927 0V80M579.891 0V80M586.855 0V80M593.818 0V80M600.782 0V80M607.746 0V80M614.709 0V80M621.673 0V80M628.637 0V80M635.6 0V80M642.564 0V80M649.528 0V80M656.491 0V80M663.455 0V80M670.419 0V80M677.382 0V80M684.346 0V80M691.31 0V80M698.273 0V80M705.237 0V80M712.201 0V80M719.164 0V80M726.128 0V80M733.092 0V80M740.055 0V80M747.019 0V80M753.983 0V80M760.946 0V80M767.91 0V80M774.874 0V80M781.837 0V80M788.801 0V80M795.765 0V80M802.728 0V80M809.692 0V80M816.656 0V80M823.619 0V80M830.583 0V80M837.547 0V80M844.51 0V80M851.474 0V80M858.438 0V80M865.401 0V80M872.365 0V80M879.329 0V80M886.292 0V80M893.256 0V80M900.22 0V80M907.183 0V80M914.147 0V80M921.111 0V80M928.074 0V80M935.038 0V80M942.002 0V80M948.965 0V80M955.929 0V80M962.893 0V80M969.856 0V80M976.82 0V80M983.784 0V80M990.747 0V80M997.711 0V80M1004.67 0V80M1011.64 0V80M1018.6 0V80M1025.57 0V80M1032.53 0V80M1039.49 0V80M1046.46 0V80M1053.42 0V80M1060.38 0V80M1067.35 0V80M1074.31 0V80M1081.27 0V80M1088.24 0V80M1095.2 0V80M1102.17 0V80M1109.13 0V80"
-						stroke="var(--tw-color-bc-stroke)"
-						stroke-opacity="0.4"
-						stroke-width="0.99921"
-					/>
-				</g>
-			</g>
-			<defs>
-				<clipPath id="clip0_241_48166">
-					<rect width="1118" height="80" fill="white" />
-				</clipPath>
-				<clipPath id="clip1_241_48166">
-					<rect
-						width="1102"
-						height="80"
-						fill="white"
-						transform="translate(8)"
-					/>
-				</clipPath>
-			</defs>
-		</svg>
+		<!-- break -->
+		<Break class="tw:sm:mb-12 tw:mb-8" />
+		<!-- focus section -->
+		<HomeFocus />
+		<!-- facts section -->
+		<HomeFacts />
 	</section>
 </template>
 
 <script lang="ts" setup>
 	usePortfolioSeo({
-		title: "Davies Okpeta",
+		title: "Davies Okpeta | Mission-Critical Software Engineer",
 		description:
 			"Senior Fullstack Web Developer. Portfolio showcasing work with React, Next.js, Vue, Nuxt and modern web technologies.",
 		ogImage: "/images/dark-lg-logo.png",

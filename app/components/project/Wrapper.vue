@@ -1,32 +1,36 @@
 <template>
-	<section class="tw:relative tw:p-8 tw:isolate">
+	<section class="tw:relative tw:sm:p-12 tw:p-4 tw:isolate">
 		<div
 			v-for="dimension in dimensionDivClasses"
 			:class="dimension"
 			:key="dimension"
 		/>
 		<div
-			class="tw:absolute tw:left-0 tw:top-0 tw:w-full tw:h-full tw:-z-10 tw:space-y-[51.2rem]"
+			class="tw:absolute tw:left-0 tw:top-0 tw:w-full tw:h-full tw:-z-10 tw:sm:space-y-[51.2rem] tw:space-y-152"
 		>
 			<template v-for="i in lineLength" :key="i">
 				<div
-					class="tw:border-y tw:border-bc-stroke tw:border-dashed tw:w-full tw:h-8"
+					class="tw:border-y tw:border-bc-stroke tw:md:border-dashed tw:border-solid tw:w-full tw:md:h-12 tw:h-4"
 				/>
 			</template>
 		</div>
-		<section class="tw:grid tw:md:grid-cols-2 tw:grid-cols-1 tw:gap-8">
+		<section
+			class="tw:grid tw:md:grid-cols-2 tw:grid-cols-1 tw:md:gap-12 tw:gap-4"
+		>
 			<template v-for="(i, index) in loopArray" :key="i">
 				<div
-					class="tw:bg-bc-primary-2 tw:h-[51.2rem] tw:w-full tw:p-8 tw:relative tw:group tw:cursor-pointer"
+					class="tw:bg-bc-primary-2 tw:sm:h-[51.2rem] tw:h-152 tw:w-full tw:md:p-8 tw:p-4 tw:relative tw:group tw:cursor-pointer tw:overflow-hidden"
 				>
 					<!-- image section -->
-					<section class="tw:w-full tw:h-[30.7rem] tw:overflow-hidden tw:mb-5">
+					<section
+						class="tw:w-full tw:md:h-[30.7rem] tw:h-86 tw:overflow-hidden tw:mb-5"
+					>
 						<NuxtImg
 							src="/images/temp/user.jpg"
 							width="100"
 							height="100"
 							alt="project image"
-							class="tw:w-full tw:h-full tw:object-cover tw:object-center tw:md:scale-150 tw:group-hover:scale-100"
+							class="tw:w-full tw:h-full tw:object-cover tw:object-center tw:md:scale-150 tw:md:group-hover:scale-100"
 							loading="lazy"
 						/>
 					</section>
@@ -72,9 +76,9 @@
 	const viewportWidth = computed(() => $getState("viewportWidth"));
 
 	const dimensionDivClasses = ref([
-		"tw:border-r tw:border-bc-stroke tw:border-dashed tw:absolute tw:left-0 tw:top-0 tw:w-8 tw:h-full",
-		"tw:border-l tw:border-bc-stroke tw:border-dashed tw:absolute tw:right-0 tw:top-0 tw:w-8 tw:h-full",
-		"tw:border-x tw:border-bc-stroke tw:border-dashed tw:absolute tw:left-1/2 tw:-translate-x-1/2 tw:top-0 tw:w-8 tw:h-full tw:md:block tw:hidden",
+		"tw:border-r tw:border-bc-stroke tw:md:border-dashed tw:border-solid tw:absolute tw:left-0 tw:top-0 tw:md:w-12 tw:w-4 tw:h-full",
+		"tw:border-l tw:border-bc-stroke tw:md:border-dashed tw:border-solid tw:absolute tw:right-0 tw:top-0 tw:md:w-12 tw:w-4 tw:h-full",
+		"tw:border-x tw:border-bc-stroke tw:md:border-dashed tw:border-solid tw:absolute tw:left-1/2 tw:-translate-x-1/2 tw:top-0 tw:md:w-12 tw:w-4 tw:h-full tw:md:block tw:hidden",
 	]);
 	const loopArray = computed(() => Array(4).fill(0));
 	const lineLength = computed(() =>

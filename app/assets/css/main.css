@@ -34,6 +34,10 @@ body {
 	background-image: var(--lg-logo);
 }
 
+.bg-logo {
+	background-image: var(--logo);
+}
+
 .flex_center {
 	display: flex;
 	align-items: center;

@@ -5,6 +5,7 @@
 	--header: url("/images/light-header.png");
 	--left-column: url("/images/dark-left-column.png");
 	--right-column: url("/images/dark-right-column.png");
+	--logo: url("/images/dark-logo.png");
 	--md-logo: url("/images/dark-md-logo.png");
 	--lg-logo: url("/images/dark-lg-logo.png");
 }
@@ -22,6 +23,7 @@
 	--text-xl: 2rem;
 	--text-2xl: 2.4rem;
 	--text-3xl: 3rem;
+	--text-8: 3.2rem;
 	--text-4xl: 4rem;
 	--text-5xl: 5rem;
 	--text-6xl: 6rem;
@@ -146,6 +148,7 @@ html:has(.DARK-MODE) {
 	--header: url("/images/dark-header.png");
 	--left-column: url("/images/dark-left-column.png");
 	--right-column: url("/images/dark-right-column.png");
+	--logo: url("/images/light-logo.png");
 	--md-logo: url("/images/light-md-logo.png");
 	--lg-logo: url("/images/dark-lg-logo.png");
 }

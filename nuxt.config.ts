@@ -12,7 +12,14 @@ export default defineNuxtConfig({
 			siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://thenerfsenpai.com",
 		},
 	},
-	modules: ["@nuxt/image", "@nuxt/scripts", "@nuxtjs/seo", "@vueuse/nuxt", "@pinia/nuxt"],
+	modules: [
+		"@nuxt/image",
+		"@nuxt/scripts",
+		"@nuxtjs/seo",
+		"@vueuse/nuxt",
+		"@pinia/nuxt",
+		"nuxt-lenis"
+	],
 	site: {
 		url: process.env.NUXT_PUBLIC_SITE_URL || "https://thenerfsenpai.com",
 		name: "TheNerfSenpai",
@@ -20,7 +27,7 @@ export default defineNuxtConfig({
 			"Davies Okpeta — Senior Fullstack Web Developer portfolio. React, Next.js, Vue, Nuxt and modern web technologies.",
 		defaultLocale: "en",
 	},
-	css: ["~/assets/css/variables.css", "~/assets/css/font.scss", "~/assets/css/main.scss"],
+	css: ["~/assets/css/font.css", "~/assets/css/variables.css", "~/assets/css/main.css", "~/assets/css/transitions.css"],
 	app: {
 		head: {
 			titleTemplate: "%s | TheNerfSenpai",
