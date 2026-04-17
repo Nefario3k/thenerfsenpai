@@ -9,9 +9,11 @@
 				class="tw:max-w-[16rem] tw:w-full tw:min-w-0 tw:shrink tw:bg-cover tw:bg-no-repeat bg-left-column tw:absolute tw:top-0 tw:left-0 tw:h-full tw:-z-10 tw:md:border-l tw:border-bc-stroke tw:md:border-dashed tw:border-solid"
 			/>
 			<main
-				class="max-container tw:border-x tw:border-bc-stroke tw:py-22 tw:bg-bc-primary tw:min-h-screen"
+				class="max-container tw:border-x tw:border-bc-stroke tw:pt-22 tw:bg-bc-primary tw:min-h-screen"
 			>
 				<slot />
+				<!-- footer -->
+				<Footer />
 			</main>
 			<span
 				class="tw:max-w-[16rem] tw:w-full tw:min-w-0 tw:shrink tw:bg-cover tw:bg-no-repeat bg-right-column tw:absolute tw:top-0 tw:right-0 tw:h-full tw:-z-10 tw:md:border-r tw:border-bc-stroke tw:md:border-dashed tw:border-solid"

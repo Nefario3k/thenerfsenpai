@@ -30,17 +30,21 @@
 		<ProjectWrapper />
 		<!-- link -->
 		<NuxtLink
-			to="/"
+			to="/projects"
 			class="tw:text-sm tw:hover:text-tc-link tw:font-medium flex_center tw:h-11 tw:w-full"
 		>
 			More Projects →
 		</NuxtLink>
 		<!-- break -->
-		<Break class="tw:sm:mb-12 tw:mb-8" />
+		<Break />
 		<!-- focus section -->
 		<HomeFocus />
 		<!-- facts section -->
 		<HomeFacts />
+		<!-- testimonials section -->
+		<HomeTestimonials />
+		<!-- break -->
+		<Break />
 	</section>
 </template>
 

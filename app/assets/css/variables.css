@@ -14,6 +14,7 @@
 @theme {
 	--font-display: "Space Grotesk", "sans-serif";
 	--font-zalando: "Zalando Sans", "sans-serif";
+	--font-verdana: "Verdana", "sans-serif";
 	/* font size  */
 	--text-xxs: 1rem;
 	--text-xs: 1.2rem;
@@ -124,6 +125,11 @@
 	--color-bc-secondary: #e2e7ea;
 	--color-bc-tertiary: #e2e7ea66;
 	--color-bc-stroke: #d9d9da;
+
+	/* outliers */
+	--color-bc-1: #c2b5ff;
+	--color-bc-2: #f56c5b;
+	--color-bc-3: #601208;
 }
 
 .max-container {
@@ -150,5 +156,5 @@ html:has(.DARK-MODE) {
 	--right-column: url("/images/dark-right-column.png");
 	--logo: url("/images/light-logo.png");
 	--md-logo: url("/images/light-md-logo.png");
-	--lg-logo: url("/images/dark-lg-logo.png");
+	--lg-logo: url("/images/light-lg-logo.png");
 }

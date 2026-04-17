@@ -78,3 +78,10 @@ body {
 	text-overflow: ellipsis;
 	word-break: break-all;
 }
+
+.no-scrollbar {
+	-webkit-overflow-scrolling: touch;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}

@@ -1,5 +1,5 @@
 <template>
-	<section class="tw:relative tw:sm:p-12 tw:p-4 tw:isolate">
+	<section class="tw:relative tw:md:p-12 tw:p-4 tw:isolate">
 		<div
 			v-for="dimension in dimensionDivClasses"
 			:class="dimension"
@@ -23,7 +23,7 @@
 				>
 					<!-- image section -->
 					<section
-						class="tw:w-full tw:md:h-[30.7rem] tw:h-86 tw:overflow-hidden tw:mb-5"
+						class="tw:w-full tw:sm:h-[30.7rem] tw:h-86 tw:overflow-hidden tw:mb-5"
 					>
 						<NuxtImg
 							src="/images/temp/user.jpg"
@@ -35,12 +35,12 @@
 						/>
 					</section>
 					<!-- title section -->
-					<h3
-						class="tw:text-2xl tw:font-bold tw:group-hover:text-tc-link elipsis"
-					>
+					<h3 class="tw:text-2xl tw:font-bold tw:group-hover:text-tc-link">
 						Apple
 					</h3>
-					<p class="tw:text-sm tw:text-tc-secondary elipsis-5">
+					<p
+						class="tw:text-sm tw:text-tc-secondary tw:sm:line-clamp-5 tw:line-clamp-3"
+					>
 						Lorem ipsum dolor sit amet consectetur. Sollicitudin pellentesque
 						ullamcorper sapien bibendum. Semper nunc facilisis massa proin.
 						Placerat enim sodales nisi tempor scelerisque leo felis turpis.

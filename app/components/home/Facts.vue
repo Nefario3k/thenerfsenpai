@@ -2,11 +2,13 @@
 	<section
 		class="tw:sm:px-12 tw:px-4 tw:sm:mb-[12rem] tw:mb-15 tw:grid tw:md:grid-cols-2 tw:grid-cols-1 tw:gap-4"
 	>
-		<p
-			class="tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:shrink-0"
-		>
-			Facts ↘
-		</p>
+		<div>
+			<p
+				class="tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:shrink-0 tw:md:sticky tw:md:top-56 tw:md:left-0"
+			>
+				Facts ↘
+			</p>
+		</div>
 		<aside class="tw:space-y-6">
 			<p class="tw:text-normal tw:sm:text-lg tw:text-sm tw:text-tc-primary">
 				I am an experienced Senior software engineer with
