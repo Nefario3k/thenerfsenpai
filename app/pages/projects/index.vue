@@ -1,5 +1,5 @@
 <template>
-	<section>
+	<section key="projects" class="transIn">
 		<!-- top section -->
 		<section class="tw:sm:px-12 tw:px-4 tw:pb-12">
 			<h1

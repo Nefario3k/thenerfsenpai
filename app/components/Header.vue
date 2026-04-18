@@ -167,7 +167,7 @@
 	const navigationLinks = [
 		{
 			label: "About",
-			to: "/",
+			to: "/about",
 		},
 		{
 			label: "Projects",

@@ -13,9 +13,9 @@
 			<p
 				v-for="(element, index) in focusElements"
 				:key="element"
-				:class="`tw:sm:pt-8 tw:pt-4 tw:text-medium tw:sm:text-4xl tw:text-8 tw:text-tc-primary ${
+				:class="`tw:text-medium tw:sm:text-4xl tw:text-8 tw:text-tc-primary ${
 					index !== 0
-						? 'tw:border-t-3 tw:border-solid tw:border-bc-tertiary'
+						? 'tw:sm:pt-8 tw:pt-4 tw:border-t-3 tw:border-solid tw:border-bc-tertiary'
 						: ''
 				}`"
 			>

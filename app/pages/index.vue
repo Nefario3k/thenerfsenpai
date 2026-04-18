@@ -1,5 +1,5 @@
 <template>
-	<section>
+	<section key="home" class="transIn">
 		<!-- top section -->
 		<section class="tw:sm:px-12 tw:px-4 tw:pb-12">
 			<div class="tw:flex tw:items-center tw:gap-3 tw:sm:mb-66 tw:mb-60">
