@@ -5,10 +5,24 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
     viewportWidth: 0,
     careerHistory: [
       {
+        company: "Omniswift",
+        role: "Senior Software Engineer",
+        duration: "Mar 2025 - present",
+        location: "Abuja, Nigeria",
+        employmentType: "Full time",
+        descriptions: [
+          "Developed and maintained mission critical applications for the Nigerian Government.",
+          "Ran teams of upwards of 5 developers and provided technical guidance and mentorship.",
+          "Increased client retention rates by completely overhauling new website design improving user experience and conversion rates.",
+          "Increased consumer satisfaction rates to 80% by developing and maintaining versatile CRM platform for managing customer interactions and data with a return of new projects of ₦1.5 Billion in revenue",
+          "Maintained security protocols accross all sites",
+        ],
+      },
+      {
         company: "Tiqwa",
         role: "Senior Software Engineer",
-        duration: "Aug 2023 – present",
-        location: "Lagos · Abuja, Nigeria",
+        duration: "Jan 2024 - Feb 2025",
+        location: "Abuja, Nigeria",
         employmentType: "Full time",
         descriptions: [
           "Maintained and improved the administrative section of the travel agency for multitenancy for multiple distinct apps.",
@@ -24,6 +38,8 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
         company: "THCO",
         role: "Frontend Engineer",
         employmentType: "Part time",
+        duration: "Aug 2023 - Jan 2025",
+        location: "Lagos Nigeria",
         descriptions: [
           "Developed and launched the first AI-driven recruitment software, contributing to a net gain of $98,000 in the first month.",
           "Implemented and maintained the AI-driven recruiting platform from inception through production, including key employee search and data management.",
@@ -36,12 +52,12 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
       {
         company: "Bex-it Digital Solutions",
         role: "Senior Frontend Developer",
-        duration: "Feb 2022 – Nov 2024",
+        duration: "Feb 2022 - Nov 2024",
         location: "Abuja, Nigeria",
         employmentType: "Full time",
         descriptions: [
           "Developed and maintained software using React, Nuxt, Vue, Laravel, and MySQL.",
-          "Collaborated with cross-functional teams, reducing project delivery timelines from about 8 months to 4–5 months.",
+          "Collaborated with cross-functional teams, reducing project delivery timelines from about 8 months to 4-5 months.",
           "Improved development efficiency by about 50% through automated testing and SOPs.",
           "Led CMS development.",
           "Engaged clients to clarify goals and requirements.",
@@ -51,7 +67,7 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
       {
         company: "Chronicles Software",
         role: "Frontend Developer",
-        duration: "Jan 2021 – Nov 2021",
+        duration: "Jan 2021 - Nov 2021",
         location: "Lagos, Nigeria",
         employmentType: "Contract",
         descriptions: [
