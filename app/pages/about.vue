@@ -264,18 +264,49 @@
 				</aside>
 			</div>
 		</section>
+		<!-- GitHub contributions ↘ -->
+		<section class="tw:sm:px-12 tw:px-4">
+			<div class="tw:space-y-10 tw:py-16">
+				<p class="tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary">
+					GitHub contributions ↘
+				</p>
+				<aside>
+					<GitHubContributions
+						:pending="contributionsPending"
+						:error="contributionsError"
+						:payload="contributionsPayload"
+					/>
+				</aside>
+			</div>
+		</section>
+		<!-- break -->
+		<Break />
 	</section>
 </template>
 
 <script lang="ts" setup>
+	import GitHubContributions from "@/components/about/GitHubContributions.vue";
 	import {
 		Accordion,
 		AccordionContent,
 		AccordionItem,
 		AccordionTrigger,
 	} from "@/components/ui/accordion";
+	import type { GitHubContributionsResponse } from "../../shared/githubContributions";
 
 	const { $getState } = useNuxtApp();
+
+	const contributions = await useFetch<GitHubContributionsResponse>(
+		"/api/github/contributions",
+		{
+			key: "github-contributions",
+		}
+	);
+
+	const contributionsPending = computed(() => contributions.pending.value);
+	const contributionsError = computed(() => contributions.error.value);
+	const contributionsPayload = computed(() => contributions.data.value ?? null);
+
 	const techStack = computed(() => $getState("techStack"));
 	const careerHistory = computed(() => $getState("careerHistory"));
 

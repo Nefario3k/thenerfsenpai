@@ -8,8 +8,10 @@ export default defineNuxtConfig({
 		port: parseInt(process.env.PORT || "8500"),
 	},
 	runtimeConfig: {
+		githubToken: process.env.NUXT_GITHUB_TOKEN || "",
 		public: {
 			siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://thenerfsenpai.com",
+			githubLogin: process.env.NUXT_PUBLIC_GITHUB_LOGIN || "",
 		},
 	},
 	modules: [
