@@ -9,7 +9,7 @@
 		class="tw:sticky tw:top-0 tw:left-0 tw:px-3 tw:w-full tw:border-b tw:border-bc-stroke tw:md:border-dashed tw:border-solid tw:z-10 tw:bg-bc-primary/70 tw:backdrop-blur-sm"
 	>
 		<div
-			class="max-container flex_between tw:gap-3 tw:border-x tw:border-bc-stroke tw:border-solid tw:md:h-44 tw:h-16 tw:sm:px-12 tw:px-4"
+			class="max-container flex_between tw:gap-3 tw:border-x tw:border-bc-stroke tw:border-solid tw:md:h-44 tw:h-16 tw:sm:px-12 tw:px-4 useCubicNestedTransition"
 		>
 			<!-- home link -->
 			<NuxtLink

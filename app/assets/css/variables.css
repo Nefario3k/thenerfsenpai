@@ -1,4 +1,3 @@
-/* ---break---  */
 @import "tailwindcss" prefix(tw);
 @import "tw-animate-css";
 /* ---break---  */
@@ -6,6 +5,7 @@
 
 :root {
 	font-size: 62.5%;
+	--transition-tag: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	--header: url("/images/light-header.png");
 	--left-column: url("/images/dark-left-column.png");
 	--right-column: url("/images/dark-right-column.png");

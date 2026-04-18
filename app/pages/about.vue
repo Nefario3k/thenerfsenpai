@@ -203,7 +203,7 @@
 							v-for="(job, index) in careerHistory"
 							:key="`${job.company}-${job.role}-${index}`"
 							:value="index.toString()"
-							:class="`no-transition tw:border-b-0 ${
+							:class="`tw:border-b-0 ${
 								index !== 0
 									? `tw:-mt-4 tw:sm:pt-8 tw:pt-4 tw:border-t-3 tw:border-solid ${
 											index.toString() ===

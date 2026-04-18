@@ -23,7 +23,7 @@
 				>
 					<!-- image section -->
 					<section
-						class="tw:w-full tw:sm:h-[30.7rem] tw:h-86 tw:overflow-hidden tw:mb-5"
+						class="tw:w-full tw:sm:h-[30.7rem] tw:h-86 tw:overflow-hidden tw:mb-5 useNestedTransition"
 					>
 						<NuxtImg
 							src="/images/temp/user.jpg"
@@ -35,7 +35,9 @@
 						/>
 					</section>
 					<!-- title section -->
-					<h3 class="tw:text-2xl tw:font-bold tw:group-hover:text-tc-link">
+					<h3
+						class="tw:text-2xl tw:font-bold tw:group-hover:text-tc-link useNestedTransition"
+					>
 						Apple
 					</h3>
 					<p
@@ -48,7 +50,7 @@
 					</p>
 					<!-- navigation section -->
 					<button
-						class="flex_center tw:w-8 tw:h-8 tw:bg-tc-link tw:outline-none tw:border-none tw:absolute tw:top-2 tw:right-2 tw:group-hover:w-16 tw:group-hover:h-16 tw:group-hover:bg-tc-link-2"
+						class="flex_center tw:w-8 tw:h-8 tw:bg-tc-link tw:outline-none tw:border-none tw:absolute tw:top-2 tw:right-2 tw:group-hover:w-16 tw:group-hover:h-16 tw:group-hover:bg-tc-link-2 useCubicNestedTransition"
 					>
 						<svg
 							width="23"

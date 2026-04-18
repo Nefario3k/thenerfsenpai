@@ -9,7 +9,7 @@
 			class="flex_between tw:sm:flex-row tw:flex-col tw:gap-4 tw:sm:px-12 tw:px-4 tw:py-5 tw:border-t tw:border-bc-stroke tw:text-tc-secondary"
 		>
 			<!-- social links -->
-			<ul class="tw:flex tw:gap-4 tw:items-center">
+			<ul class="tw:flex tw:gap-4 tw:items-center useNestedTransition">
 				<!-- github -->
 				<li>
 					<a

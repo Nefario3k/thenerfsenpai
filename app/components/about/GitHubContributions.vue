@@ -45,17 +45,26 @@
 						role="img"
 						:aria-label="`GitHub contributions: ${payload.totalContributions} in the last year`"
 					>
-						<div
-							v-for="cell in flatCells"
-							:key="cell.date"
-							:class="[
-								'tw:aspect-square tw:min-h-[10px] tw:rounded-[2px]',
-								levelClass(cell.level),
-							]"
-							:title="`${cell.date}: ${cell.count} contribution${
-								cell.count === 1 ? '' : 's'
-							}`"
-						/>
+						<TooltipProvider v-for="cell in flatCells" :key="cell.date">
+							<Tooltip>
+								<TooltipTrigger>
+									<div
+										:class="[
+											'tw:aspect-square tw:min-h-[10px] tw:rounded-[2px] tw:cursor-pointer',
+											levelClass(cell.level),
+										]"
+									></div>
+								</TooltipTrigger>
+								<TooltipContent>
+									<p>{{ cell.date }}</p>
+									<p>
+										{{ cell.count }} contribution{{
+											cell.count === 1 ? "" : "s"
+										}}
+									</p>
+								</TooltipContent>
+							</Tooltip>
+						</TooltipProvider>
 					</div>
 				</div>
 				<div
@@ -91,6 +100,12 @@
 		GitHubContributionDay,
 		GitHubContributionsResponse,
 	} from "../../../shared/githubContributions";
+	import {
+		Tooltip,
+		TooltipContent,
+		TooltipProvider,
+		TooltipTrigger,
+	} from "@/components/ui/tooltip";
 
 	const props = defineProps<{
 		pending: boolean;

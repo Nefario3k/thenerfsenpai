@@ -15,7 +15,7 @@
 						:key="testimonial.name"
 					>
 						<div
-							class="tw:md:w-200 tw:w-[36.6rem] tw:min-w-min tw:h-full tw:min-h-200 tw:border tw:border-tc-tertiary tw:relative tw:md:p-8 tw:p-5 tw:flex tw:flex-col tw:justify-between tw:gap-10 tw:isolate tw:group"
+							class="tw:md:w-200 tw:w-[36.6rem] tw:min-w-min tw:h-full tw:min-h-200 tw:border tw:border-tc-tertiary tw:relative tw:md:p-8 tw:p-5 tw:flex tw:flex-col tw:justify-between tw:gap-10 tw:isolate tw:group useNestedTransition"
 						>
 							<!-- dots -->
 							<div
@@ -87,7 +87,7 @@
 				<!-- left navigation -->
 				<button
 					type="button"
-					class="tw:w-10 tw:h-10 tw:bg-tc-primary flex_center tw:hover:bg-tc-link tw:cursor-pointer tw:group tw:disabled:opacity-40 tw:disabled:cursor-not-allowed tw:disabled:hover:bg-tc-primary"
+					class="tw:w-10 tw:h-10 tw:bg-tc-primary flex_center tw:hover:bg-tc-link tw:cursor-pointer tw:group tw:disabled:opacity-40 tw:disabled:cursor-not-allowed tw:disabled:hover:bg-tc-primary useNestedTransition"
 					aria-label="Previous testimonials"
 					:disabled="!canScrollPrev"
 					@click="scrollPrev"
@@ -126,7 +126,7 @@
 				<!-- right navigation -->
 				<button
 					type="button"
-					class="tw:w-10 tw:h-10 tw:bg-tc-primary flex_center tw:hover:bg-tc-link tw:cursor-pointer tw:group tw:disabled:opacity-40 tw:disabled:cursor-not-allowed tw:disabled:hover:bg-tc-primary"
+					class="tw:w-10 tw:h-10 tw:bg-tc-primary flex_center tw:hover:bg-tc-link tw:cursor-pointer tw:group tw:disabled:opacity-40 tw:disabled:cursor-not-allowed tw:disabled:hover:bg-tc-primary useNestedTransition"
 					aria-label="Next testimonials"
 					:disabled="!canScrollNext"
 					@click="scrollNext"

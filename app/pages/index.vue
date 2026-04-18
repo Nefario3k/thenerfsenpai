@@ -19,11 +19,10 @@
 			</div>
 
 			<h1
-				class="tw:sm:text-[6.4rem] tw:text-8 tw:font-normal tw:font-zalando tw:leading-tight"
+				class="tw:sm:text-[6.4rem] tw:text-8 tw:font-normal tw:font-zalando tw:leading-tight tw:max-w-7xl"
 			>
-				Building immersive digital<br />
-				interfaces with mastery<br />
-				and purposeful design.
+				Building mission-critical software with mastery purposeful design and
+				functions.
 			</h1>
 		</section>
 		<!-- mini projects section -->
@@ -31,7 +30,7 @@
 		<!-- link -->
 		<NuxtLink
 			to="/projects"
-			class="tw:text-sm tw:hover:text-tc-link tw:font-medium flex_center tw:h-11 tw:w-full"
+			class="tw:text-sm tw:hover:text-tc-link tw:font-medium flex_center tw:h-11 tw:w-full useNestedTransition"
 		>
 			More Projects →
 		</NuxtLink>
