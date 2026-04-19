@@ -1,5 +1,8 @@
 <template>
-	<section class="tw:relative tw:md:p-12 tw:p-4 tw:isolate">
+	<section
+		v-if="list.length > 0"
+		class="tw:relative tw:md:p-12 tw:p-4 tw:isolate"
+	>
 		<div
 			v-for="dimension in dimensionDivClasses"
 			:class="dimension"
@@ -17,8 +20,10 @@
 		<section
 			class="tw:grid tw:md:grid-cols-2 tw:grid-cols-1 tw:md:gap-12 tw:gap-4"
 		>
-			<template v-for="(i, index) in loopArray" :key="i">
-				<div
+			<template v-for="item in list" :key="item.slug">
+				<NuxtLink
+					:to="`/projects/${item.slug}`"
+					title="View Project"
 					class="tw:bg-bc-primary-2 tw:sm:h-[51.2rem] tw:h-152 tw:w-full tw:md:p-8 tw:p-4 tw:relative tw:group tw:cursor-pointer tw:overflow-hidden"
 				>
 					<!-- image section -->
@@ -26,31 +31,34 @@
 						class="tw:w-full tw:sm:h-[30.7rem] tw:h-86 tw:overflow-hidden tw:mb-5 useNestedTransition"
 					>
 						<NuxtImg
-							src="/images/temp/user.jpg"
-							width="100"
-							height="100"
-							alt="project image"
-							class="tw:w-full tw:h-full tw:object-cover tw:object-center tw:md:scale-150 tw:md:group-hover:scale-100"
+							:src="item.images.banner"
+							width="100%"
+							height="100%"
+							:alt="`${item.title} banner image`"
+							class="tw:w-full tw:h-full tw:object-cover tw:object-top tw:md:scale-100 tw:md:group-hover:scale-105"
+							densities="x1 x2"
 							loading="lazy"
+							placeholder
+							fit="cover"
+							quality="100"
 						/>
 					</section>
 					<!-- title section -->
 					<h3
-						class="tw:text-2xl tw:font-bold tw:group-hover:text-tc-link useNestedTransition"
+						class="tw:text-2xl tw:font-bold tw:group-hover:text-tc-link useNestedTransition tw:sm:line-clamp-3 tw:line-clamp-1"
+						:title="item.title"
 					>
-						Apple
+						{{ item.title }}
 					</h3>
 					<p
 						class="tw:text-sm tw:text-tc-secondary tw:sm:line-clamp-5 tw:line-clamp-3"
+						:title="item.description"
 					>
-						Lorem ipsum dolor sit amet consectetur. Sollicitudin pellentesque
-						ullamcorper sapien bibendum. Semper nunc facilisis massa proin.
-						Placerat enim sodales nisi tempor scelerisque leo felis turpis.
-						Lorem ipsum dolor sit amet consectetur. Sollicitudin pellentesque
+						{{ item.description }}
 					</p>
 					<!-- navigation section -->
 					<button
-						class="flex_center tw:w-8 tw:h-8 tw:bg-tc-link tw:outline-none tw:border-none tw:absolute tw:top-2 tw:right-2 tw:group-hover:w-16 tw:group-hover:h-16 tw:group-hover:bg-tc-link-2 useCubicNestedTransition"
+						class="flex_center tw:w-8 tw:h-8 tw:bg-tc-link tw:outline-none tw:border-none tw:absolute tw:top-2 tw:right-2 tw:group-hover:w-16 tw:group-hover:h-16 tw:group-hover:bg-tc-link-2 useCubicNestedTransition tw:cursor-pointer"
 					>
 						<svg
 							width="23"
@@ -66,13 +74,19 @@
 							/>
 						</svg>
 					</button>
-				</div>
+				</NuxtLink>
 			</template>
 		</section>
 	</section>
 </template>
 
 <script lang="ts" setup>
+	interface TypeProps {
+		list?: TypeProjects[];
+	}
+	const props = withDefaults(defineProps<TypeProps>(), {
+		list: () => [],
+	});
 	const { $getState } = useNuxtApp();
 
 	const viewportWidth = computed(() => $getState("viewportWidth"));
@@ -82,11 +96,10 @@
 		"tw:border-l tw:border-bc-stroke tw:md:border-dashed tw:border-solid tw:absolute tw:right-0 tw:top-0 tw:md:w-12 tw:w-4 tw:h-full",
 		"tw:border-x tw:border-bc-stroke tw:md:border-dashed tw:border-solid tw:absolute tw:left-1/2 tw:-translate-x-1/2 tw:top-0 tw:md:w-12 tw:w-4 tw:h-full tw:md:block tw:hidden",
 	]);
-	const loopArray = computed(() => Array(4).fill(0));
 	const lineLength = computed(() =>
 		viewportWidth.value && viewportWidth.value >= 960
-			? Math.round(loopArray.value.length / 2 + 1)
-			: loopArray.value.length + 1
+			? Math.round(props.list.length / 2 + 1)
+			: props.list.length + 1
 	);
 </script>
 

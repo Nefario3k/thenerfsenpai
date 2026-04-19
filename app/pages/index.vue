@@ -26,7 +26,7 @@
 			</h1>
 		</section>
 		<!-- mini projects section -->
-		<ProjectWrapper />
+		<ProjectWrapper :list="projects" />
 		<!-- link -->
 		<NuxtLink
 			to="/projects"
@@ -48,6 +48,8 @@
 </template>
 
 <script lang="ts" setup>
+	const { $getState } = useNuxtApp();
+	const projects = computed(() => $getState("projects").slice(0, 4));
 	usePortfolioSeo({
 		title: "Davies Okpeta | Mission-Critical Software Engineer",
 		description:

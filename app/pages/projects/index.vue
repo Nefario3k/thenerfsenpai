@@ -9,13 +9,15 @@
 			</h1>
 		</section>
 		<!-- mini projects section -->
-		<ProjectWrapper />
+		<ProjectWrapper :list="projects" />
 		<!-- break -->
 		<Break class="tw:border-t-0!" />
 	</section>
 </template>
 
 <script lang="ts" setup>
+	const { $getState } = useNuxtApp();
+	const projects = computed(() => $getState("projects"));
 	usePortfolioSeo({
 		title: "Davies Okpeta | Projects",
 		description:

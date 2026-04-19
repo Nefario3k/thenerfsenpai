@@ -567,11 +567,14 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
         description:
           'E-commerce for beauty and skincare on Korner.ng—a curated catalog for women and men spanning hair care, grooming, oral care, K-beauty, anti-aging, acne, sensitive skin, gift sets, and more, with merchandising rails like new & trending, featured, top-rated, and top-selling plus brand/price/rating filters. Shoppers check out with multiple payment options; operators run the business from a Laravel-backed admin CMS.',
         images: {
-          banner: 'banner',
-          icon: 'icon',
-          intro: 'intro',
-          challenges: ['challenge1', 'challenge2'],
-          technology: 'technology',
+          banner: '/images/projects/korner/banner.png',
+          icon: '/images/projects/korner/logo.png',
+          intro: '/images/projects/korner/1.png',
+          challenges: [
+            '/images/projects/korner/2.png',
+            '/images/projects/korner/3.png'
+          ],
+          technology: '/images/projects/korner/4.png',
         },
         challenge: {
           title:
