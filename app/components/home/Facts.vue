@@ -9,7 +9,7 @@
 				Facts ↘
 			</p>
 		</div>
-		<aside class="tw:space-y-6">
+		<aside class="">
 			<p class="tw:text-normal tw:sm:text-lg tw:text-sm tw:text-tc-primary">
 				I am an experienced Senior software engineer with
 				<strong>over 5 years</strong> work experience with a diverse

@@ -15,6 +15,10 @@ declare global {
         solution: { title: string; deliverables: string[]; impact: string[] };
         technology: string;
         link: string;
+        client: string;
+        type: 'fintech' | 'ecommerce' | 'real estate' | 'healthcare' | 'education' | 'power' | 'productivity';
+        duration: string;
+        year: string;
     }
     interface TypeCareerHistory {
         company: string;

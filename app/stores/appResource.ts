@@ -47,6 +47,10 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
         },
         technology: 'Used an array of technologies to build the project including Cloud infrastructure, Data warehouse architecture, Automated analytics engine with Multi-stakeholder integration framework',
         link: 'https://nelf.gov.ng',
+        client: 'Government',
+        type: 'education',
+        duration: '1 year',
+        year: '2024',
       },
       {
         slug: 'project-nti',
@@ -91,6 +95,10 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
         },
         technology: 'Used an array of technologies to build the project including Cloud infrastructure, Data warehouse architecture, Automated analytics engine with Multi-stakeholder integration framework',
         link: 'https://www.my.nti.edu.ng/',
+        client: 'Government',
+        type: 'education',
+        duration: '1 year',
+        year: '2023',
       },
       {
         slug: 'project-primes',
@@ -137,6 +145,10 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
         },
         technology: 'Used an array of technologies to build the project including Cloud infrastructure, Secure databases, API integration framework and Compliance security layers',
         link: 'https://64-23-142-69.nip.io',
+        client: 'Government',
+        type: 'power',
+        duration: '2 years',
+        year: '2023',
       },
       {
         slug: 'project-asterlio',
@@ -185,6 +197,10 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
         technology:
           'Nuxt.js (Vue, TypeScript) authenticated CRM at dev-app.asterlio.com; public marketing and trial flows at asterlio.com; omnichannel integrations (WhatsApp Business, Instagram, Facebook Messenger, live chat, email); in-product ticket workflows and analytics; OAuth on the login experience (e.g. Google, Facebook); security and compliance messaging aligned with public documentation (encryption, GDPR/CCPA).',
         link: 'https://asterlio.com/',
+        client: 'Omiswift',
+        type: 'productivity',
+        duration: '1 year',
+        year: '2025',
       },
       {
         slug: 'project-beezlinq',
@@ -231,6 +247,10 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
         technology:
           'Nuxt.js (Vue, TypeScript) application for marketing and authenticated experiences; email/password authentication with sign-up and password reset flows; OAuth (Google, LinkedIn) on the login surface; digital business card / eWallet domain features as exposed in the product (e.g. NFC, signatures, backgrounds) integrated into a single Nuxt codebase pattern.',
         link: 'https://beezlinq.com/',
+        client: 'Beezlinq',
+        type: 'productivity',
+        duration: '1 year',
+        year: '2023',
       },
       {
         slug: 'project-savingsbox',
@@ -277,6 +297,10 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
         technology:
           'Frontend: Vue.js, Nuxt.js (TypeScript), Vuetify, SCSS; animation: Nuxt-AOS, GSAP. Backend: PHP, Laravel. Data: MySQL, PostgreSQL. Infra: AWS, Docker, Kubernetes. Payments: Paystack, Flutterwave.',
         link: 'https://savingsbox.ng/',
+        client: 'Savings Box',
+        type: 'fintech',
+        duration: '1 year',
+        year: '2024',
       },
       {
         slug: 'project-senahomes',
@@ -324,6 +348,10 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
           'Frontend: Vue.js, Nuxt.js (TypeScript), Vuex. UI: Vuetify, SCSS. Animation: Nuxt-AOS. Backend: PHP, Laravel. Data: MySQL, PostgreSQL. Infra: AWS, Docker.',
 
         link: 'https://senahomesrealestate.com/',
+        client: 'Sena Homes',
+        type: 'real estate',
+        duration: '6 Months',
+        year: '2024',
       },
       {
         slug: 'project-realtimepay',
@@ -370,6 +398,10 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
         technology:
           'Frontend: Vue.js, Nuxt.js (TypeScript), Pinia, Vuex. UI: Vuetify, SCSS, Tailwind. Animation: Nuxt-AOS, GSAP, vue-auto-animate. Backend: PHP, Laravel. Data: MySQL, PostgreSQL. Infra: AWS, Docker. Payments: Paystack.',
         link: 'https://realtimepay.ng',
+        client: 'RealtimePay',
+        type: 'power',
+        duration: '6 Months',
+        year: '2024',
       },
       {
         slug: 'project-safecircle',
@@ -417,6 +449,10 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
         technology:
           'Next.js (React, TypeScript) for the member web app at app.safecirclecapital.com; public marketing and self-serve education at safecirclecapital.com; bank connectivity and security positioning including Plaid for integrations, bank-level encryption, and KYC for automated payments; OAuth (Google, Apple) and phone/email authentication on the login experience; mobile distribution via App Store and Google Play as listed on the marketing site.',
         link: 'https://www.safecirclecapital.com/',
+        client: 'SafeCircle Capital',
+        type: 'fintech',
+        duration: '8 Months',
+        year: '2025',
       },
       {
         slug: 'project-pharmachain',
@@ -464,6 +500,10 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
         technology:
           'Nuxt.js (Vue, TypeScript) for the authenticated web app at app.pharmachains.ai; public marketing and education at pharmachains.ai; AI-driven medicine search and availability matching across a broad verified pharmacy set; Web3 / $PHAI utility positioning for searches, contributor rewards, and on-chain authenticity narratives; OAuth (Google) on the login surface.',
         link: 'https://pharmachains.ai/',
+        client: 'Pharmachain AI',
+        type: 'healthcare',
+        duration: '8 Months',
+        year: '2025',
       },
       {
         slug: 'project-successbox',
@@ -511,6 +551,10 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
         technology:
           'React.js (TypeScript) web platform for authenticated learning and account flows on successbox.ng (including successbox.ng/login); curriculum-aligned digital content delivery; interactive e-Textbook patterns (media, annotations, in-content assessment); large-scale CBT practice with analytics; OAuth (Google, Facebook); multi-device session/sync as described on the public site; operated in ecosystem context with Chronicles Software as noted on successbox.ng.',
         link: 'https://successbox.ng/',
+        client: 'SuccessBOX',
+        type: 'education',
+        duration: '1 year',
+        year: '2021',
       },
       {
         slug: 'project-tiqwa',
@@ -560,6 +604,10 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
         technology:
           'Frontend: Vue.js, Nuxt.js (TypeScript), Pinia, Vuex. Styling: SCSS, Tailwind. Animation: vue-auto-animate. Backend: PHP, Laravel. Data: MySQL, PostgreSQL. Infra: AWS, Docker, AWS Amplify, Vercel. Payments: Paystack, Flutterwave, bank transfer. APIs and sandboxes as offered publicly (e.g. sandbox.tiqwa.com).',
         link: 'https://www.tiqwa.com/',
+        client: 'Tiqwa',
+        type: 'productivity',
+        duration: '2 years',
+        year: '2024',
       },
       {
         slug: 'project-korner',
@@ -609,6 +657,10 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
         technology:
           'Frontend: Vue.js, Nuxt.js (TypeScript), Pinia. UI: Vuetify, SCSS, Tailwind. Animation: Nuxt-AOS, GSAP. Backend: PHP, Laravel. Data: MySQL, PostgreSQL. Infra: AWS, Docker, Kubernetes. Payments: Paystack, Opay, Flutterwave, Apple Pay. Storefront and auth entry at korner.ng and korner.ng/auth/login; mobile distribution links as presented on Korner.ng (Google Play, App Store).',
         link: 'https://korner.ng/',
+        client: 'Korner',
+        type: 'ecommerce',
+        duration: '6 Months',
+        year: '2024',
       },
     ],
     careerHistory: [
