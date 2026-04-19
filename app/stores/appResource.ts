@@ -9,11 +9,14 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
         title: 'National Student Loan Application Scheme (SLAS)',
         description: 'Digital infrastructure enabling Nigerian students to access federal education loans—secure financial data handling and nationwide integration with universities.',
         images: {
-          banner: 'https://res.cloudinary.com/omniswift/image/upload/v1774882485/contact-us-uploads/rrrjrpmcf2fictlobdz8.jpg',
-          icon: 'https://nelf.gov.ng/assets/NELFUND-logo.png',
-          intro: 'https://res.cloudinary.com/omniswift/image/upload/v1771848069/oswebsite/ubdsylr9tv4tfnjkobhi.jpg',
-          challenges: ['https://res.cloudinary.com/omniswift/image/upload/v1775047642/contact-us-uploads/q8seqzfxdgavynghfx9v.jpg', 'https://res.cloudinary.com/omniswift/image/upload/v1771848182/oswebsite/rrmnrtgi1xwlywbiui5q.jpg'],
-          technology: 'https://res.cloudinary.com/omniswift/image/upload/v1774882555/contact-us-uploads/okzpiwrq0oqzmx9wyi0x.jpg',
+          banner: '/images/projects/nelfund/banner.jpg',
+          icon: '/images/projects/nelfund/logo.png',
+          intro: '/images/projects/nelfund/1.png',
+          challenges: [
+            '/images/projects/nelfund/2.jpg',
+            '/images/projects/nelfund/3.jpg',
+          ],
+          technology: '/images/projects/nelfund/4.jpg',
         },
         challenge: {
           title: 'A secure, scalable platform integrated with universities to process Nigerian student loan applications while meeting security and data sovereignty requirements.',
@@ -46,28 +49,187 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
         link: 'https://nelf.gov.ng',
       },
       {
+        slug: 'project-nti',
+        title: 'National Teachers\' Institute',
+        description: 'Academic and administrative systems for universities and polytechnics. Our platforms manage student applications, records, course delivery, and payments, serving tens of thousands of students annually.',
+        images: {
+          banner: '/images/projects/nti/banner.png',
+          icon: '/images/projects/nti/logo.svg',
+          intro: '/images/projects/nti/1.jpg',
+          challenges: [
+            '/images/projects/nti/2.png',
+            '/images/projects/nti/4.png',
+          ],
+          technology: '/images/projects/nti/3.jpg',
+        },
+        challenge: {
+          title: 'Nigerian universities, polytechnics, and colleges required reliable digital systems to manage core academic operations.',
+          contents: [
+            'Handle 50,000+ applications annually during peak admission windows',
+            'Operate under intermittent connectivity conditions',
+            'Integrate with legacy academic and financial systems',
+            'Ensure long-term data accuracy and security',
+            'Downtime during admissions directly impacts institutional revenue and reputation.',
+            'Optimize platforms based on 10 years of operational data',
+          ],
+        },
+        solution: {
+          title: 'Designed, deployed, and operated student portal platforms for over 10 years, engineered for scale, reliability, and continuous optimization.',
+          deliverables: [
+            'Developed and operated student portal platforms for 10+ years',
+            'Built systems handling 50,000+ applications annually (500,000+ total)',
+            'Implemented load balancing for peak admission periods',
+            'Created offline-capable interfaces for low-connectivity scenarios',
+            'Integrated with the existing university academic and financial systems',
+          ],
+          impact: [
+            '500,000+ student applications successfully processed',
+            '99.9% uptime maintained during critical admission windows',
+            'Zero data loss incidents over decade of operations',
+            'Platforms continuously optimized based on 10 years of usage data',
+          ],
+        },
+        technology: 'Used an array of technologies to build the project including Cloud infrastructure, Data warehouse architecture, Automated analytics engine with Multi-stakeholder integration framework',
+        link: 'https://www.my.nti.edu.ng/',
+      },
+      {
+        slug: 'project-primes',
+        title: 'Presidential Metering Initiative Platform',
+        description: 'An enterprise-grade system to track and manage the entire meter asset lifecycle, from procurement and warehousing through installation and operation',
+        images: {
+          banner: '/images/projects/primes/banner.png',
+          icon: '/images/projects/primes/logo.png',
+          intro: '/images/projects/primes/1.png',
+          challenges: [
+            '/images/projects/primes/2.png',
+            '/images/projects/primes/3.png'
+          ],
+          technology: '/images/projects/primes/4.jpg',
+        },
+        challenge: {
+          title: 'Managing a 5-million-meter deployment across a 3-year national rollout',
+          contents: [
+            'Building an enterprise-grade system to manage and track the end-to-end meter asset lifecycle at national scale',
+            'Deploying and managing 5 million electricity meters within 3 years',
+            'Handling complex coordination between procurement, warehousing, installation, and operations',
+            'Enabling effective cost management and financial tracking',
+            'Supporting data-driven decision-making across the initiative',
+            'Scaling the system to handle national-level operations and high data volume',
+          ],
+        },
+        solution: {
+          title: 'Built a cloud-hosted enterprise platform providing end-to-end visibility and control over the national meter deployment program',
+          deliverables: [
+            '5 million meter deployment tracked across 3-year national rollout across all 36 states and the FCT',
+            'Complete meter asset lifecycle management system',
+            'Cost and benefit tracking across the program',
+            'Analytics dashboards for data-driven decision-making',
+            'Comprehensive data warehouse for collection, storage, and analysis',
+            'Automated reporting and analytics engine',
+          ],
+          impact: [
+            '5 million meter deployment tracked across 3-year national rollout',
+            'Real-time data accessible to stakeholders from anywhere',
+            'Automated progress and analytics reports generated continuously',
+            'Data-driven insights supporting program optimization decisions',
+            'Scalable cloud infrastructure ensuring high availability and global access'
+          ],
+        },
+        technology: 'Used an array of technologies to build the project including Cloud infrastructure, Secure databases, API integration framework and Compliance security layers',
+        link: 'https://64-23-142-69.nip.io',
+      },
+      {
+        slug: 'project-asterlio',
+        title: 'Asterlio',
+        description:
+          'Omnichannel customer-support CRM that pulls social, chat, and email into one Nuxt dashboard—tickets, routing, automations, and team analytics so agents respond faster with clearer context. Public experience at asterlio.com; authenticated product workspace at dev-app.asterlio.com.',
+        images: {
+          banner: '/images/projects/asterlio/banner.png',
+          icon: '/images/projects/asterlio/logo.png',
+          intro: '/images/projects/asterlio/1.png',
+          challenges: [
+            '/images/projects/asterlio/2.png',
+            '/images/projects/asterlio/3.png',
+          ],
+          technology: '/images/projects/asterlio/4.png',
+        },
+        challenge: {
+          title:
+            'Give growing teams one place to run support across WhatsApp, Instagram, Facebook, live site chat, and email—without losing speed, accountability, or visibility into volume, SLAs, and satisfaction.',
+          contents: [
+            'Conversations were scattered across channels, making it hard to prioritize work, avoid duplicate replies, and keep a single customer timeline.',
+            'Leaders needed trustworthy metrics—ticket mix, response and resolution times, CSAT, and staff availability—without exporting everything to spreadsheets.',
+            'Support workflows had to scale with teams: assignments, escalations, categories, and lightweight automation so agents focus on complex issues.',
+            'The product had to feel approachable for non-technical operators: fast onboarding, trial-friendly onboarding, and integrations connected with guided steps rather than custom code.',
+            'Customer data handling had to align with expectations around security and compliance (e.g. GDPR/CCPA) as messaging volume and retention grow.',
+            'The authenticated CRM experience needed a modern, responsive Nuxt workspace separate from the marketing site, with social sign-in options where appropriate.',
+          ],
+        },
+        solution: {
+          title:
+            'Shipped a Nuxt-based Asterlio workspace and marketing presence that unifies omnichannel conversations, ticket operations, collaboration, and analytics in one CRM-style dashboard.',
+          deliverables: [
+            'Built the customer-facing story and flows on asterlio.com—positioning, pricing, FAQs, and trial entry points including team-dashboard messaging.',
+            'Implemented the authenticated support CRM at https://app.asterlio.com/ with login, email/password, and OAuth options (e.g. Google and Facebook) aligned with the product narrative.',
+            'Delivered an omnichannel inbox model covering WhatsApp Business, Instagram DMs, Facebook Messenger, website live chat, and email in one operational view.',
+            'Implemented ticket management patterns—categories, status views, recent queues, and collaboration primitives such as assignment and escalation—to keep workloads organized.',
+            'Added analytics surfaces for operational insight: ticket counts and trends, response/resolution time ranges, CSAT, category breakdowns, date-range filters, and staff online/offline summaries.',
+            'Documented a low-friction integration story for business users (guided connection, no coding required) and enterprise-oriented assurances around encryption, data residency posture, and regulatory alignment described on the public site.',
+          ],
+          impact: [
+            'Support teams can centralize conversations instead of context-switching across vendor apps, improving consistency and time-to-first-response.',
+            'Managers gain readable operational dashboards that tie channel volume to team performance and customer satisfaction.',
+            'The split between marketing (asterlio.com) and the Nuxt CRM (app.asterlio.com) keeps acquisition clear while giving agents a focused daily workspace.',
+          ],
+        },
+        technology:
+          'Nuxt.js (Vue, TypeScript) authenticated CRM at dev-app.asterlio.com; public marketing and trial flows at asterlio.com; omnichannel integrations (WhatsApp Business, Instagram, Facebook Messenger, live chat, email); in-product ticket workflows and analytics; OAuth on the login experience (e.g. Google, Facebook); security and compliance messaging aligned with public documentation (encryption, GDPR/CCPA).',
+        link: 'https://asterlio.com/',
+      },
+      {
         slug: 'project-beezlinq',
         title: 'Beezlinq',
         description: 'Digital wallet and networking platform that keeps professional contacts in one place. It brings digital business cards, NFC cards, email signatures, and virtual backgrounds into a single workflow so users can create, update, and share their presence without scattered tools or lost leads—built for fast, consistent connection anywhere.',
         images: {
-          banner: 'banner',
-          icon: 'icon',
-          intro: 'intro',
-          challenges: ['challenge1', 'challenge2'],
-          technology: 'technology',
+          banner: '/images/projects/beezlinq/banner.png',
+          icon: '/images/projects/beezlinq/logo.png',
+          intro: '/images/projects/beezlinq/1.png',
+          challenges: [
+            '/images/projects/beezlinq/2.png',
+            '/images/projects/beezlinq/3.png',
+          ],
+          technology: '/images/projects/beezlinq/4.png',
         },
-
         challenge: {
-          title: 'Challenge',
-          contents: ['content1', 'content2'],
+          title:
+            'Replace scattered “contact me” links, PDFs, and one-off profiles with one shareable digital identity that feels premium, stays current, and works everywhere professionals meet.',
+          contents: [
+            'Professionals still lose momentum when their details live in too many places—static cards, inboxes, and social DMs—without a single canonical profile they can update once.',
+            'First-time users need a low-friction path from discovery to an active card: clear sign-up, familiar login options, and password recovery when they return after a gap.',
+            'A digital card product has to earn trust quickly: polished visuals, responsive layouts, and authentication choices (email/password plus OAuth) that match how people already sign in elsewhere.',
+            'Networking products compete on speed to share: generating links, QR-style handoffs, NFC, signatures, or backgrounds must not feel like separate mini-apps bolted together.',
+            'As profiles grow richer (media, links, social proof), the “wallet” metaphor should keep cards organized and easy to manage without overwhelming casual users.',
+            'The stack had to stay maintainable as the product evolves—Nuxt gives structured routing, SSR/SPA flexibility, and a consistent component model for marketing and authenticated surfaces.',
+          ],
         },
         solution: {
-          title: 'Solution',
-          deliverables: ['deliverable1', 'deliverable2'],
-          impact: ['impact1', 'impact2'],
+          title:
+            'Delivered a Nuxt-based Beezlinq experience that centers an eWallet for digital business cards, with onboarding and return visits handled through the dedicated login and sign-up flows.',
+          deliverables: [
+            'Implemented the public product story on beezlinq.com around an eWallet for digital business cards—emphasizing a stylish, easy-to-share card for meaningful connections.',
+            'Built the authentication surface at beezlinq.com/login with email/password login, account creation, forgot-password recovery, and OAuth entry points for Google and LinkedIn.',
+            'Structured the app as a Nuxt application so marketing, auth, and wallet-style card management can share layouts, state patterns, and deployment conventions.',
+            'Aligned UX copy and flows with the product promise: grow your network with a digital business card that is simple to use and share at the point of introduction.',
+            'Extended the networking model beyond a single static page—supporting richer presence formats (e.g. NFC, email signatures, virtual backgrounds) within one coherent product narrative where applicable.',
+          ],
+          impact: [
+            'Users move from fragmented contact exchange to one primary link or asset they control, reducing “wrong number / old title” moments after a role change.',
+            'Social and email-based sign-in lowers drop-off for returning users compared to forcing yet another unique password for a niche tool.',
+            'Nuxt’s conventions support faster iteration on landing, auth, and in-app surfaces as Beezlinq adds channels and card formats.',
+          ],
         },
-        technology: 'wwdwdwd',
-
+        technology:
+          'Nuxt.js (Vue, TypeScript) application for marketing and authenticated experiences; email/password authentication with sign-up and password reset flows; OAuth (Google, LinkedIn) on the login surface; digital business card / eWallet domain features as exposed in the product (e.g. NFC, signatures, backgrounds) integrated into a single Nuxt codebase pattern.',
         link: 'https://beezlinq.com/',
       },
       {
@@ -75,13 +237,13 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
         title: 'Savings Box',
         description: 'Nigerian fintech and e-commerce app for savings, loans, and investments. Users manage money and goals in one simple flow, with higher-yield savings and credit where available. The Jolly plan ties in everyday groceries and household goods to ease food inflation pressure and support disciplined spending.',
         images: {
-          banner: 'https://www.bexit.com.ng/wp-content/uploads/2023/10/SavingsBox-Portolifo-1.jpg',
-          icon: '/images/projects/savingsbox.png',
-          intro: 'https://www.bexit.com.ng/wp-content/uploads/2023/10/SavingsBox-Portolifo-3.jpg',
+          banner: '/images/projects/savingsbox/banner.jpg',
+          icon: '/images/projects/savingsbox/logo.png',
+          intro: '/images/projects/savingsbox/1.jpg',
           challenges: [
-            'https://www.bexit.com.ng/wp-content/uploads/2023/10/SavingsBox-Portolifo-4.jpg',
-            'https://www.bexit.com.ng/wp-content/uploads/2023/10/SavingsBox-Portolifo-5.jpg'],
-          technology: 'https://www.bexit.com.ng/wp-content/uploads/2023/10/SavingsBox-Portolifo-6.jpg',
+            '/images/projects/savingsbox/2.jpg',
+            '/images/projects/savingsbox/3.jpg'],
+          technology: '/images/projects/savingsbox/4.jpg',
         },
         challenge: {
           title:
@@ -121,11 +283,14 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
         title: 'Sena Homes Real Estate',
         description: 'UAE-focused listing platform for renting, leasing, and buying property—with no commission to users. It brings sale, purchase, and rental flows together so people can discover and compare homes in one place, with an emphasis on quality listings, a polished experience, and straightforward search and discovery.',
         images: {
-          banner: '	https://www.bexit.com.ng/wp-content/uploads/2023/10/SenaHomes-Portfolio-6.jpg',
-          icon: '/images/projects/sena-homes.png',
-          intro: '	https://www.bexit.com.ng/wp-content/uploads/2023/10/SenaHomes-Portfolio-1.jpg',
-          challenges: ['	https://www.bexit.com.ng/wp-content/uploads/2023/10/SenaHomes-Portfolio-5.jpg', '	https://www.bexit.com.ng/wp-content/uploads/2023/10/SenaHomes-Portfolio-4.jpg'],
-          technology: '	https://www.bexit.com.ng/wp-content/uploads/2023/10/SenaHomes-Portfolio-3.jpg',
+          banner: '/images/projects/senahomes/banner.jpg',
+          icon: '/images/projects/senahomes/logo.png',
+          intro: '/images/projects/senahomes/1.jpg',
+          challenges: [
+            '/images/projects/senahomes/2.jpg',
+            '/images/projects/senahomes/3.jpg'
+          ],
+          technology: '/images/projects/senahomes/4.jpg'
         },
         challenge: {
           title:
@@ -159,6 +324,193 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
           'Frontend: Vue.js, Nuxt.js (TypeScript), Vuex. UI: Vuetify, SCSS. Animation: Nuxt-AOS. Backend: PHP, Laravel. Data: MySQL, PostgreSQL. Infra: AWS, Docker.',
 
         link: 'https://senahomesrealestate.com/',
+      },
+      {
+        slug: 'project-realtimepay',
+        title: 'RealtimePay',
+        description: 'Modern utility web app for paying bills in one place—tokens, airtime, data, cable, and education pins—with secure wallet funding and real-time delivery. The experience is built around a single, clean dashboard for purchases, wallet top-ups, and account management, with security measures including two-factor authentication and protected payments.',
+        images: {
+          banner: '/images/projects/realtimepay/banner.jpg',
+          icon: '/images/projects/realtimepay/logo.png',
+          intro: '/images/projects/realtimepay/3.png',
+          challenges: [
+            '/images/projects/realtimepay/1.png',
+            '/images/projects/realtimepay/2.png'
+          ],
+          technology: '/images/projects/realtimepay/4.png',
+        },
+        challenge: {
+          title:
+            'Ship a modern, one-stop utility payments product—wallet-funded purchases, many bill categories, and admin tooling—without sacrificing speed, clarity, or trust at checkout.',
+          contents: [
+            'Users needed a single place to buy electricity tokens, mobile airtime, internet data, cable TV subscriptions, and education pins (e.g. WAEC registration and result checker)—instead of juggling multiple vendors and portals.',
+            'Utility purchases demand reliability: users expect secure payments, funded wallets, and near real-time fulfillment when services are dispatched.',
+            'The experience had to feel contemporary and easy to scan—strong landing and app UI, responsive layouts, and consistent UX across admin and customer surfaces, implemented from Figma.',
+            'Operations required a CMS-driven workflow so marketing pages, banners, FAQs, and in-app content can change quickly, including media workflows (dynamic content and drag-and-drop image selection).',
+            'Because money movement is involved, access control had to be strict: roles group permissions, and pages, functions, and user-visible content must align with what each role is provisioned to do.',
+            'The platform needed practical safeguards: OAuth and local login paths, 2FA, bounded sessions, and anti-abuse controls with rate limits and cooldowns communicated in the UI and enforced server-side—plus reporting for monitoring performance and volume.',
+          ],
+        },
+        solution: {
+          title:
+            'Built a Nuxt/Vue (TypeScript) utility stack on Laravel with Paystack funding, RBAC, CMS-driven content, and in-product analytics—optimized for fast bill purchases and dependable operations.',
+          deliverables: [
+            'Implemented Figma designs for the admin app and landing page, including core purchase and account flows, UX refinements, and responsive behavior across admin, user app, and marketing surfaces.',
+            'Integrated Paystack as the payment channel for wallet funding and bill payments, aligned with the product’s checkout and reconciliation needs.',
+            'Implemented role-based restrictions: permissions are provisioned through roles and enforced for pages, actions, and content on both client and server.',
+            'Delivered authentication and security controls (OAuth and local auth, 2FA, session limits) plus request throttling with user-visible limits and cooldown states.',
+            'Shipped CMS-backed content for admin and user experiences with simplified editorial steps, alongside charts, custom charts, date selectors, progress reporting, and spreadsheet exports.',
+          ],
+          impact: [
+            'Customers replace several fragmented portals with one streamlined bill-payment workflow, improving convenience for individuals and businesses.',
+            'Stronger security posture and clearer controls reduce operational risk as transaction volume grows.',
+            'Admin reporting and exports support faster decisions and fewer manual reconciliations compared to ad-hoc spreadsheets.',
+          ],
+        },
+        technology:
+          'Frontend: Vue.js, Nuxt.js (TypeScript), Pinia, Vuex. UI: Vuetify, SCSS, Tailwind. Animation: Nuxt-AOS, GSAP, vue-auto-animate. Backend: PHP, Laravel. Data: MySQL, PostgreSQL. Infra: AWS, Docker. Payments: Paystack.',
+        link: 'https://realtimepay.ng',
+      },
+      {
+        slug: 'project-safecircle',
+        title: 'SafeCircle Capital',
+        description:
+          'Digital group savings for families, friends, and coworkers—inspired by rotating savings circles (susu, partner, tanda) with clear schedules, transparent balances, and direct bank rails instead of informal cash handling. Marketing and education live at safecirclecapital.com; members run circles in a Next.js app at app.safecirclecapital.com, including login with phone or email, Google, and Apple.',
+        images: {
+          banner: '/images/projects/safecircle/banner.png',
+          icon: '/images/projects/safecircle/logo.png',
+          intro: '/images/projects/safecircle/1.png',
+          challenges: [
+            '/images/projects/safecircle/2.png',
+            '/images/projects/safecircle/3.png'
+          ],
+          technology: '/images/projects/safecircle/4.png',
+        },
+        challenge: {
+          title:
+            'Move trusted community saving online without losing clarity: fixed rules, visible payout order, honest contribution history, and bank-linked money movement people can audit—without the platform acting as an opaque custodian.',
+          contents: [
+            'Informal circles work on trust but break down when schedules, who paid, and whose turn is next live only in chats and memory.',
+            'Members expect payouts to hit real bank accounts on time, with notifications and a clear rotation—not informal handoffs that create disputes.',
+            'The product promised “no intermediaries” positioning: connect banks and facilitate member-to-member flows rather than pooling funds in a black box.',
+            'Automatic contributions require bank-grade connections and identity checks (e.g. Plaid-style linking and KYC) so fraud and mistaken pulls are minimized.',
+            'Admins need control to define contribution size, cadence, group size, start date, payout order, and member invites—while members need read-only transparency into the same plan.',
+            'Missed payments need a fair, visible policy: risk signals, admin alerts, retries where automation exists, and eventual removal paths that stay consistent with group agreements.',
+          ],
+        },
+        solution: {
+          title:
+            'Shipped a Next.js member experience and public acquisition site that digitizes rotating group savings with schedules, transparency tooling, and Plaid-backed bank connectivity framed around U.S. security expectations.',
+          deliverables: [
+            'Reflected the public value proposition on safecirclecapital.com: “Save Smarter Together,” how-it-works storytelling, FAQs (payouts, security, group creation, missed payments, payout order), pricing tiers, and resources (blogs, help center, guides).',
+            'Implemented the authenticated product entry at app.safecirclecapital.com/login—welcome flows for trusted circles, phone-or-email login, SMS consent paths where required, password recovery, and OAuth with Google and Apple plus account creation gated by Terms and Privacy acceptance.',
+            'Modeled group lifecycle flows aligned with the marketing narrative: admins create savings groups, set contribution amount, frequency, size, and start date, invite members, and configure payout order visible to the whole circle.',
+            'Surfaced transparency features described on the site: who contributed, what is due next, and group health in near real time so the circle stays aligned without side spreadsheets.',
+            'Documented and productized operational rules from the FAQ layer—direct bank payout on a member’s turn, KYC expectations for automated payments, retry behavior, and admin discretion on persistent delinquency.',
+          ],
+          impact: [
+            'Groups can keep the cultural savings model they already trust while reducing confusion and conflict from informal tracking.',
+            'Bank-linked, KYC-aware automation makes recurring contributions and payouts more repeatable than cash-only circles at scale.',
+            'Clear admin-configured payout order and member visibility reinforce the “full transparency” promise central to adoption.',
+          ],
+        },
+        technology:
+          'Next.js (React, TypeScript) for the member web app at app.safecirclecapital.com; public marketing and self-serve education at safecirclecapital.com; bank connectivity and security positioning including Plaid for integrations, bank-level encryption, and KYC for automated payments; OAuth (Google, Apple) and phone/email authentication on the login experience; mobile distribution via App Store and Google Play as listed on the marketing site.',
+        link: 'https://www.safecirclecapital.com/',
+      },
+      {
+        slug: 'project-pharmachain',
+        title: 'Pharmachain AI',
+        description:
+          'AI-assisted medicine discovery across a large verified pharmacy network—search by location, see availability-oriented results, and reduce blind phone calls. Public story and token positioning live on pharmachains.ai; authenticated access and search workflows run in a Nuxt app at app.pharmachains.ai, with sign-in via username, email, or phone, password, remember-me, Google OAuth, and sign-up.',
+        images: {
+          banner: '/images/projects/pharmachain/banner.png',
+          icon: '/images/projects/pharmachain/logo.png',
+          intro: '/images/projects/pharmachain/1.png',
+          challenges: [
+            '/images/projects/pharmachain/2.png',
+            '/images/projects/pharmachain/3.png'
+          ],
+          technology: '/images/projects/pharmachain/4.png',
+        },
+        challenge: {
+          title:
+            'Help patients find real stock and fair options fast—without pharmacy-hopping, opaque pricing, or weak authenticity signals—while still fitting into how people already search when they are stressed or ill.',
+          contents: [
+            'Classic workflows force people into queues and repeated calls, often learning a medicine is unavailable only after travel or long waits.',
+            'There is rarely trustworthy, near–real-time visibility into which nearby pharmacies actually carry a SKU before someone leaves home.',
+            'Price and convenience vary widely, yet most consumers lack a simple way to compare trusted options side by side.',
+            'Counterfeits and uncertain provenance erode confidence; patients need stronger authenticity and traceability narratives than a generic web search.',
+            'The product must scale discovery across a very large pharmacy footprint while keeping results localized and understandable for non-technical users.',
+            'A utility token and Web3 layer ($PHAI) has to be explained without alienating mainstream users who only want medicine quickly and safely.',
+          ],
+        },
+        solution: {
+          title:
+            'Shipped a Nuxt-powered Pharmachain workspace plus a marketing site that frames AI search, in-app pharmacy messaging, location-aware matching, and $PHAI-powered utility—from discovery through pharmacy onboarding.',
+          deliverables: [
+            'Built the acquisition narrative on pharmachains.ai: “Find Your Medicine in Seconds,” problem/solution story (queues, blind search, access, cost, trust), location-first search UX, chat-and-confirm positioning, and “Pharmachain in action” walkthroughs.',
+            'Surfaced the $PHAI utility story as described publicly—search fuel, contributor rewards tied to a decentralized knowledge graph, authenticity/traceability framing, and sustainability mechanics (burn/redistribution)—alongside starter incentives such as bonus $PHAI for new users.',
+            'Implemented the authenticated entry at app.pharmachains.ai/login with flexible identifier login (username, email, or phone), password, remember-me, forgot-password recovery, Google OAuth, and sign-up paths with Terms and Privacy links.',
+            'Aligned product flows with the marketed loop: set location, run a single AI-backed search across the verified pharmacy network, compare nearby options, and shortlist a pharmacy with confidence before pickup.',
+            'Added pharmacy-side growth surface on the marketing site (e.g. pre-registration / onboarding interest) so the network can expand beyond consumer search alone.',
+          ],
+          impact: [
+            'Patients can replace ad-hoc calling with one guided search and optional in-app confirmation, shrinking time-to-answer when a prescription is urgent.',
+            'Pharmacies gain a clearer channel for demand and verification instead of only reactive phone traffic.',
+            'Tokenized authenticity and reward narratives, when adopted, strengthen trust and data quality feedback loops beyond a traditional directory.',
+          ],
+        },
+        technology:
+          'Nuxt.js (Vue, TypeScript) for the authenticated web app at app.pharmachains.ai; public marketing and education at pharmachains.ai; AI-driven medicine search and availability matching across a broad verified pharmacy set; Web3 / $PHAI utility positioning for searches, contributor rewards, and on-chain authenticity narratives; OAuth (Google) on the login surface.',
+        link: 'https://pharmachains.ai/',
+      },
+      {
+        slug: 'project-successbox',
+        title: 'SuccessBOX',
+        description:
+          'Premium Nigerian digital learning for JSS1-SS3: 45+ curriculum-aligned subjects, 120+ interactive e-Textbooks, 50,000+ CBT-style practice items, smart progress analytics, and exam tracks for WAEC, NECO, JAMB, and BECE—studiable across devices with account sync. Marketing and acquisition live on successbox.ng; learners continue on a React web app at successbox.ng/login with email/password, remember-me, Google and Facebook sign-in, and password recovery.',
+        images: {
+          banner: '/images/projects/successbox/banner.png',
+          icon: '/images/projects/successbox/logo.png',
+          intro: '/images/projects/successbox/1.png',
+          challenges: [
+            '/images/projects/successbox/2.png',
+            '/images/projects/successbox/3.png'
+          ],
+          technology: '/images/projects/successbox/4.png',
+        },
+        challenge: {
+          title:
+            'Deliver a national-grade secondary learning product that feels as rich as paper plus video, yet stays organized, measurable, and affordable at scale for students, parents, and partner schools.',
+          contents: [
+            'Learners need Nigerian curriculum fidelity (JSS1-SS3) with credible pathways into high-stakes exams—not generic international content bolted on.',
+            'Digital textbooks must go beyond PDFs: embedded media, in-chapter interaction, search, and annotation patterns that survive real study sessions.',
+            'Practice at scale (tens of thousands of CBT items) only helps if explanations, analytics, and weak-area routing turn volume into better outcomes.',
+            'Students study on phones, tablets, and desktops; progress, bookmarks, and attempts must sync so switching devices never resets momentum.',
+            'Schools and families expect transparent pricing, institutional options, and trust signals (reviews, partner schools) comparable to offline tutoring brands.',
+            'Authentication and return visits must be frictionless—familiar email login plus social options—so daily study habits actually stick.',
+          ],
+        },
+        solution: {
+          title:
+            'Shipped a React-based SuccessBOX experience and public marketing site that package curriculum breadth, interactive e-Textbooks, large practice banks, analytics, and exam prep into one coherent student journey.',
+          deliverables: [
+            'Implemented the public story on successbox.ng: positioning as Nigeria\'s advanced digital education platform, feature grid (curriculum, e-Textbooks, CBT practice, analytics, multi-device, exam prep), subject showcase, partner-school trust band, testimonials, FAQ (product definition, pricing from ₦2,500/month, multi-device sync, curriculum alignment), and contact paths.',
+            'Built the learner entry at successbox.ng/login—welcome-back framing, email and password with remember-me, forgot password, OAuth with Google and Facebook, and sign-up handoff for new accounts.',
+            'Reflected the interactive textbook value proposition: highlights and notes, embedded explanatory video, in-chapter quizzes, and cross-library search as marketed on the landing experience.',
+            'Surfaced analytics and exam-excellence modules aligned with public copy: performance insight, WAEC/NECO/JAMB/BECE preparation tracks, and large CBT question banks with explanations.',
+            'Documented multi-device continuity and subscription flexibility in-product and on marketing pages so institutions can inquire while individuals self-serve.',
+          ],
+          impact: [
+            'Students replace fragmented PDFs, random YouTube, and last-minute cram apps with one structured path tied to Nigerian standards and major exams.',
+            'Teachers and families gain visibility into progress instead of guessing whether self-study is working.',
+            'Partner schools can endorse a single digital layer that still feels premium enough to sit beside physical textbooks.',
+          ],
+        },
+        technology:
+          'React.js (TypeScript) web platform for authenticated learning and account flows on successbox.ng (including successbox.ng/login); curriculum-aligned digital content delivery; interactive e-Textbook patterns (media, annotations, in-content assessment); large-scale CBT practice with analytics; OAuth (Google, Facebook); multi-device session/sync as described on the public site; operated in ecosystem context with Chronicles Software as noted on successbox.ng.',
+        link: 'https://successbox.ng/',
       },
     ],
     careerHistory: [
