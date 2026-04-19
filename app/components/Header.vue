@@ -102,67 +102,109 @@
 						></li>
 					</ul>
 				</section>
-				<!-- hamburger menu button -->
-				<button
-					type="button"
-					aria-label="Toggle Menu"
-					title="Toggle Menu"
-					tabindex="0"
-					class="tw:cursor-pointer tw:border-none tw:outline-none tw:focus:outline-none flex_center tw:p-0 tw:ml-6 tw:shrink-0 tw:md:hidden!"
-					@click="navMenuOpen = !navMenuOpen"
-					@keydown.enter="navMenuOpen = !navMenuOpen"
-					@keydown.space.prevent="navMenuOpen = !navMenuOpen"
-				>
-					<div class="tw:w-6 tw:h-6 tw:relative">
-						<!-- top -->
-						<span
-							:class="`tw:w-full tw:h-[0.15rem] shrink-0 tw:bg-tc-primary tw:block tw:absolute tw:transition-all tw:duration-300 tw:left-0 ${
-								navMenuOpen
-									? 'tw:top-1/2 tw:-translate-y-1/2 tw:rotate-45 tw:left-0'
-									: 'tw:top-0 tw:translate-y-0 tw:rotate-0'
-							}`"
-						></span>
-						<!-- middle -->
-						<span
-							:class="`tw:w-full tw:h-[0.15rem] shrink-0 tw:bg-tc-primary tw:block tw:absolute tw:transition-all tw:duration-300 tw:left-0 tw:top-1/2 tw:-translate-y-1/2 ${
-								navMenuOpen ? 'tw:opacity-0' : 'tw:opacity-100'
-							}`"
-						></span>
-						<!-- bottom -->
-						<span
-							:class="`tw:w-full tw:h-[0.15rem] shrink-0 tw:bg-tc-primary tw:block tw:absolute tw:transition-all tw:duration-300 tw:right-0 ${
-								navMenuOpen
-									? 'tw:bottom-1/2 tw:-translate-y-1/2 tw:-rotate-45'
-									: 'tw:bottom-0 tw:translate-y-0 tw:rotate-0'
-							}`"
-						></span>
-					</div>
-				</button>
 				<!-- qrcode -->
 				<SvgQRCode
 					class="tw:w-11 tw:h-11 tw:min-w-11 tw:md:block tw:hidden"
 					title="Scan to chat on whatsapp"
 				/>
+				<!-- hamburger menu -->
+				<Sheet v-model:open="navIsOpen" @update:open="setnavIsOpen">
+					<!-- hamburger menu button -->
+					<SheetTrigger
+						type="button"
+						aria-label="Toggle Menu"
+						title="Toggle Menu"
+						tabindex="0"
+						class="tw:cursor-pointer tw:border-none tw:outline-none tw:focus:outline-none flex_center tw:p-0 tw:ml-6 tw:shrink-0 tw:md:hidden!"
+					>
+						<div class="tw:w-6 tw:h-6 tw:relative">
+							<!-- top -->
+							<span
+								:class="`tw:w-full tw:h-[0.15rem] shrink-0 tw:block tw:absolute tw:transition-all tw:duration-300 tw:left-0 ${
+									navIsOpen
+										? 'tw:top-1/2 tw:-translate-y-1/2 tw:rotate-45 tw:left-0 tw:bg-tc-link'
+										: 'tw:top-0 tw:translate-y-0 tw:rotate-0 tw:bg-tc-primary'
+								}`"
+							></span>
+							<!-- middle -->
+							<span
+								:class="`tw:w-full tw:h-[0.15rem] shrink-0 tw:block tw:absolute tw:transition-all tw:duration-300 tw:left-0 tw:top-1/2 tw:-translate-y-1/2 ${
+									navIsOpen ? 'tw:opacity-0' : 'tw:opacity-100 tw:bg-tc-primary'
+								}`"
+							></span>
+							<!-- bottom -->
+							<span
+								:class="`tw:w-full tw:h-[0.15rem] shrink-0 tw:block tw:absolute tw:transition-all tw:duration-300 tw:right-0 ${
+									navIsOpen
+										? 'tw:bottom-1/2 tw:-translate-y-1/2 tw:-rotate-45 tw:bg-tc-link'
+										: 'tw:bottom-0 tw:translate-y-0 tw:rotate-0 tw:bg-tc-primary'
+								}`"
+							></span>
+						</div>
+					</SheetTrigger>
+					<SheetContent
+						class="tw:w-full tw:h-full tw:max-h-[calc(100vh-6.4rem)] tw:border-none tw:isolate tw:bg-bc-primary/70 tw:backdrop-blur-sm tw:overflow-hidden"
+						side="bottom"
+						aria-describedby="mobile-nav"
+						hide-close-button
+					>
+						<SheetTitle class="tw:sr-only">Mobile Navigation</SheetTitle>
+						<SheetDescription class="tw:sr-only">mobile-nav</SheetDescription>
+						<section
+							class="tw:flex tw:flex-col tw:justify-between tw:gap-2.5 tw:h-full tw:overflow-hidden"
+						>
+							<nav
+								class="tw:flex-auto tw:px-6 tw:py-11 tw:overflow-y-auto tw:w-full useCubicNestedTransition"
+								aria-label="Mobile navigation"
+							>
+								<ul class="tw:flex tw:flex-col tw:w-full tw:-mt-4">
+									<li
+										v-for="link in navigationLinks"
+										class="tw:w-full"
+										:key="`mobile-nav-${link.to}`"
+									>
+										<NuxtLink
+											:to="link.to"
+											:aria-current="isActive(link.to) ? 'page' : undefined"
+											@click="setnavIsOpen(false)"
+											:class="`tw:font-medium tw:hover:text-tc-link tw:gap-1 tw:block tw:w-full tw:hover:text-4xl tw:py-4 tw:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-white tw:focus-visible:ring-offset-2 tw:focus-visible:rounded-2 tw:border-b tw:border-bc-stroke tw:border-solid ${
+												isActive(link.to)
+													? 'tw:text-tc-link tw:text-4xl'
+													: 'tw:text-tc-primary tw:text-2xl'
+											}`"
+											>{{ link.label }}</NuxtLink
+										>
+									</li>
+								</ul>
+							</nav>
+						</section>
+					</SheetContent>
+				</Sheet>
 			</section>
 		</div>
 	</header>
 </template>
 
 <script lang="ts" setup>
+	import {
+		Sheet,
+		SheetContent,
+		SheetDescription,
+		SheetTitle,
+		SheetTrigger,
+	} from "@/components/ui/sheet";
 	const colorScheme = useCookie<ColorScheme>("colorScheme");
+	const { y: scrollY } = useWindowScroll();
 	const route = useRoute();
+	const { $getState } = useNuxtApp();
 
 	const currentScheme = computed(
 		() => (colorScheme.value ?? "light") as ColorScheme
 	);
+	const hasScrolled = computed(() => scrollY.value > 100);
 
-	const handleColorSchemeToggle = () => {
-		const next: ColorScheme = currentScheme.value === "dark" ? "light" : "dark";
-		colorScheme.value = next;
-	};
-	const navMenuOpen = ref(true);
-	const isActive = (href: string) =>
-		href === "/" ? route.path === "/" : route.path.startsWith(href);
+	const navIsOpen = ref(false);
+	const viewportWidth = computed(() => $getState("viewportWidth"));
 
 	const navigationLinks = [
 		{
@@ -178,6 +220,21 @@
 			to: "/",
 		},
 	];
+
+	const isActive = (href: string) =>
+		href === "/" ? route.path === "/" : route.path.startsWith(href);
+	const setnavIsOpen = (val: boolean) => {
+		navIsOpen.value = val;
+	};
+	const handleColorSchemeToggle = () => {
+		const next: ColorScheme = currentScheme.value === "dark" ? "light" : "dark";
+		colorScheme.value = next;
+	};
+	watch(viewportWidth, (value) => {
+		if (value >= 960) {
+			setnavIsOpen(false);
+		}
+	});
 </script>
 
 <style></style>
