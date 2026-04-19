@@ -512,6 +512,101 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
           'React.js (TypeScript) web platform for authenticated learning and account flows on successbox.ng (including successbox.ng/login); curriculum-aligned digital content delivery; interactive e-Textbook patterns (media, annotations, in-content assessment); large-scale CBT practice with analytics; OAuth (Google, Facebook); multi-device session/sync as described on the public site; operated in ecosystem context with Chronicles Software as noted on successbox.ng.',
         link: 'https://successbox.ng/',
       },
+      {
+        slug: 'project-tiqwa',
+        title: 'Tiqwa',
+        description:
+          'Travel technology stack that opens inventory to agencies, tour operators, and fintechs: REST developer APIs, smart booking widget, white-label OTA, B2B agent tooling, and corporate travel—combining Amadeus Enterprise with Tiqwa\'s consolidator layer for SOTO and African local airline coverage. Public platform story at tiqwa.com; next-generation Anchor onboarding and account creation at https://v2.tiqwa.com/create-account.',
+        images: {
+          banner: '/images/projects/tiqwa/banner.png',
+          icon: '/images/projects/tiqwa/logo.ico',
+          intro: '/images/projects/tiqwa/1.png',
+          challenges: [
+            '/images/projects/tiqwa/2.png',
+            '/images/projects/tiqwa/3.png'
+          ],
+          technology: '/images/projects/tiqwa/4.png',
+        },
+        challenge: {
+          title:
+            'Unify global GDS-grade flight capability with local African inventory, then ship it through multiple go-to-market shapes—raw API, embeddable widget, full OTA, B2B desks, and corporate policy—without fragmenting admin, payments, or trust.',
+          contents: [
+            'Travel sellers still rebuild the same integrations, booking rails, and reporting stacks instead of buying a composable platform that scales from API-only to full white-label.',
+            'Product surfaces span marketing, authenticated admin, embeddable booking widgets, and email—each must stay visually aligned, responsive, and fast enough for conversion-heavy flows.',
+            'Money movement is multi-channel (Paystack, Flutterwave, bank transfer); reconciliation and operator UX cannot be an afterthought.',
+            'Large teams need strict governance: roles bundle permissions, and pages, actions, and CMS-driven content must respect what each operator is provisioned to see or change.',
+            'Authentication and abuse resistance matter at API and UI layers—local login with 2FA expectations, bounded sessions, and rate limits with cooldown feedback mirrored server-side.',
+            'Leadership needs operational truth in the product: charts, custom views, date filters, progress reporting, and spreadsheet exports instead of manual reporting loops.',
+          ],
+        },
+        solution: {
+          title:
+            'Delivered Nuxt/Vue (TypeScript) admin, customer, widget, and email experiences on Laravel-backed services—payment diversity, RBAC, CMS-driven dynamic content, and analytics—aligned with Tiqwa’s API-first travel platform narrative.',
+          deliverables: [
+            'Implemented Figma designs across the admin application, smart booking widget surfaces, and responsive user journeys—including cross-platform email templates and structure testing.',
+            'Integrated multiple payment channels (Paystack, Flutterwave, bank transfer) so agencies and platforms can collect funds with flexibility appropriate to each market.',
+            'Built a role-and-permission system where roles aggregate permissions and access to pages, functions, and user-visible content is validated consistently on client and server.',
+            'Hardened authentication (local auth with 2FA posture), session limits, and request throttling with user-visible limits and cooldown states enforced server-side.',
+            'Shipped CMS workflows so admin-curated content powers both admin and user-facing areas with simplified editorial steps, plus drag-and-drop image selection where required.',
+            'Implemented operational analytics: charts (including custom charts), date selectors, progress views, and table export to sheets for reporting and decision support.',
+            'Supported the next-generation Anchor experience entry at v2.tiqwa.com/create-account alongside the public developer and product story on tiqwa.com (APIs, Anchor OTA, corporate, white-label, B2B).',
+          ],
+          impact: [
+            'Agencies and partners ship faster by integrating one consolidated travel stack instead of stitching GDS, local inventory, and booking UI separately.',
+            'Stronger internal controls and clearer reporting reduce operational risk as transaction volume and headcount grow.',
+            'Consistent UI, widget, and email quality improves end-customer trust and retention for Tiqwa-powered brands.',
+          ],
+        },
+        technology:
+          'Frontend: Vue.js, Nuxt.js (TypeScript), Pinia, Vuex. Styling: SCSS, Tailwind. Animation: vue-auto-animate. Backend: PHP, Laravel. Data: MySQL, PostgreSQL. Infra: AWS, Docker, AWS Amplify, Vercel. Payments: Paystack, Flutterwave, bank transfer. APIs and sandboxes as offered publicly (e.g. sandbox.tiqwa.com).',
+        link: 'https://www.tiqwa.com/',
+      },
+      {
+        slug: 'project-korner',
+        title: 'Korner',
+        description:
+          'E-commerce for beauty and skincare on Korner.ng—a curated catalog for women and men spanning hair care, grooming, oral care, K-beauty, anti-aging, acne, sensitive skin, gift sets, and more, with merchandising rails like new & trending, featured, top-rated, and top-selling plus brand/price/rating filters. Shoppers check out with multiple payment options; operators run the business from a Laravel-backed admin CMS.',
+        images: {
+          banner: 'banner',
+          icon: 'icon',
+          intro: 'intro',
+          challenges: ['challenge1', 'challenge2'],
+          technology: 'technology',
+        },
+        challenge: {
+          title:
+            'Launch a premium-feeling skincare marketplace that merchandises a wide attribute-heavy catalog without overwhelming shoppers—while giving ops a CMS, payments, RBAC, and analytics that keep inventory and campaigns honest at scale.',
+          contents: [
+            'Beauty SKUs explode across brands, concerns, and claims; navigation, filters (brand, price, rating), and category trees must stay fast and trustworthy on real devices.',
+            'Merchandising is continuous—hero campaigns, “new & trending,” confidence-led storytelling, and product grids need CMS control without developer bottlenecks.',
+            'Checkout must support the payment mix customers expect in-market (cards, wallets, Apple Pay) without fragile one-off integrations per channel.',
+            'Catalog data is relational-heavy: products, suppliers, categories, subcategories, and attributes must stay consistent between admin authoring and storefront rendering.',
+            'Teams need governance: roles bundle permissions so only provisioned staff touch pricing, suppliers, sensitive settings, or customer data.',
+            'Authentication, fraud, and abuse resistance matter for retail peaks—2FA posture, local credentials, bounded sessions, and rate limits with cooldown feedback mirrored server-side.',
+          ],
+        },
+        solution: {
+          title:
+            'Delivered a Nuxt/Vue (TypeScript, Pinia) storefront and admin CMS on Laravel with Vuetify—multi-gateway checkout, RBAC, rich CMS (products, suppliers, taxonomy, attributes), drag-and-drop media, and operational analytics.',
+          deliverables: [
+            'Implemented Figma-driven admin CMS and customer storefront UX—including responsive layouts, promotional sections (e.g. hero and “Get your Confidence Back” style campaigns), category hubs, and product discovery grids aligned with Korner.ng.',
+            'Built storefront filtering and merchandising patterns reflected on the live site: brand, price, and rating filters; rails for new/trending, featured, top-rated, and top-selling inventory.',
+            'Integrated multiple payment channels (Paystack, Opay, Flutterwave, Apple Pay) so checkout matches regional and premium-wallet expectations.',
+            'Implemented role-based access: permissions are grouped into roles and enforced for pages, functions, and CMS-backed content on client and server.',
+            'Shipped authentication hardening—verified email and password sign-in at korner.ng/auth/login with registration and forgot-password flows, session limits, optional OAuth paths where the product enables social sign-in, and 2FA-ready posture for sensitive accounts.',
+            'Delivered CMS workflows with simplified steps, dynamic content, drag-and-drop image selection, and commerce primitives for products, suppliers, categories, subcategories, and attributes.',
+            'Added operational reporting: charts (including custom charts), date selectors, progress summaries, and spreadsheet exports for catalog, orders, and growth decisions.',
+          ],
+          impact: [
+            'Customers discover curated skincare and grooming faster with filters and editorial rails instead of endless scrolling.',
+            'Operators scale catalog and campaigns through the CMS instead of redeploying the storefront for every merchandising tweak.',
+            'Finance and trust improve when payments and permissions are consistent, observable, and exportable for reconciliation.',
+          ],
+        },
+        technology:
+          'Frontend: Vue.js, Nuxt.js (TypeScript), Pinia. UI: Vuetify, SCSS, Tailwind. Animation: Nuxt-AOS, GSAP. Backend: PHP, Laravel. Data: MySQL, PostgreSQL. Infra: AWS, Docker, Kubernetes. Payments: Paystack, Opay, Flutterwave, Apple Pay. Storefront and auth entry at korner.ng and korner.ng/auth/login; mobile distribution links as presented on Korner.ng (Google Play, App Store).',
+        link: 'https://korner.ng/',
+      },
     ],
     careerHistory: [
       {
