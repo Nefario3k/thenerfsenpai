@@ -1,6 +1,7 @@
 declare global {
     type ColorScheme = "light" | "dark";
     interface TypeProjects {
+        slug: string;
         title: string;
         description: string;
         images: {
@@ -10,12 +11,9 @@ declare global {
             challenges: string[];
             technology: string;
         };
-        challenge: string;
-        technology: {
-            description: string;
-            list: string[];
-        };
-        outcome: string;
+        challenge: { title: string; contents: string[] };
+        solution: { title: string; deliverables: string[]; impact: string[] };
+        technology: string;
         link: string;
     }
     interface TypeCareerHistory {
@@ -35,6 +33,7 @@ declare global {
         viewportWidth: number;
         careerHistory: TypeCareerHistory[];
         techStack: TypeTechStack[];
+        projects: TypeProjects[];
     }
 
     type TypeAppResourceKeys = keyof TypeAppResource;
