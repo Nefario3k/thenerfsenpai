@@ -100,4 +100,11 @@ export default defineNuxtConfig({
 	vite: {
 		plugins: [tailwindcss()],
 	},
+	sitemap: {
+		sources: ["/api/__sitemap__/urls"],
+		autoLastmod: true,
+	},
+	robots: {
+		allow: ["/"],
+	},
 });

@@ -18,10 +18,10 @@
 			>
 				<div>
 					<div class="tw:md:sticky tw:md:top-56 tw:md:left-0">
-						<h3 class="tw:font-medium tw:text-lg">The Nerf Senpai</h3>
-						<h4 class="tw:font-medium tw:text-base tw:text-tc-secondary">
+						<p class="tw:font-medium tw:text-lg">The Nerf Senpai</p>
+						<p class="tw:font-medium tw:text-base tw:text-tc-secondary">
 							Creative Developer
-						</h4>
+						</p>
 					</div>
 				</div>
 				<!-- image -->
@@ -41,9 +41,9 @@
 		<!-- profile section -->
 		<section class="tw:sm:px-12 tw:px-4">
 			<div class="tw:py-16 tw:border-b tw:border-bc-stroke tw:space-y-10">
-				<p class="tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary">
+				<h2 class="tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary">
 					Profile ↘
-				</p>
+				</h2>
 				<div
 					class="tw:sm:text-xl tw:text-base tw:font-normal tw:text-tc-secondary tw:font-verdana"
 				>
@@ -131,7 +131,7 @@
 					<strong>📧 Contact Me</strong>: Reach out via LinkedIn messaging or at
 					<a
 						href="mailto:thenerfsenpai@gmail.com"
-						class="tw:text-tc-link tw:underline tw:font-medium"
+						class="tw:text-tc-link tw:underline tw:font-medium tw:rounded-sm tw:focus-visible:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-tc-link tw:focus-visible:ring-offset-2 tw:focus-visible:ring-offset-bc-primary"
 						>thenerfsenpai@gmail.com</a
 					>
 					for inquiries, opportunities, or just a friendly chat. <br /><br />
@@ -146,11 +146,11 @@
 				class="tw:grid tw:md:grid-cols-2 tw:grid-cols-1 tw:gap-10 tw:py-16 tw:border-b tw:border-bc-stroke"
 			>
 				<div>
-					<p
+					<h2
 						class="tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:md:sticky tw:md:top-56 tw:md:left-0"
 					>
 						Tools & Tech ↘
-					</p>
+					</h2>
 				</div>
 				<aside class="tw:sm:space-y-8 tw:space-y-4">
 					<div
@@ -162,11 +162,11 @@
 								: ''
 						}`"
 					>
-						<p
+						<h3
 							class="tw:text-medium tw:sm:text-4xl tw:text-8 tw:text-tc-primary"
 						>
 							{{ element.title }}
-						</p>
+						</h3>
 						<div class="tw:md:columns-4 tw:sm:columns-3 tw:columns-2 tw:gap-4">
 							<template v-for="item in element.content" :key="item">
 								<p
@@ -186,11 +186,11 @@
 				class="tw:grid tw:md:grid-cols-2 tw:grid-cols-1 tw:gap-10 tw:py-16 tw:border-b tw:border-bc-stroke"
 			>
 				<div>
-					<p
+					<h2
 						class="tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:md:sticky tw:md:top-56 tw:md:left-0"
 					>
 						Career ↘
-					</p>
+					</h2>
 				</div>
 				<aside>
 					<Accordion
@@ -267,9 +267,9 @@
 		<!-- GitHub contributions ↘ -->
 		<section class="tw:sm:px-12 tw:px-4">
 			<div class="tw:space-y-10 tw:py-16">
-				<p class="tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary">
+				<h2 class="tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary">
 					GitHub contributions ↘
-				</p>
+				</h2>
 				<aside>
 					<GitHubContributions
 						:pending="contributionsPending"
@@ -312,7 +312,7 @@
 
 	const openedProject = ref<string>("0");
 	usePortfolioSeo({
-		title: "Davies Okpeta | Mission-Critical Software Engineer",
+		title: "Davies Okpeta | About",
 		description:
 			"Senior Software Engineer. Portfolio showcasing work with React, Next.js, Vue, Nuxt and modern web technologies.",
 		ogImage: "/images/dark-lg-logo.png",

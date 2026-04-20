@@ -1,3 +1,5 @@
+import type { ComputedRef } from "vue";
+
 const DEFAULT_SITE_NAME = "TheNerfSenpai";
 const DEFAULT_DESCRIPTION =
 	"Davies Okpeta — Senior Fullstack Web Developer portfolio. React, Next.js, Vue, Nuxt and modern web technologies.";
@@ -51,4 +53,23 @@ export const usePortfolioSeo = (options: UsePortfolioSeoOptions = {}) => {
 		link: [{ rel: "canonical", href: canonical }],
 		meta: [{ name: "keywords", content: keywords }],
 	});
+};
+
+/** Per-project route SEO; updates when `project` ref changes (e.g. client navigates between slugs). */
+export const useProjectSeo = (project: ComputedRef<TypeProjects | undefined>) => {
+	watch(
+		project,
+		(p) => {
+			if (!p) return;
+			const extra = [p.technology, p.type, p.client].filter(Boolean).join(", ");
+			usePortfolioSeo({
+				title: p.title,
+				description: p.description,
+				ogImage: p.images.banner,
+				canonicalPath: `/projects/${p.slug}`,
+				keywords: extra,
+			});
+		},
+		{ immediate: true }
+	);
 };

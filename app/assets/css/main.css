@@ -108,3 +108,11 @@ body {
 .useNestedTransitionLonger * {
 	transition: all 0.5s ease-in-out !important;
 }
+
+/* Baseline keyboard focus for native controls (Tailwind `outline-none` overrides where applied). */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+	outline: 2px solid var(--tw-color-tc-link);
+	outline-offset: 2px;
+}

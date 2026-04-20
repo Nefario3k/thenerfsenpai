@@ -6,6 +6,8 @@
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
 		class="tw:w-full tw:h-full tw:border-y tw:border-bc-stroke tw:block"
+		aria-hidden="true"
+		focusable="false"
 	>
 		<g clip-path="url(#clip0_241_48166)">
 			<g clip-path="url(#clip1_241_48166)">

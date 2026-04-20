@@ -11,7 +11,7 @@
 					:src="project.images.icon"
 					width="100%"
 					height="100%"
-					alt="Project logo`"
+					:alt="`${project.title} logo`"
 					class="tw:w-auto tw:min-w-10 tw:h-full tw:max-h-20 tw:object-contain tw:object-center tw:shrink-0"
 					densities="x1 x2"
 					preload
@@ -64,6 +64,7 @@
 				<a
 					:href="project.link"
 					target="_blank"
+					rel="noopener noreferrer"
 					title="Visit Live Project"
 					class="tw:text-sm tw:py-3 tw:text-tc-link tw:font-medium useNestedTransition tw:hover:text-tc-link-2 tw:border-b tw:border-transparent tw:border-dashed tw:hover:border-tc-link-2"
 					v-if="project.link"
@@ -101,7 +102,7 @@
 					:src="project.images.intro"
 					width="100%"
 					height="100%"
-					alt="Intro banner image`"
+					:alt="`${project.title} intro image`"
 					class="tw:w-full tw:h-full tw:object-cover tw:object-top"
 					densities="x1 x2"
 					loading="lazy"
@@ -158,7 +159,7 @@
 							:src="image"
 							width="100%"
 							height="100%"
-							alt="Challenges image`"
+							:alt="`${project.title} challenge image ${index + 1}`"
 							class="tw:w-full tw:h-full tw:object-cover tw:object-center"
 							densities="x1 x2"
 							loading="lazy"
@@ -194,7 +195,7 @@
 					:src="project.images.technology"
 					width="100%"
 					height="100%"
-					alt="Technology banner image`"
+					:alt="`${project.title} technology image`"
 					class="tw:w-full tw:h-full tw:object-cover tw:object-top"
 					densities="x1 x2"
 					loading="lazy"
@@ -254,11 +255,11 @@
 			v-if="relatedWorks.length > 0"
 			class="tw:border-t tw:border-bc-stroke"
 		>
-			<h4
+			<h2
 				class="tw:sm:px-12 tw:px-4 tw:py-4 tw:text-sm tw:text-tc-secondary tw:font-medium"
 			>
 				Related Works ↘
-			</h4>
+			</h2>
 			<ProjectWrapper :list="relatedWorks" />
 		</section>
 		<!-- break -->
@@ -306,6 +307,9 @@
 				item.type === project.value?.type && item.slug !== project.value?.slug
 		);
 	});
+
+	useProjectSeo(project);
+	useProjectStructuredData(project);
 </script>
 
 <style></style>

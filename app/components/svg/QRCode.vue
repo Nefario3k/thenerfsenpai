@@ -5,7 +5,10 @@
 		height="280"
 		xmlns:xlink="http://www.w3.org/1999/xlink"
 		viewBox="0 0 280 280"
+		role="img"
+		:aria-label="accessibleLabel"
 	>
+		<title>{{ accessibleLabel }}</title>
 		<defs>
 			<clipPath id="clip-path-background-color-13">
 				<rect x="0" y="0" width="280" height="280" />
@@ -1837,6 +1840,16 @@
 	</svg>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+	withDefaults(
+		defineProps<{
+			/** Accessible name; also rendered as the SVG title element. */
+			accessibleLabel?: string;
+		}>(),
+		{
+			accessibleLabel: "WhatsApp QR code",
+		}
+	);
+</script>
 
 <style></style>

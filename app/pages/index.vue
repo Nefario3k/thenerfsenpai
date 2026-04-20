@@ -11,10 +11,10 @@
 					class="tw:sm:w-24 tw:sm:h-24 tw:w-16 tw:h-16 tw:block tw:object-cover tw:object-center tw:rounded-4 tw:aspect-square tw:shrink-0"
 				/>
 				<div>
-					<h3 class="tw:font-medium tw:text-lg">The Nerf Senpai</h3>
-					<h4 class="tw:font-medium tw:text-base tw:text-tc-secondary">
+					<p class="tw:font-medium tw:text-lg">The Nerf Senpai</p>
+					<p class="tw:font-medium tw:text-base tw:text-tc-secondary">
 						Creative Developer
-					</h4>
+					</p>
 				</div>
 			</div>
 
@@ -30,7 +30,7 @@
 		<!-- link -->
 		<NuxtLink
 			to="/projects"
-			class="tw:text-sm tw:hover:text-tc-link tw:font-medium flex_center tw:h-11 tw:w-full useNestedTransition"
+			class="tw:text-sm tw:hover:text-tc-link tw:font-medium flex_center tw:h-11 tw:w-full useNestedTransition tw:rounded-sm tw:focus-visible:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-tc-link tw:focus-visible:ring-offset-2 tw:focus-visible:ring-offset-bc-primary"
 		>
 			More Projects →
 		</NuxtLink>
@@ -51,7 +51,7 @@
 	const { $getState } = useNuxtApp();
 	const projects = computed(() => $getState("projects").slice(0, 4));
 	usePortfolioSeo({
-		title: "Davies Okpeta | Mission-Critical Software Engineer",
+		title: "Davies Okpeta | Portfolio & Selected Work",
 		description:
 			"Senior Fullstack Web Developer. Portfolio showcasing work with React, Next.js, Vue, Nuxt and modern web technologies.",
 		ogImage: "/images/dark-lg-logo.png",

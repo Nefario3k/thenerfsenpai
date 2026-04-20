@@ -12,7 +12,6 @@
 	function updateViewportWidth() {
 		$setState("viewportWidth", window.innerWidth);
 	}
-	usePortfolioSeo();
 	useStructuredData();
 
 	const prefersReducedMotion = inject<Ref<boolean>>(

@@ -3,6 +3,8 @@
 		<div
 			v-if="pending"
 			class="tw:rounded-md tw:border tw:border-bc-stroke tw:p-6 tw:text-sm tw:text-tc-secondary tw:font-verdana"
+			role="status"
+			aria-live="polite"
 			aria-busy="true"
 		>
 			Loading contribution graph…

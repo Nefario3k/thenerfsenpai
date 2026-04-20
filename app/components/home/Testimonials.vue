@@ -1,21 +1,25 @@
 <template>
 	<section class="tw:mb-4 tw:overflow-hidden">
-		<p
+		<h2
 			class="tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:mb-4 tw:sm:px-12 tw:px-4"
 		>
 			Testimonials ↘
-		</p>
+		</h2>
 		<section class="tw:sm:py-8 tw:space-y-16">
-			<HorizontalScroll ref="horizontalScrollRef" @metrics="onMetrics">
+			<HorizontalScroll
+				ref="horizontalScrollRef"
+				aria-label="Testimonials, scroll horizontally to read more"
+				@metrics="onMetrics"
+			>
 				<div
 					class="tw:grid tw:gap-8 tw:grid-flow-col tw:min-w-max tw:sm:px-12 tw:px-4"
 				>
-					<div
+					<article
 						v-for="(testimonial, testimonialIndex) in testimonials"
 						:key="testimonial.name"
 					>
 						<div
-							class="tw:md:w-200 tw:w-[36.6rem] tw:min-w-min tw:h-full tw:min-h-200 tw:border tw:border-tc-tertiary tw:relative tw:md:p-8 tw:p-5 tw:flex tw:flex-col tw:justify-between tw:gap-10 tw:isolate tw:group useNestedTransition"
+							class="tw:md:w-200 tw:w-[36.6rem] tw:min-w-min tw:h-full tw:min-h-200 tw:border tw:border-tc-tertiary tw:relative tw:md:p-8 tw:p-5 tw:isolate tw:group useNestedTransition"
 						>
 							<!-- dots -->
 							<div
@@ -33,44 +37,48 @@
 								}"
 							></div>
 							<!-- quote -->
-							<div
-								class="tw:sm:text-lg tw:text-sm tw:text-tc-secondary tw:font-normal tw:md:group-hover:text-white no-scrollbar"
+							<blockquote
+								class="tw:m-0 tw:sm:text-lg tw:text-sm tw:text-tc-secondary tw:font-normal tw:md:group-hover:text-white no-scrollbar tw:flex tw:flex-col tw:justify-between tw:gap-10 tw:min-h-full"
+								:cite="testimonial.link"
 							>
-								"
-								<div v-html="testimonial.quote" class="tw:inline"></div>
-								"
-							</div>
-							<!-- author -->
-							<a
-								:href="testimonial.link"
-								target="_blank"
-								class="tw:flex tw:items-center tw:gap-2 tw:border-0 tw:ring-0 tw:cursor-pointer"
-							>
-								<NuxtImg
-									v-if="testimonial.image"
-									:src="testimonial.image"
-									:alt="testimonial.name"
-									width="100"
-									height="100"
-									loading="lazy"
-									class="tw:w-15 tw:h-15 tw:object-cover tw:object-top tw:rounded-full tw:shrink-0"
-								/>
-								<div class="tw:text-tc-secondary tw:md:group-hover:text-white">
-									<h3
-										class="tw:sm:text-lg tw:text-sm tw:font-bold tw:font-verdana tw:capitalize"
+								<div v-html="testimonial.quote"></div>
+								<footer class="tw:mt-10 tw:font-normal">
+									<a
+										:href="testimonial.link"
+										target="_blank"
+										rel="noopener noreferrer"
+										class="tw:flex tw:items-center tw:gap-2 tw:border-0 tw:ring-0 tw:cursor-pointer tw:rounded-sm tw:focus-visible:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-tc-link tw:focus-visible:ring-offset-2 tw:focus-visible:ring-offset-bc-primary"
+										:aria-label="`${testimonial.name} on LinkedIn (opens in a new tab)`"
 									>
-										{{ testimonial.name }}
-									</h3>
-									<p
-										class="tw:text-xs tw:font-verdana tw:first-letter:uppercase tw:line-clamp-1"
-										:title="testimonial.role"
-									>
-										{{ testimonial.role }}
-									</p>
-								</div>
-							</a>
+										<NuxtImg
+											v-if="testimonial.image"
+											:src="testimonial.image"
+											alt=""
+											width="100"
+											height="100"
+											loading="lazy"
+											class="tw:w-15 tw:h-15 tw:object-cover tw:object-top tw:rounded-full tw:shrink-0"
+										/>
+										<div
+											class="tw:text-tc-secondary tw:md:group-hover:text-white"
+										>
+											<cite
+												class="tw:sm:text-lg tw:text-sm tw:font-bold tw:font-verdana tw:capitalize tw:not-italic tw:block"
+											>
+												{{ testimonial.name }}
+											</cite>
+											<p
+												class="tw:text-xs tw:font-verdana tw:first-letter:uppercase tw:line-clamp-1"
+												:title="testimonial.role"
+											>
+												{{ testimonial.role }}
+											</p>
+										</div>
+									</a>
+								</footer>
+							</blockquote>
 						</div>
-					</div>
+					</article>
 				</div>
 			</HorizontalScroll>
 			<!-- controls -->
@@ -87,7 +95,7 @@
 				<!-- left navigation -->
 				<button
 					type="button"
-					class="tw:w-10 tw:h-10 tw:bg-tc-primary flex_center tw:hover:bg-tc-link tw:cursor-pointer tw:group tw:disabled:opacity-40 tw:disabled:cursor-not-allowed tw:disabled:hover:bg-tc-primary useNestedTransition"
+					class="tw:w-10 tw:h-10 tw:bg-tc-primary flex_center tw:hover:bg-tc-link tw:cursor-pointer tw:group tw:disabled:opacity-40 tw:disabled:cursor-not-allowed tw:disabled:hover:bg-tc-primary useNestedTransition tw:rounded-sm tw:focus-visible:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-tc-link tw:focus-visible:ring-offset-2 tw:focus-visible:ring-offset-bc-primary"
 					aria-label="Previous testimonials"
 					:disabled="!canScrollPrev"
 					@click="scrollPrev"
@@ -126,7 +134,7 @@
 				<!-- right navigation -->
 				<button
 					type="button"
-					class="tw:w-10 tw:h-10 tw:bg-tc-primary flex_center tw:hover:bg-tc-link tw:cursor-pointer tw:group tw:disabled:opacity-40 tw:disabled:cursor-not-allowed tw:disabled:hover:bg-tc-primary useNestedTransition"
+					class="tw:w-10 tw:h-10 tw:bg-tc-primary flex_center tw:hover:bg-tc-link tw:cursor-pointer tw:group tw:disabled:opacity-40 tw:disabled:cursor-not-allowed tw:disabled:hover:bg-tc-primary useNestedTransition tw:rounded-sm tw:focus-visible:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-tc-link tw:focus-visible:ring-offset-2 tw:focus-visible:ring-offset-bc-primary"
 					aria-label="Next testimonials"
 					:disabled="!canScrollNext"
 					@click="scrollNext"

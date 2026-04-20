@@ -14,20 +14,25 @@
 			<!-- home link -->
 			<NuxtLink
 				to="/"
-				class="tw:w-full tw:md:h-11 tw:h-8 tw:md:max-w-[20rem] tw:max-w-8 tw:bg-no-repeat tw:bg-contain tw:bg-(image:--logo) tw:md:bg-(image:--md-logo) tw:border-none tw:outline-none tw:focus:outline-none tw:block"
+				aria-label="TheNerfSenpai home"
+				class="tw:w-full tw:md:h-11 tw:h-8 tw:md:max-w-[20rem] tw:max-w-8 tw:bg-no-repeat tw:bg-contain tw:bg-(image:--logo) tw:md:bg-(image:--md-logo) tw:border-none tw:outline-none tw:focus-visible:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-tc-link tw:focus-visible:ring-offset-2 tw:focus-visible:ring-offset-bc-primary tw:rounded-sm tw:block"
 			/>
 			<!-- right section -->
 			<section class="tw:flex tw:md:gap-8 tw:items-center">
 				<!-- navigation links -->
 				<section class="tw:flex tw:gap-6 tw:items-center">
-					<ul class="tw:md:flex tw:hidden tw:gap-6 tw:items-center">
+					<nav
+						aria-label="Primary"
+						class="tw:hidden tw:md:flex tw:gap-6 tw:items-center"
+					>
+					<ul class="tw:flex tw:gap-6 tw:items-center">
 						<!-- links -->
 						<template v-for="link in navigationLinks" :key="link.to">
 							<li>
 								<NuxtLink
 									:to="link.to"
 									:aria-current="isActive(link.to) ? 'page' : undefined"
-									:class="` tw:hover:text-tc-link tw:hover:text-lg tw:hover:font-semibold ${
+									:class="` tw:hover:text-tc-link tw:hover:text-lg tw:hover:font-semibold tw:rounded-sm tw:focus-visible:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-tc-link tw:focus-visible:ring-offset-2 tw:focus-visible:ring-offset-bc-primary ${
 										isActive(link.to)
 											? 'tw:text-tc-link tw:text-lg tw:font-semibold'
 											: 'tw:text-tc-secondary tw:text-sm tw:font-normal'
@@ -41,6 +46,7 @@
 							></li>
 						</template>
 					</ul>
+					</nav>
 					<ul class="tw:flex tw:md:gap-6 tw:gap-3.5 tw:items-center">
 						<li
 							class="tw:md:hidden tw:block tw:w-1 tw:h-4 tw:border-r tw:border-bc-stroke tw:md:border-dashed tw:border-solid"
@@ -56,7 +62,7 @@
 								"
 								title="Toggle Dark Mode"
 								tabindex="0"
-								class="tw:cursor-pointer tw:border-none tw:outline-none tw:focus:outline-none flex_center tw:p-0 tw:hover:scale-125 tw:group"
+								class="tw:cursor-pointer tw:border-none tw:outline-none tw:focus-visible:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-tc-link tw:focus-visible:ring-offset-2 tw:focus-visible:ring-offset-bc-primary tw:rounded-sm flex_center tw:p-0 tw:hover:scale-125 tw:group"
 								@click="handleColorSchemeToggle"
 								@keydown.enter="handleColorSchemeToggle"
 								@keydown.space.prevent="handleColorSchemeToggle"
@@ -105,7 +111,7 @@
 				<!-- qrcode -->
 				<SvgQRCode
 					class="tw:w-11 tw:h-11 tw:min-w-11 tw:md:block tw:hidden"
-					title="Scan to chat on whatsapp"
+					accessible-label="Scan QR code to chat on WhatsApp"
 				/>
 				<!-- hamburger menu -->
 				<Sheet v-model:open="navIsOpen" @update:open="setnavIsOpen">
@@ -115,7 +121,7 @@
 						aria-label="Toggle Menu"
 						title="Toggle Menu"
 						tabindex="0"
-						class="tw:cursor-pointer tw:border-none tw:outline-none tw:focus:outline-none flex_center tw:p-0 tw:ml-6 tw:shrink-0 tw:md:hidden!"
+						class="tw:cursor-pointer tw:border-none tw:outline-none tw:focus-visible:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-tc-link tw:focus-visible:ring-offset-2 tw:focus-visible:ring-offset-bc-primary tw:rounded-sm flex_center tw:p-0 tw:ml-6 tw:shrink-0 tw:md:hidden!"
 					>
 						<div class="tw:w-6 tw:h-6 tw:relative">
 							<!-- top -->
@@ -145,11 +151,13 @@
 					<SheetContent
 						class="tw:w-full tw:h-full tw:max-h-[calc(100vh-6.4rem)] tw:border-none tw:isolate tw:bg-bc-primary/70 tw:backdrop-blur-sm tw:overflow-hidden"
 						side="bottom"
-						aria-describedby="mobile-nav"
+						aria-describedby="mobile-nav-desc"
 						hide-close-button
 					>
 						<SheetTitle class="tw:sr-only">Mobile Navigation</SheetTitle>
-						<SheetDescription class="tw:sr-only">mobile-nav</SheetDescription>
+						<SheetDescription id="mobile-nav-desc" class="tw:sr-only">
+							Site sections: About, Projects, and Contact.
+						</SheetDescription>
 						<section
 							class="tw:flex tw:flex-col tw:justify-between tw:gap-2.5 tw:h-full tw:overflow-hidden"
 						>

@@ -23,6 +23,7 @@
 			<template v-for="item in list" :key="item.slug">
 				<NuxtLink
 					:to="`/projects/${item.slug}`"
+					:aria-label="`View project: ${item.title}`"
 					title="View Project"
 					class="tw:bg-bc-primary-2 tw:sm:h-[51.2rem] tw:h-152 tw:w-full tw:md:p-8 tw:p-4 tw:relative tw:group tw:cursor-pointer tw:overflow-hidden"
 				>
@@ -56,9 +57,10 @@
 					>
 						{{ item.description }}
 					</p>
-					<!-- navigation section -->
-					<button
-						class="flex_center tw:w-8 tw:h-8 tw:bg-tc-link tw:outline-none tw:border-none tw:absolute tw:top-2 tw:right-2 tw:group-hover:w-16 tw:group-hover:h-16 tw:group-hover:bg-tc-link-2 useCubicNestedTransition tw:cursor-pointer"
+					<!-- decorative arrow (card is a single link; avoid nested interactive elements) -->
+					<span
+						aria-hidden="true"
+						class="flex_center tw:w-8 tw:h-8 tw:bg-tc-link tw:absolute tw:top-2 tw:right-2 tw:group-hover:w-16 tw:group-hover:h-16 tw:group-hover:bg-tc-link-2 useCubicNestedTransition tw:pointer-events-none"
 					>
 						<svg
 							width="23"
@@ -73,7 +75,7 @@
 								fill="var(--tw-color-bc-secondary)"
 							/>
 						</svg>
-					</button>
+					</span>
 				</NuxtLink>
 			</template>
 		</section>
