@@ -26,6 +26,7 @@
 					:aria-label="`View project: ${item.title}`"
 					title="View Project"
 					class="tw:bg-bc-primary-2 tw:sm:h-[51.2rem] tw:h-152 tw:w-full tw:md:p-8 tw:p-4 tw:relative tw:group tw:cursor-pointer tw:overflow-hidden"
+					@click="$scrollPageToTop()"
 				>
 					<!-- image section -->
 					<section

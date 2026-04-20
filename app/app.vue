@@ -3,16 +3,68 @@
 		<NuxtLayout>
 			<NuxtPage />
 		</NuxtLayout>
+		<!-- fixed blur background -->
+		<Transition name="fade">
+			<div
+				v-if="backgroundBlur !== null"
+				ref="imagePreviewDialogRef"
+				class="tw:fixed tw:top-0 tw:left-0 tw:w-dvw tw:h-dvh tw:bg-bc-primary/70 tw:backdrop-blur-sm tw:z-10 tw:overflow-y-auto tw:p-16 flex_center"
+				:class="{ blurBg: isMounted }"
+				role="dialog"
+				aria-modal="true"
+				aria-label="Image preview"
+				tabindex="-1"
+				@click="closeBackgroundBlur"
+			>
+				<button
+					type="button"
+					title="Close image preview"
+					class="tw:absolute tw:top-8 tw:right-8 tw:w-5 tw:h-5 tw:rounded-full tw:focus-visible:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-tc-link tw:focus-visible:ring-offset-2 tw:focus-visible:ring-offset-bc-primary tw:cursor-pointer tw:hover:rotate-180 tw:hover:scale-150 useNestedTransition tw:group"
+					aria-label="Close image preview"
+				>
+					<span
+						class="tw:w-full tw:h-[0.3rem] shrink-0 tw:block tw:absolute tw:transition-all tw:duration-300 tw:left-0 tw:top-1/2 tw:-translate-y-1/2 tw:rotate-45 tw:bg-tc-link tw:group-hover:bg-tc-link-2"
+					></span>
+					<span
+						class="tw:w-full tw:h-[0.3rem] shrink-0 tw:block tw:absolute tw:transition-all tw:duration-300 tw:left-0 tw:top-1/2 tw:-translate-y-1/2 tw:-rotate-45 tw:bg-tc-link tw:group-hover:bg-tc-link-2"
+					></span>
+				</button>
+				<img
+					v-if="backgroundBlur && backgroundBlur !== null"
+					:key="backgroundBlur"
+					width="100%"
+					height="100%"
+					:src="backgroundBlur"
+					alt="Image Preview"
+					class="tw:w-auto! tw:h-auto! tw:max-h-full tw:max-w-full tw:block tw:object-contain tw:object-center tw:rounded-4 tw:shadow-md tw:shrink-0 tw:cursor-normal"
+					@click.stop
+				/>
+			</div>
+		</Transition>
 	</lenis>
 </template>
 <script setup lang="ts">
 	const { manifestHref } = useThemeManifest();
-	const { $setState } = useNuxtApp();
-
-	function updateViewportWidth() {
-		$setState("viewportWidth", window.innerWidth);
-	}
+	const { $setState, $getState } = useNuxtApp();
 	useStructuredData();
+
+	const isMounted = ref(false);
+	const backgroundBlur = computed(() => $getState("backgroundBlur"));
+	const imagePreviewDialogRef = ref<HTMLElement | null>(null);
+
+	const closeBackgroundBlur = () => {
+		if (isMounted.value) {
+			$setState("backgroundBlur", null);
+		}
+	};
+	const onEscapeCloseBackgroundBlur = (event: KeyboardEvent) => {
+		if (event.key === "Escape" && backgroundBlur.value) {
+			$setState("backgroundBlur", null);
+		}
+	};
+	const updateViewportWidth = () => {
+		$setState("viewportWidth", window.innerWidth);
+	};
 
 	const prefersReducedMotion = inject<Ref<boolean>>(
 		"prefersReducedMotion",
@@ -24,14 +76,23 @@
 		autoRaf: true,
 		direction: "vertical" as const,
 	}));
-	useHead({
-		link: [{ rel: "manifest", href: manifestHref }],
+	watch(backgroundBlur, async (value) => {
+		if (!value) return;
+		await nextTick();
+		imagePreviewDialogRef.value?.focus();
 	});
 	onMounted(() => {
 		$setState("viewportWidth", window.innerWidth);
 		window.addEventListener("resize", updateViewportWidth);
+		window.addEventListener("keydown", onEscapeCloseBackgroundBlur);
+		$setState("backgroundBlur", null);
+		isMounted.value = true;
 	});
 	onUnmounted(() => {
 		window.removeEventListener("resize", updateViewportWidth);
+		window.removeEventListener("keydown", onEscapeCloseBackgroundBlur);
+	});
+	useHead({
+		link: [{ rel: "manifest", href: manifestHref }],
 	});
 </script>

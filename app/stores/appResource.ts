@@ -3,6 +3,7 @@ import { defineStore } from 'pinia'
 export const useMyAppResourceStore = defineStore('myAppResourceStore', {
   state: (): TypeAppResource => ({
     viewportWidth: 0,
+    backgroundBlur: '',
     projects: [
       {
         slug: 'project-nelfund',
@@ -711,8 +712,8 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
         link: 'https://www.omniswift.com/',
         client: 'Omniswift',
         type: 'productivity',
-        duration: '2025 — present',
-        year: '2025',
+        duration: '2 Months',
+        year: '2026',
       },
     ],
     careerHistory: [

@@ -8,10 +8,22 @@ export default defineNuxtPlugin(() => {
     const setState = <K extends TypeAppResourceKeys>(key: K, value: TypeAppResource[K]) => {
         appResourceStore.$patch({ [key]: value } as Partial<TypeAppResource>);
     };
+
+    const scrollPageToTop = () => {
+        nextTick(() => {
+            setTimeout(() => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                });
+            }, 200);
+        });
+    };
     return {
         provide: {
             getState,
             setState,
+            scrollPageToTop,
         },
     };
 });

@@ -13,6 +13,12 @@ body {
 	background-color: var(--tw-color-bc-primary);
 }
 
+html {
+	&:has(.blurBg) {
+		overflow: hidden;
+	}
+}
+
 .bg-header {
 	background-image: var(--header);
 }
@@ -115,4 +121,15 @@ button:focus-visible,
 summary:focus-visible {
 	outline: 2px solid var(--tw-color-tc-link);
 	outline-offset: 2px;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: all 0.3s ease-in-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+	opacity: 0;
+	scale: 1.5;
 }

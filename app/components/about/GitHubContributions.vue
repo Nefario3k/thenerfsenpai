@@ -42,7 +42,7 @@
 					class="tw:min-w-0 tw:flex-1 tw:overflow-x-auto tw:md:order-0 tw:order-2"
 				>
 					<div
-						class="tw:grid tw:gap-[3px] tw:p-1"
+						class="tw:grid tw:gap-1.5"
 						:style="gridStyle"
 						role="img"
 						:aria-label="`GitHub contributions: ${payload.totalContributions} in the last year`"
@@ -118,8 +118,8 @@
 	const gridWeeks = computed(() => props.payload?.weeks ?? []);
 
 	const gridStyle = computed(() => ({
-		gridTemplateColumns: `repeat(${gridWeeks.value.length}, minmax(0, 1fr))`,
-		gridTemplateRows: "repeat(7, minmax(0, 1fr))",
+		gridTemplateColumns: `repeat(${gridWeeks.value.length}, minmax(10px, 1fr))`,
+		gridTemplateRows: "repeat(7, minmax(10px, 1fr))",
 	}));
 
 	const flatCells = computed(() => {

@@ -38,6 +38,7 @@ declare global {
         careerHistory: TypeCareerHistory[];
         techStack: TypeTechStack[];
         projects: TypeProjects[];
+        backgroundBlur: string | null;
     }
 
     type TypeAppResourceKeys = keyof TypeAppResource;

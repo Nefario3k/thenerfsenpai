@@ -6,18 +6,11 @@
 		>
 			<!-- logo -->
 			<div class="tw:flex tw:gap-3 tw:items-center">
-				<NuxtImg
+				<ImagePreview
 					v-if="project.images.icon"
 					:src="project.images.icon"
-					width="100%"
-					height="100%"
 					:alt="`${project.title} logo`"
 					class="tw:w-auto tw:min-w-10 tw:h-full tw:max-h-20 tw:object-contain tw:object-center tw:shrink-0"
-					densities="x1 x2"
-					preload
-					placeholder
-					fit="cover"
-					quality="100"
 				/>
 				<h1
 					class="tw:sm:text-[6.4rem] tw:text-8 tw:font-normal tw:font-zalando tw:leading-tight"
@@ -29,17 +22,10 @@
 			<section
 				class="tw:w-full tw:sm:h-[66.1rem] tw:h-70 tw:overflow-hidden tw:shadow"
 			>
-				<NuxtImg
+				<ImagePreview
 					:src="project.images.banner"
-					width="100%"
-					height="100%"
 					:alt="`${project.title} banner image`"
 					class="tw:w-full tw:h-full tw:object-cover tw:object-top"
-					densities="x1 x2"
-					loading="lazy"
-					placeholder
-					fit="cover"
-					quality="100"
 				/>
 			</section>
 			<!-- client section -->
@@ -98,17 +84,10 @@
 			<section
 				class="tw:w-full tw:sm:h-[66.1rem] tw:h-70 tw:overflow-hidden tw:shadow"
 			>
-				<NuxtImg
+				<ImagePreview
 					:src="project.images.intro"
-					width="100%"
-					height="100%"
 					:alt="`${project.title} intro image`"
 					class="tw:w-full tw:h-full tw:object-cover tw:object-top"
-					densities="x1 x2"
-					loading="lazy"
-					placeholder
-					fit="cover"
-					quality="100"
 				/>
 			</section>
 			<!-- challenges -->
@@ -155,17 +134,10 @@
 					}"
 				>
 					<div class="tw:md:h-150 tw:h-96 tw:overflow-hidden tw:shadow">
-						<NuxtImg
+						<ImagePreview
 							:src="image"
-							width="100%"
-							height="100%"
 							:alt="`${project.title} challenge image ${index + 1}`"
 							class="tw:w-full tw:h-full tw:object-cover tw:object-center"
-							densities="x1 x2"
-							loading="lazy"
-							placeholder
-							fit="cover"
-							quality="100"
 						/>
 					</div>
 				</div>
@@ -191,17 +163,10 @@
 			<section
 				class="tw:w-full tw:sm:h-[66.1rem] tw:h-70 tw:overflow-hidden tw:shadow"
 			>
-				<NuxtImg
+				<ImagePreview
 					:src="project.images.technology"
-					width="100%"
-					height="100%"
 					:alt="`${project.title} technology image`"
 					class="tw:w-full tw:h-full tw:object-cover tw:object-top"
-					densities="x1 x2"
-					loading="lazy"
-					placeholder
-					fit="cover"
-					quality="100"
 				/>
 			</section>
 			<!-- solution -->
