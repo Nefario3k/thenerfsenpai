@@ -197,7 +197,7 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
         technology:
           'Nuxt.js (Vue, TypeScript) authenticated CRM at dev-app.asterlio.com; public marketing and trial flows at asterlio.com; omnichannel integrations (WhatsApp Business, Instagram, Facebook Messenger, live chat, email); in-product ticket workflows and analytics; OAuth on the login experience (e.g. Google, Facebook); security and compliance messaging aligned with public documentation (encryption, GDPR/CCPA).',
         link: 'https://asterlio.com/',
-        client: 'Omiswift',
+        client: 'Omniswift',
         type: 'productivity',
         duration: '1 year',
         year: '2025',
@@ -661,6 +661,58 @@ export const useMyAppResourceStore = defineStore('myAppResourceStore', {
         type: 'ecommerce',
         duration: '6 Months',
         year: '2024',
+      },
+      {
+        slug: 'project-omniswift',
+        title: 'Omniswift',
+        description:
+          'Public mission-critical brand and pipeline site for Omniswift—Nigeria-based engineers and consultants who design, build, and operate digital platforms government agencies, universities, and energy companies depend on daily. omniswift.com translates that promise into featured programme stories (EduTech, GovTech, energy), quantitative proof (e.g. 500,000+ applications processed, 99.9% uptime framing, 5M+ meters tracked nationally), services for institutions that cannot afford downtime, and a consultation path for new engagements.',
+        images: {
+          banner: '/images/projects/omniswift/banner.png',
+          icon: '/images/projects/omniswift/logo.png',
+          intro: '/images/projects/omniswift/1.png',
+          challenges: [
+            '/images/projects/omniswift/2.png',
+            '/images/projects/omniswift/3.png',
+          ],
+          technology: '/images/projects/omniswift/4.png',
+        },
+        challenge: {
+          title:
+            'Turn a decade-scale institutional delivery record into a credible, scannable web narrative—without drowning procurement officers in jargon or hiding the human team behind the logo.',
+          contents: [
+            'Public-sector and enterprise buyers evaluate vendors on proof: uptime, data security, disaster recovery, and scale metrics must read as earned, not marketing fluff.',
+            'Omniswift spans multiple regulated sectors; the site has to segment EduTech, GovTech, and energy stories while still feeling like one coherent partnership.',
+            'Services must map cleanly to buyer intent—custom build, modernization, mission-critical support, and transformation consulting—so visitors self-identify quickly.',
+            'Featured programmes (NTI-scale admissions, SLAS-style national platforms, metering initiatives) each deserve depth without duplicating the entire case study on the homepage.',
+            'Lead generation has to be low-friction (e.g. email capture and “schedule a call”) while signaling seriousness and response expectations (e.g. discovery call, 24-hour turnaround messaging).',
+            'Trust extends beyond projects: leadership, delivery model, and “why us” differentiators (African sector expertise, transformation partnership, reliability) need space without cluttering navigation.',
+          ],
+        },
+        solution: {
+          title:
+            'Shipped omniswift.com as a mission-critical marketing and credibility platform—hero positioning, programme carousels, quantified outcomes, services grid, leadership narrative, and conversion-oriented consultation requests.',
+          deliverables: [
+            'Implemented the homepage story arc from omniswift.com: “Mission Critical” headline, sector scope (government, universities, energy), and scale proof points (applications processed, platforms serving millions, uptime and metering scale).',
+            'Built featured-project rails and deeper programme teasers for National Teachers’ Institute, National Student Loan Application Scheme (SLAS), and Presidential Metering Initiative Platform—each with sector labels and “Learn more” style pathways.',
+            'Structured “Why Omniswift” pillars—deep African sector expertise, transformation partnership with documentation and knowledge transfer, and mission-critical reliability (uptime, security, DR, scale).',
+            'Published a services index aligned with institutional buyers: custom platform development, modernization and integration, mission-critical platform support, and digital transformation consulting.',
+            'Surfaced delivery leadership (“senior engineers” narrative) with team bios and roles to humanize large-scale engagements.',
+            'Added case-study and social-proof moments (e.g. SLAS uptime callout with supporting copy) plus footer discovery, policies, and social channels as presented on the public site.',
+          ],
+          impact: [
+            'Prospects can validate Omniswift against peer vendors using concrete programme references and quantitative outcomes instead of generic “we build apps” claims.',
+            'Sector teams find their lane faster through EduTech / GovTech / energy storytelling and linked programme detail.',
+            'Consultation CTAs give business development a measurable top-of-funnel aligned with the site’s “schedule a call” positioning.',
+          ],
+        },
+        technology:
+          'Public marketing and case-study web platform at omniswift.com—responsive layout system, modular content blocks for featured projects and carousels, services taxonomy, team profiles, lead capture (consultation / email request), policy and legal footers, and performance-oriented delivery suitable for institutional audiences; underlying implementation follows modern front-end and hosting practices appropriate to an enterprise vendor site (exact framework per deployment).',
+        link: 'https://www.omniswift.com/',
+        client: 'Omniswift',
+        type: 'productivity',
+        duration: '2025 — present',
+        year: '2025',
       },
     ],
     careerHistory: [
