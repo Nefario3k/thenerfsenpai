@@ -8,7 +8,7 @@
 			<div
 				v-if="backgroundBlur !== null"
 				ref="imagePreviewDialogRef"
-				class="tw:fixed tw:top-0 tw:left-0 tw:w-dvw tw:h-dvh tw:bg-bc-primary/70 tw:backdrop-blur-sm tw:z-10 tw:overflow-y-auto tw:p-16 flex_center"
+				class="tw:fixed tw:top-0 tw:left-0 tw:w-dvw tw:h-dvh tw:bg-bc-primary/70 tw:backdrop-blur-sm tw:z-10 tw:p-16 flex_center"
 				:class="{ blurBg: isMounted }"
 				role="dialog"
 				aria-modal="true"
@@ -16,29 +16,30 @@
 				tabindex="-1"
 				@click="closeBackgroundBlur"
 			>
-				<button
-					type="button"
-					title="Close image preview"
-					class="tw:absolute tw:top-8 tw:right-8 tw:w-5 tw:h-5 tw:rounded-full tw:focus-visible:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-tc-link tw:focus-visible:ring-offset-2 tw:focus-visible:ring-offset-bc-primary tw:cursor-pointer tw:hover:rotate-180 tw:hover:scale-150 useNestedTransition tw:group"
-					aria-label="Close image preview"
-				>
-					<span
-						class="tw:w-full tw:h-[0.3rem] shrink-0 tw:block tw:absolute tw:transition-all tw:duration-300 tw:left-0 tw:top-1/2 tw:-translate-y-1/2 tw:rotate-45 tw:bg-tc-link tw:group-hover:bg-tc-link-2"
-					></span>
-					<span
-						class="tw:w-full tw:h-[0.3rem] shrink-0 tw:block tw:absolute tw:transition-all tw:duration-300 tw:left-0 tw:top-1/2 tw:-translate-y-1/2 tw:-rotate-45 tw:bg-tc-link tw:group-hover:bg-tc-link-2"
-					></span>
-				</button>
-				<img
-					v-if="backgroundBlur && backgroundBlur !== null"
-					:key="backgroundBlur"
-					width="100%"
-					height="100%"
-					:src="backgroundBlur"
-					alt="Image Preview"
-					class="tw:w-auto! tw:h-auto! tw:max-h-full tw:max-w-full tw:block tw:object-contain tw:object-center tw:rounded-4 tw:shadow-md tw:shrink-0 tw:cursor-normal"
-					@click.stop
-				/>
+				<template v-if="backgroundBlur && backgroundBlur !== null">
+					<button
+						type="button"
+						title="Close image preview"
+						class="tw:absolute tw:top-8 tw:right-8 tw:w-5 tw:h-5 tw:rounded-full tw:focus-visible:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-tc-link tw:focus-visible:ring-offset-2 tw:focus-visible:ring-offset-bc-primary tw:cursor-pointer tw:hover:rotate-180 tw:hover:scale-150 useNestedTransition tw:group"
+						aria-label="Close image preview"
+					>
+						<span
+							class="tw:w-full tw:h-[0.3rem] shrink-0 tw:block tw:absolute tw:transition-all tw:duration-300 tw:left-0 tw:top-1/2 tw:-translate-y-1/2 tw:rotate-45 tw:bg-tc-link tw:group-hover:bg-tc-link-2"
+						></span>
+						<span
+							class="tw:w-full tw:h-[0.3rem] shrink-0 tw:block tw:absolute tw:transition-all tw:duration-300 tw:left-0 tw:top-1/2 tw:-translate-y-1/2 tw:-rotate-45 tw:bg-tc-link tw:group-hover:bg-tc-link-2"
+						></span>
+					</button>
+					<img
+						:key="backgroundBlur"
+						width="100%"
+						height="100%"
+						:src="backgroundBlur"
+						alt="Image Preview"
+						class="tw:w-auto! tw:h-auto! tw:max-h-full tw:max-w-full tw:block tw:object-contain tw:object-center tw:rounded-4 tw:shadow-md tw:shrink-0 tw:cursor-normal"
+						@click.stop
+					/>
+				</template>
 			</div>
 		</Transition>
 	</lenis>
@@ -76,7 +77,7 @@
 		autoRaf: true,
 		direction: "vertical" as const,
 	}));
-	watch(backgroundBlur, async (value) => {
+	watch(backgroundBlur, async (value: string | null) => {
 		if (!value) return;
 		await nextTick();
 		imagePreviewDialogRef.value?.focus();

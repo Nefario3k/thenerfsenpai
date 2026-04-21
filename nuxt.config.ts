@@ -29,14 +29,14 @@ export default defineNuxtConfig({
 		 * Prefix for all the imported component.
 		 * @default "Ui"
 		 */
-		prefix: '',
+		prefix: "",
 		/**
 		 * Directory that the component lives in.
 		 * Will respect the Nuxt aliases.
 		 * @link https://nuxt.com/docs/api/nuxt-config#alias
 		 * @default "@/components/ui"
 		 */
-		componentDir: '@/components/ui'
+		componentDir: "@/components/ui",
 	},
 	site: {
 		url: process.env.NUXT_PUBLIC_SITE_URL || "https://thenerfsenpai.com",
@@ -45,7 +45,12 @@ export default defineNuxtConfig({
 			"Davies Okpeta — Senior Fullstack Web Developer portfolio. React, Next.js, Vue, Nuxt and modern web technologies.",
 		defaultLocale: "en",
 	},
-	css: ["~/assets/css/font.css", "~/assets/css/variables.css", "~/assets/css/main.css", "~/assets/css/transitions.css"],
+	css: [
+		"~/assets/css/font.css",
+		"~/assets/css/variables.css",
+		"~/assets/css/main.css",
+		"~/assets/css/transitions.css",
+	],
 	app: {
 		head: {
 			titleTemplate: "%s | TheNerfSenpai",
@@ -99,6 +104,9 @@ export default defineNuxtConfig({
 	},
 	vite: {
 		plugins: [tailwindcss()],
+		optimizeDeps: {
+			include: ["reka-ui", "@phosphor-icons/vue", "clsx", "tailwind-merge"],
+		},
 	},
 	sitemap: {
 		sources: ["/api/__sitemap__/urls"],
