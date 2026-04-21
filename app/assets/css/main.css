@@ -16,10 +16,7 @@ body {
 html,
 body {
 	&:has(.blurBg) {
-		&::-webkit-scrollbar-track {
-			background: transparent !important;
-		}
-		&::-webkit-scrollbar-thumb {
+		&::-webkit-scrollbar {
 			background: transparent !important;
 		}
 	}
