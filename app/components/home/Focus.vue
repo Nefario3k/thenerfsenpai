@@ -4,6 +4,11 @@
 	>
 		<div>
 			<h2
+				v-gsap.whenVisible.reverse.from="{
+					opacity: 0,
+					x: -30,
+					duration: 0.5,
+				}"
 				class="tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:shrink-0 tw:md:sticky tw:md:top-56 tw:md:left-0"
 			>
 				Focus ↘
@@ -18,6 +23,11 @@
 						? 'tw:sm:pt-8 tw:pt-4 tw:border-t-3 tw:border-solid tw:border-bc-tertiary'
 						: ''
 				}`"
+				v-gsap.whenVisible.reverse.from="{
+					opacity: 0.5,
+					y: 30,
+					duration: 0.5,
+				}"
 			>
 				{{ element }}
 			</p>

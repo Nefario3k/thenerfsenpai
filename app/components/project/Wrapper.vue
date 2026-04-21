@@ -11,7 +11,10 @@
 		<div
 			class="tw:absolute tw:left-0 tw:top-0 tw:w-full tw:h-full tw:-z-10 tw:sm:space-y-[51.2rem] tw:space-y-152"
 		>
-			<template v-for="i in lineLength" :key="i">
+			<template
+				v-for="i in lineLength"
+				:key="i"
+			>
 				<div
 					class="tw:border-y tw:border-bc-stroke tw:md:border-dashed tw:border-solid tw:w-full tw:md:h-12 tw:h-4"
 				/>
@@ -20,13 +23,21 @@
 		<section
 			class="tw:grid tw:md:grid-cols-2 tw:grid-cols-1 tw:md:gap-12 tw:gap-4"
 		>
-			<template v-for="item in list" :key="item.slug">
+			<template
+				v-for="item in list"
+				:key="item.slug"
+			>
 				<NuxtLink
 					:to="`/projects/${item.slug}`"
 					:aria-label="`View project: ${item.title}`"
 					title="View Project"
 					class="tw:bg-bc-primary-2 tw:sm:h-[51.2rem] tw:h-152 tw:w-full tw:md:p-8 tw:p-4 tw:relative tw:group tw:cursor-pointer tw:overflow-hidden"
 					@click="$scrollPageToTop()"
+					v-gsap.whenVisible.reverse.from="{
+						opacity: 0,
+						scale: 0.9,
+						duration: 0.5,
+					}"
 				>
 					<!-- image section -->
 					<section

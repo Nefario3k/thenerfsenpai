@@ -1,5 +1,8 @@
 <template>
-	<section key="home" class="transIn">
+	<section
+		key="home"
+		class="transIn"
+	>
 		<!-- top section -->
 		<section class="tw:sm:px-12 tw:px-4 tw:pb-12">
 			<div class="tw:flex tw:items-center tw:gap-3 tw:sm:mb-66 tw:mb-60">
@@ -19,10 +22,17 @@
 			</div>
 
 			<h1
-				class="tw:sm:text-[6.4rem] tw:text-8 tw:font-normal tw:font-zalando tw:leading-tight tw:max-w-7xl"
+				v-gsap.splitText.words.from="{
+					opacity: 0,
+					x: -30,
+					stagger: 0.1,
+				}"
+				class="tw:sm:text-[5.4rem] tw:text-8 tw:font-normal tw:font-zalando tw:leading-tight tw:max-w-7xl"
 			>
-				Building mission-critical software with mastery purposeful design and
-				functions.
+				Building mission-critical software with masterful engineering,
+				purposeful design, and reliable functionality.
+				<!-- Delivering mission-critical systems through disciplined engineering,
+				intentional design, and dependable behavior. -->
 			</h1>
 		</section>
 		<!-- mini projects section -->
@@ -51,7 +61,7 @@
 	const { $getState } = useNuxtApp();
 	const projects = computed(() => $getState("projects").slice(0, 4));
 	usePortfolioSeo({
-		title: "Davies Okpeta | Portfolio & Selected Work",
+		title: "Davies Okpeta | Creative Developer",
 		description:
 			"Senior Fullstack Web Developer. Portfolio showcasing work with React, Next.js, Vue, Nuxt and modern web technologies.",
 		ogImage: "/images/dark-lg-logo.png",

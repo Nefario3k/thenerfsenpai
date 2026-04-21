@@ -1,11 +1,19 @@
 <template>
-	<section key="about" class="transIn">
+	<section
+		key="about"
+		class="transIn"
+	>
 		<!-- top section -->
 		<section
 			class="tw:sm:px-12 tw:px-4 tw:pb-10 tw:border-b tw:border-bc-stroke"
 		>
 			<h1
-				class="tw:sm:text-[6.4rem] tw:text-8 tw:font-normal tw:font-zalando tw:leading-tight"
+				v-gsap.splitText.words.from="{
+					opacity: 0,
+					x: -30,
+					stagger: 0.1,
+				}"
+				class="tw:sm:text-[5.4rem] tw:text-8 tw:font-normal tw:font-zalando tw:leading-tight"
 			>
 				Meet your new<br />
 				favourite developer
@@ -168,7 +176,10 @@
 							{{ element.title }}
 						</h3>
 						<div class="tw:md:columns-4 tw:sm:columns-3 tw:columns-2 tw:gap-4">
-							<template v-for="item in element.content" :key="item">
+							<template
+								v-for="item in element.content"
+								:key="item"
+							>
 								<p
 									class="tw:text-sm tw:text-tc-secondary tw:font-verdana tw:pb-4"
 								>
@@ -254,7 +265,10 @@
 								<ul
 									class="tw:list-disc tw:list-outside tw:pl-4 tw:space-y-2 tw:text-sm tw:text-tc-secondary tw:font-verdana"
 								>
-									<li v-for="line in job.descriptions" :key="line">
+									<li
+										v-for="line in job.descriptions"
+										:key="line"
+									>
 										{{ line }}
 									</li>
 								</ul>

@@ -1,9 +1,17 @@
 <template>
-	<section key="projects" class="transIn">
+	<section
+		key="projects"
+		class="transIn"
+	>
 		<!-- top section -->
 		<section class="tw:sm:px-12 tw:px-4 tw:pb-12">
 			<h1
-				class="tw:sm:text-[6.4rem] tw:text-8 tw:font-normal tw:font-zalando tw:leading-tight"
+				v-gsap.splitText.words.from="{
+					opacity: 0,
+					x: -30,
+					stagger: 0.1,
+				}"
+				class="tw:sm:text-[5.4rem] tw:text-8 tw:font-normal tw:font-zalando tw:leading-tight"
 			>
 				Projects ↘
 			</h1>
