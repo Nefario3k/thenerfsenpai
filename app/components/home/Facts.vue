@@ -4,13 +4,25 @@
 	>
 		<div>
 			<h2
+				v-gsap.whenVisible.reverse.from="{
+					opacity: 0,
+					x: -30,
+					duration: 0.5,
+				}"
 				class="tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:shrink-0 tw:md:sticky tw:md:top-56 tw:md:left-0"
 			>
 				Facts ↘
 			</h2>
 		</div>
 		<aside class="">
-			<p class="tw:text-normal tw:sm:text-lg tw:text-sm tw:text-tc-primary">
+			<p
+				v-gsap.whenVisible.reverse.from="{
+					opacity: 0,
+					y: 30,
+					duration: 0.9,
+				}"
+				class="tw:text-normal tw:sm:text-lg tw:text-sm tw:text-tc-primary"
+			>
 				I am an experienced Senior software engineer with
 				<strong>over 5 years</strong> work experience with a diverse
 				understanding of mission critical projects ranging from high stake

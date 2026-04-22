@@ -5,6 +5,11 @@
 			to="/"
 			aria-label="TheNerfSenpai home"
 			class="tw:w-full tw:sm:h-118 tw:h-60 tw:bg-no-repeat tw:bg-contain tw:bg-center tw:bg-(image:--lg-logo) tw:border-none tw:outline-none tw:focus-visible:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-tc-link tw:focus-visible:ring-offset-2 tw:focus-visible:ring-offset-bc-primary tw:rounded-sm tw:block tw:sm:mb-12 tw:mb-8"
+			v-gsap.whenVisible.reverse.from="{
+				opacity: 0.5,
+				y: -30,
+				duration: 0.5,
+			}"
 		/>
 		<div
 			class="flex_between tw:sm:flex-row tw:flex-col tw:gap-4 tw:sm:px-12 tw:px-4 tw:py-5 tw:border-t tw:border-bc-stroke tw:text-tc-secondary"
@@ -12,7 +17,13 @@
 			<!-- social links -->
 			<ul class="tw:flex tw:gap-4 tw:items-center useNestedTransition">
 				<!-- github -->
-				<li>
+				<li
+					v-gsap.from="{
+						opacity: 0.5,
+						x: -30,
+						duration: 0.3,
+					}"
+				>
 					<a
 						href="https://github.com/Nefario3k"
 						target="_blank"
@@ -38,7 +49,13 @@
 					</a>
 				</li>
 				<!-- X -->
-				<li>
+				<li
+					v-gsap.from="{
+						opacity: 0.5,
+						x: -30,
+						duration: 0.5,
+					}"
+				>
 					<a
 						href="https://x.com/daviesokpeta"
 						target="_blank"
@@ -64,7 +81,13 @@
 					</a>
 				</li>
 				<!-- Linkedin -->
-				<li>
+				<li
+					v-gsap.from="{
+						opacity: 0.5,
+						x: -30,
+						duration: 0.8,
+					}"
+				>
 					<a
 						href="https://www.linkedin.com/in/davies-o-b60a801b0/"
 						target="_blank"
@@ -90,10 +113,21 @@
 					</a>
 				</li>
 			</ul>
-			<span class="tw:text-xs"
+			<span
+				v-gsap.from="{
+					opacity: 0.5,
+					y: -30,
+					duration: 0.5,
+				}"
+				class="tw:text-xs"
 				>© {{ new Date().getFullYear() }} The Nerf Senpai</span
 			>
 			<time
+				v-gsap.from="{
+					opacity: 0.5,
+					x: 30,
+					duration: 0.5,
+				}"
 				class="tw:text-xs tw:tabular-nums"
 				:datetime="timeIso || undefined"
 				>{{ currentTime }}</time

@@ -1,10 +1,7 @@
 <template>
-	<section
-		key="projects"
-		class="transIn"
-	>
+	<section key="projects" class="transIn">
 		<!-- top section -->
-		<section class="tw:sm:px-12 tw:px-4 tw:pb-12">
+		<section class="tw:sm:px-12 tw:px-4 tw:pb-12 tw:overflow-hidden">
 			<h1
 				v-gsap.splitText.words.from="{
 					opacity: 0,

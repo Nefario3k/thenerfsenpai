@@ -8,8 +8,11 @@
 			<div
 				v-if="backgroundBlur !== null"
 				ref="imagePreviewDialogRef"
-				class="tw:fixed tw:top-0 tw:left-0 tw:w-dvw tw:h-dvh tw:bg-bc-primary/70 tw:backdrop-blur-sm tw:z-10 tw:p-16 flex_center"
-				:class="{ blurBg: isMounted }"
+				class="tw:fixed tw:top-0 tw:left-0 tw:w-dvw tw:h-dvh tw:backdrop-blur-sm tw:z-10 tw:p-16 flex_center"
+				:class="{
+					'blurBg tw:bg-bc-primary/70': isMounted,
+					'tw:bg-bc-primary': !isMounted,
+				}"
 				role="dialog"
 				aria-modal="true"
 				aria-label="Image preview"

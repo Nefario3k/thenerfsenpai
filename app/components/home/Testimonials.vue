@@ -1,6 +1,11 @@
 <template>
 	<section class="tw:mb-4 tw:overflow-hidden">
 		<h2
+			v-gsap.whenVisible.reverse.from="{
+				opacity: 0,
+				x: -30,
+				duration: 0.5,
+			}"
 			class="tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:mb-4 tw:sm:px-12 tw:px-4"
 		>
 			Testimonials ↘
@@ -17,6 +22,12 @@
 					<article
 						v-for="(testimonial, testimonialIndex) in testimonials"
 						:key="testimonial.name"
+						v-gsap.whenVisible.reverse.from="{
+							opacity: 0,
+							x: 30,
+							duration: 1,
+							stagger: 0.1,
+						}"
 					>
 						<div
 							class="tw:md:w-200 tw:w-[36.6rem] tw:min-w-min tw:h-full tw:min-h-200 tw:border tw:border-tc-tertiary tw:relative tw:md:p-8 tw:p-5 tw:isolate tw:group useNestedTransition"

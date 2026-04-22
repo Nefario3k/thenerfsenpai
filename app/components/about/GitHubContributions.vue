@@ -39,7 +39,7 @@
 				class="tw:flex tw:flex-col tw:md:gap-16 tw:gap-6 tw:md:flex-row tw:md:items-center tw:md:justify-between"
 			>
 				<div
-					class="tw:min-w-0 tw:flex-1 tw:overflow-x-auto tw:md:order-0 tw:order-2"
+					class="tw:min-w-0 tw:flex-1 tw:overflow-x-auto tw:md:order-0 tw:order-2 no-scrollbar"
 				>
 					<div
 						class="tw:grid tw:gap-1.5"
@@ -51,6 +51,12 @@
 							<Tooltip>
 								<TooltipTrigger>
 									<div
+										v-gsap.whenVisible.reverse.from="{
+											opacity: 0.5,
+											x: -30,
+											duration: 0.5,
+											stagger: 0.1,
+										}"
 										:class="[
 											'tw:aspect-square tw:min-h-[10px] tw:rounded-[2px] tw:cursor-pointer',
 											levelClass(cell.level),
@@ -70,6 +76,11 @@
 					</div>
 				</div>
 				<div
+					v-gsap.whenVisible.reverse.from="{
+						opacity: 0.5,
+						x: -30,
+						duration: 0.5,
+					}"
 					class="tw:flex tw:shrink-0 tw:flex-col tw:gap-2 tw:lg:items-end tw:font-verdana tw:text-xs tw:text-tc-secondary"
 				>
 					<div class="tw:flex tw:items-center tw:gap-2">
@@ -89,7 +100,14 @@
 					</div>
 				</div>
 			</div>
-			<p class="tw:text-sm tw:text-tc-secondary tw:font-verdana">
+			<p
+				v-gsap.whenVisible.reverse.from="{
+					opacity: 0.5,
+					x: -30,
+					duration: 0.5,
+				}"
+				class="tw:text-sm tw:text-tc-secondary tw:font-verdana"
+			>
 				{{ payload.totalContributions.toLocaleString() }} contributions in the
 				past year
 			</p>

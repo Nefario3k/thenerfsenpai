@@ -1,11 +1,8 @@
 <template>
-	<section
-		key="about"
-		class="transIn"
-	>
+	<section key="about" class="transIn">
 		<!-- top section -->
 		<section
-			class="tw:sm:px-12 tw:px-4 tw:pb-10 tw:border-b tw:border-bc-stroke"
+			class="tw:sm:px-12 tw:px-4 tw:pb-10 tw:border-b tw:border-bc-stroke tw:overflow-hidden"
 		>
 			<h1
 				v-gsap.splitText.words.from="{
@@ -26,8 +23,24 @@
 			>
 				<div>
 					<div class="tw:md:sticky tw:md:top-56 tw:md:left-0">
-						<p class="tw:font-medium tw:text-lg">The Nerf Senpai</p>
-						<p class="tw:font-medium tw:text-base tw:text-tc-secondary">
+						<p
+							v-gsap.from="{
+								opacity: 0,
+								x: -30,
+								duration: 0.5,
+							}"
+							class="tw:font-medium tw:text-lg"
+						>
+							The Nerf Senpai
+						</p>
+						<p
+							v-gsap.from="{
+								opacity: 0,
+								x: -30,
+								duration: 0.9,
+							}"
+							class="tw:font-medium tw:text-base tw:text-tc-secondary"
+						>
 							Creative Developer
 						</p>
 					</div>
@@ -37,11 +50,16 @@
 					class="tw:overflow-hidden tw:w-full tw:md:h-[73.3rem] tw:h-[44.3rem] tw:block tw:rounded-4"
 				>
 					<NuxtImg
-						src="/images/temp/user.jpg"
-						width="100"
-						height="100"
+						src="https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776844501/DaviesOkpeta_Headshot_2026-02-02_uzyjwo.jpg"
+						width="100%"
+						height="100%"
 						alt="TheNerfSenpai"
-						class="tw:w-full tw:h-full tw:block tw:object-cover tw:object-top"
+						class="tw:w-auto tw:h-auto tw:block tw:object-contain tw:object-top tw:rounded-4"
+						v-gsap.from="{
+							opacity: 0,
+							scale: 1.5,
+							duration: 1,
+						}"
 					/>
 				</div>
 			</div>
@@ -49,11 +67,23 @@
 		<!-- profile section -->
 		<section class="tw:sm:px-12 tw:px-4">
 			<div class="tw:py-16 tw:border-b tw:border-bc-stroke tw:space-y-10">
-				<h2 class="tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary">
+				<h2
+					class="tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary"
+					v-gsap.whenVisible.reverse.from="{
+						opacity: 0.5,
+						y: 30,
+						duration: 0.5,
+					}"
+				>
 					Profile ↘
 				</h2>
 				<div
 					class="tw:sm:text-xl tw:text-base tw:font-normal tw:text-tc-secondary tw:font-verdana"
+					v-gsap.whenVisible.reverse.from="{
+						opacity: 0.5,
+						y: 30,
+						duration: 0.5,
+					}"
 				>
 					🚀 Experienced Software Engineer | Building Scalable Systems
 					<br />
@@ -155,6 +185,11 @@
 			>
 				<div>
 					<h2
+						v-gsap.whenVisible.reverse.from="{
+							opacity: 0.5,
+							y: 30,
+							duration: 0.5,
+						}"
 						class="tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:md:sticky tw:md:top-56 tw:md:left-0"
 					>
 						Tools & Tech ↘
@@ -169,6 +204,11 @@
 								? 'tw:-mt-4 tw:sm:pt-8 tw:pt-4 tw:border-t-3 tw:border-solid tw:border-bc-tertiary'
 								: ''
 						}`"
+						v-gsap.whenVisible.reverse.from="{
+							opacity: 0.5,
+							y: 30,
+							duration: 0.5,
+						}"
 					>
 						<h3
 							class="tw:text-medium tw:sm:text-4xl tw:text-8 tw:text-tc-primary"
@@ -176,11 +216,14 @@
 							{{ element.title }}
 						</h3>
 						<div class="tw:md:columns-4 tw:sm:columns-3 tw:columns-2 tw:gap-4">
-							<template
-								v-for="item in element.content"
-								:key="item"
-							>
+							<template v-for="item in element.content" :key="item">
 								<p
+									v-gsap.whenVisible.reverse.from="{
+										opacity: 0.5,
+										x: 30,
+										duration: 0.5,
+										stagger: 0.1,
+									}"
 									class="tw:text-sm tw:text-tc-secondary tw:font-verdana tw:pb-4"
 								>
 									{{ item }}
@@ -198,6 +241,11 @@
 			>
 				<div>
 					<h2
+						v-gsap.whenVisible.reverse.from="{
+							opacity: 0.5,
+							y: 30,
+							duration: 0.5,
+						}"
 						class="tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:md:sticky tw:md:top-56 tw:md:left-0"
 					>
 						Career ↘
@@ -224,6 +272,12 @@
 									  }`
 									: ''
 							}`"
+							v-gsap.whenVisible.reverse.from="{
+								opacity: 0.5,
+								y: 30,
+								duration: 0.5,
+								stagger: 0.1,
+							}"
 						>
 							<AccordionTrigger
 								class="tw:space-y-4 tw:text-left tw:flex tw:items-center tw:justify-between tw:cursor-pointer tw:gap-4 tw:w-full tw:no-underline! tw:border-0! tw:outline-none!"
@@ -265,10 +319,7 @@
 								<ul
 									class="tw:list-disc tw:list-outside tw:pl-4 tw:space-y-2 tw:text-sm tw:text-tc-secondary tw:font-verdana"
 								>
-									<li
-										v-for="line in job.descriptions"
-										:key="line"
-									>
+									<li v-for="line in job.descriptions" :key="line">
 										{{ line }}
 									</li>
 								</ul>
@@ -279,9 +330,16 @@
 			</div>
 		</section>
 		<!-- GitHub contributions ↘ -->
-		<section class="tw:sm:px-12 tw:px-4">
+		<section class="tw:sm:px-12 tw:px-4 tw:overflow-hidden">
 			<div class="tw:space-y-10 tw:py-16">
-				<h2 class="tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary">
+				<h2
+					class="tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary"
+					v-gsap.whenVisible.reverse.from="{
+						opacity: 0.5,
+						x: -30,
+						duration: 0.5,
+					}"
+				>
 					GitHub contributions ↘
 				</h2>
 				<aside>
