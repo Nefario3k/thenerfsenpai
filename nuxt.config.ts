@@ -174,7 +174,7 @@ export default defineNuxtConfig({
 	vite: {
 		plugins: [tailwindcss()],
 		optimizeDeps: {
-			include: ["reka-ui", "@phosphor-icons/vue", "clsx", "tailwind-merge", "yup"],
+			include: ["reka-ui", "@phosphor-icons/vue", "clsx", "tailwind-merge", "yup", "lenis"],
 		},
 	},
 	sitemap: {

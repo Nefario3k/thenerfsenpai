@@ -10,11 +10,15 @@
 		@mousedown="handleDragStart"
 		@scroll.passive="emitMetrics"
 	>
-		<slot />
+		<div ref="contentRef">
+			<slot />
+		</div>
 	</section>
 </template>
 
 <script lang="ts" setup>
+	import Lenis from "lenis";
+
 	export interface HorizontalScrollMetrics {
 		scrollLeft: number;
 		scrollWidth: number;
@@ -37,6 +41,7 @@
 	}>();
 
 	const sectionRef = ref<HTMLElement | null>(null);
+	const contentRef = ref<HTMLElement | null>(null);
 	const isScrollable = ref(false);
 	const isDragging = ref(false);
 	const startX = ref(0);
@@ -60,8 +65,13 @@
 
 	const handleDragMove = (e: MouseEvent) => {
 		if (!isDragging.value || !sectionRef.value) return;
-		sectionRef.value.scrollLeft =
-			startScrollLeft.value + (startX.value - e.clientX);
+		const nextScrollLeft = startScrollLeft.value + (startX.value - e.clientX);
+		sectionRef.value.scrollLeft = nextScrollLeft;
+		horizontalLenis?.scrollTo(nextScrollLeft, {
+			immediate: true,
+			lock: true,
+			force: true,
+		});
 	};
 
 	const handleDragEnd = () => {
@@ -85,7 +95,7 @@
 		const el = sectionRef.value;
 		if (!el) return;
 		const stepPx = Math.max(48, el.clientWidth * props.scrollStepFraction);
-		el.scrollBy({ left: direction * stepPx, behavior: "smooth" });
+		horizontalLenis?.scrollTo(el.scrollLeft + direction * stepPx);
 	};
 
 	defineExpose({
@@ -93,23 +103,54 @@
 	});
 
 	let resizeObserver: ResizeObserver | null = null;
+	let horizontalLenis: Lenis | null = null;
+	let rafId: number | null = null;
+
+	const raf = (time: number) => {
+		horizontalLenis?.raf(time);
+		rafId = window.requestAnimationFrame(raf);
+	};
 
 	onMounted(() => {
 		nextTick(() => {
 			updateScrollable();
 			emitMetrics();
-			const el = sectionRef.value;
-			if (!el) return;
+			const wrapper = sectionRef.value;
+			const content = contentRef.value;
+			if (!wrapper || !content) return;
+
+			horizontalLenis = new Lenis({
+				wrapper,
+				content,
+				orientation: "horizontal",
+				gestureOrientation: "both",
+				smoothWheel: true,
+				autoRaf: false,
+			});
+
+			horizontalLenis.on("scroll", () => {
+				updateScrollable();
+				emitMetrics();
+			});
+
+			rafId = window.requestAnimationFrame(raf);
+
 			resizeObserver = new ResizeObserver(() => {
 				updateScrollable();
 				emitMetrics();
 			});
-			resizeObserver.observe(el);
+			resizeObserver.observe(wrapper);
 		});
 	});
 
 	onUnmounted(() => {
 		resizeObserver?.disconnect();
+		horizontalLenis?.destroy();
+		horizontalLenis = null;
+		if (rafId !== null) {
+			window.cancelAnimationFrame(rafId);
+			rafId = null;
+		}
 		window.removeEventListener("mousemove", handleDragMove);
 		window.removeEventListener("mouseup", handleDragEnd);
 	});

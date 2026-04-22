@@ -28,9 +28,17 @@
 							duration: 1,
 							stagger: 0.1,
 						}"
+						class="tw:md:h-200 tw:h-148"
 					>
 						<div
-							class="tw:md:w-200 tw:w-[36.6rem] tw:min-w-min tw:h-full tw:min-h-200 tw:border tw:border-tc-tertiary tw:relative tw:md:p-8 tw:p-5 tw:isolate tw:group useNestedTransition"
+							class="tw:md:w-200 tw:w-[29.6rem] tw:min-w-min tw:h-full tw:border tw:border-tc-tertiary tw:relative tw:isolate tw:group useNestedTransition tw:focus-visible:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-tc-link tw:focus-visible:ring-offset-2 tw:focus-visible:ring-offset-bc-primary tw:cursor-pointer"
+							title="View testimonial"
+							role="button"
+							tabindex="0"
+							aria-haspopup="dialog"
+							:aria-label="`Open testimonial from ${testimonial.name}`"
+							@click="openTestimonialSheet(testimonial)"
+							@keydown="onTestimonialCardKeydown($event, testimonial)"
 						>
 							<!-- dots -->
 							<div
@@ -49,15 +57,20 @@
 							></div>
 							<!-- quote -->
 							<blockquote
-								class="tw:m-0 tw:sm:text-lg tw:text-sm tw:text-tc-secondary tw:font-normal tw:md:group-hover:text-white no-scrollbar tw:flex tw:flex-col tw:justify-between tw:gap-10 tw:min-h-full"
+								class="tw:m-0 tw:sm:text-lg tw:text-sm tw:text-tc-secondary tw:font-normal tw:md:group-hover:text-white no-scrollbar tw:flex tw:flex-col tw:justify-between tw:gap-10 tw:h-full tw:overflow-hidden"
 								:cite="testimonial.link"
 							>
-								<div v-html="testimonial.quote"></div>
-								<footer class="tw:mt-10 tw:font-normal">
+								<div
+									v-html="testimonial.quote"
+									class="tw:md:p-8 tw:pb-0! tw:p-5 tw:line-clamp-11 tw:overflow-hidden"
+								></div>
+								<footer class="tw:font-normal tw:md:p-8 tw:pt-0! tw:p-5">
 									<a
 										:href="testimonial.link"
 										target="_blank"
 										rel="noopener noreferrer"
+										@click.stop
+										@keydown.stop
 										class="tw:flex tw:items-center tw:gap-2 tw:border-0 tw:ring-0 tw:cursor-pointer tw:rounded-sm tw:focus-visible:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-tc-link tw:focus-visible:ring-offset-2 tw:focus-visible:ring-offset-bc-primary"
 										:aria-label="`${testimonial.name} on LinkedIn (opens in a new tab)`"
 									>
@@ -68,7 +81,7 @@
 											width="100"
 											height="100"
 											loading="lazy"
-											class="tw:w-15 tw:h-15 tw:object-cover tw:object-top tw:rounded-full tw:shrink-0"
+											class="tw:md:w-15 tw:md:h-15 tw:w-10 tw:h-10 tw:object-cover tw:object-top tw:rounded-full tw:shrink-0"
 										/>
 										<div
 											class="tw:text-tc-secondary tw:md:group-hover:text-white"
@@ -184,11 +197,79 @@
 				</button>
 			</div>
 		</section>
+		<Sheet
+			v-model:open="isTestimonialSheetOpen"
+			@update:open="setTestimonialSheetOpen"
+		>
+			<SheetContent
+				class="tw:w-full tw:h-full tw:md:max-h-[calc(100vh-11rem)] tw:max-h-[calc(100vh-6.4rem)] tw:border-none tw:isolate tw:bg-bc-primary/70 tw:backdrop-blur-sm tw:overflow-hidden tw:block!"
+				side="bottom"
+				aria-describedby="testimonial-sheet-desc"
+			>
+				<SheetTitle class="tw:sr-only">Testimonial details</SheetTitle>
+				<SheetDescription id="testimonial-sheet-desc" class="tw:sr-only">
+					Read the complete testimonial and profile details.
+				</SheetDescription>
+				<section
+					v-if="selectedTestimonial"
+					class="tw:h-full tw:overflow-y-auto no-scrollbar tw:w-full"
+					data-lenis-prevent
+				>
+					<div
+						class="tw:min-h-full tw:px-4 tw:sm:px-12 tw:py-10 tw:max-w-228 tw:mx-auto"
+					>
+						<div class="tw:flex tw:items-start tw:gap-4">
+							<NuxtImg
+								v-if="selectedTestimonial.image"
+								:src="selectedTestimonial.image"
+								:alt="`${selectedTestimonial.name} profile picture`"
+								width="100"
+								height="100"
+								loading="lazy"
+								class="tw:w-16 tw:h-16 tw:object-cover tw:object-top tw:rounded-full tw:shrink-0"
+							/>
+							<div>
+								<cite
+									class="tw:text-2xl tw:font-bold tw:font-verdana tw:capitalize tw:not-italic tw:block tw:text-tc-primary"
+								>
+									{{ selectedTestimonial.name }}
+								</cite>
+								<p class="tw:text-sm tw:text-tc-secondary tw:mt-1">
+									{{ selectedTestimonial.role }}
+								</p>
+								<a
+									:href="selectedTestimonial.link"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="tw:inline-flex tw:items-center tw:gap-2 tw:mt-3 tw:text-sm tw:font-semibold tw:text-tc-link tw:underline tw:underline-offset-4 tw:focus-visible:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-tc-link tw:focus-visible:ring-offset-2 tw:focus-visible:ring-offset-bc-primary tw:rounded-sm"
+									:aria-label="`${selectedTestimonial.name} on LinkedIn (opens in a new tab)`"
+								>
+									View on LinkedIn
+								</a>
+							</div>
+						</div>
+
+						<blockquote
+							class="tw:m-0 tw:mt-8 tw:text-base tw:text-tc-secondary tw:leading-8 tw:font-normal tw:*:text-tc-secondary"
+							:cite="selectedTestimonial.link"
+						>
+							<div v-html="selectedTestimonial.quote"></div>
+						</blockquote>
+					</div>
+				</section>
+			</SheetContent>
+		</Sheet>
 	</section>
 </template>
 
 <script lang="ts" setup>
 	import type { HorizontalScrollMetrics } from "~/components/HorizontalScroll.vue";
+	import {
+		Sheet,
+		SheetContent,
+		SheetDescription,
+		SheetTitle,
+	} from "@/components/ui/sheet";
 
 	const horizontalScrollRef = ref<{
 		scrollByDirection: (direction: -1 | 1) => void;
@@ -251,6 +332,32 @@
 		quote: string;
 		link: string;
 	}
+
+	const isTestimonialSheetOpen = ref(false);
+	const selectedTestimonial = ref<TypeTestimonial | null>(null);
+
+	const openTestimonialSheet = (testimonial: TypeTestimonial) => {
+		selectedTestimonial.value = testimonial;
+		isTestimonialSheetOpen.value = true;
+	};
+
+	const setTestimonialSheetOpen = (value: boolean) => {
+		isTestimonialSheetOpen.value = value;
+		if (!value) {
+			selectedTestimonial.value = null;
+		}
+	};
+
+	const onTestimonialCardKeydown = (
+		event: KeyboardEvent,
+		testimonial: TypeTestimonial
+	) => {
+		if (event.key === "Enter" || event.key === " ") {
+			event.preventDefault();
+			openTestimonialSheet(testimonial);
+		}
+	};
+
 	const testimonials = ref<TypeTestimonial[]>([
 		{
 			name: "Ibidapo Adeolu",
