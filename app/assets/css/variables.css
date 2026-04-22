@@ -277,3 +277,77 @@ html:has(.DARK-MODE) {
 		@apply tw:bg-background tw:text-foreground;
 	}
 }
+
+.notification-with-actions-wrapper {
+	--nv-width: 350px;
+	--nv-min-width: auto;
+	--nv-spacing: 0.625rem;
+	--nv-y-align: center;
+	--nv-y-align-has-title: center;
+	--nv-radius: 1rem !important;
+	--nv-border-width: 2px;
+	--nv-icon-size: 2rem;
+	--nv-title-size: 1.8rem;
+	--nv-message-size: 1.2rem;
+	--nv-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+	--nv-tip-width: 0px;
+	--nv-progress-height: 4px;
+	--success: #28b780;
+	--danger-1: #f56c5b;
+	--primary: #a896ff;
+	--text-dark-1: #08070c;
+
+	--nv-global-bg: #fff;
+	--nv-global-fg: #000;
+	--nv-global-accent: #28b780;
+	--nv-global-border: #fff;
+
+	box-shadow: 0px 8px 16px 0px var(--shadow-color-3) !important;
+	min-width: 300px !important;
+	border-width: var(--nv-border-width) !important;
+	border-radius: 1rem !important;
+	overflow: hidden !important;
+	@apply tw:bg-bc-primary! tw:border-current! tw:border-dashed!;
+
+	&:has(.Notivue__notification:is([data-notivue="success"])) {
+		color: var(--success) !important;
+		--nv-global-accent: var(--success);
+	}
+	&:has(.Notivue__notification:is([data-notivue="error"])) {
+		color: var(--danger-1) !important;
+		--nv-global-accent: var(--danger-1);
+	}
+	&:has(.Notivue__notification:is([data-notivue="info"])) {
+		color: var(--primary) !important;
+		--nv-global-accent: var(--primary);
+	}
+
+	svg {
+		color: currentColor !important;
+		width: 2.4rem !important;
+		height: 2.4rem !important;
+		min-width: 2.4rem !important;
+		align-self: start !important;
+	}
+
+	.Notivue__content-message {
+		@apply tw:text-tc-primary! tw:text-base!;
+	}
+
+	.Notivue__content-title {
+		font-size: 2rem !important;
+		color: currentColor !important;
+	}
+
+	button {
+		@apply tw:text-tc-primary! tw:self-start! tw:hover:text-red-500! tw:hover:scale-125! tw:hover:rotate-180! tw:transition-all! tw:duration-300! tw:ease-in-out!;
+	}
+
+	.Notivue__notification {
+		background-color: transparent !important;
+		box-shadow: none !important;
+		border: none !important;
+		border-radius: 0 !important;
+		align-self: start !important;
+	}
+}

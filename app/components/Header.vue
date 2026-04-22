@@ -234,61 +234,68 @@
 			<SheetDescription id="contact-me-desc" class="tw:sr-only">
 				Contact me for more information.
 			</SheetDescription>
-			<section class="tw:h-full tw:overflow-y-auto" data-lenis-prevent>
-				<div class="tw:p-10 tw:w-full">
-					<!-- title -->
-					<h3
-						class="tw:md:text-4xl tw:text-2xl tw:font-semibold tw:text-tc-primary tw:text-center tw:font-verdana"
-					>
-						Contact Me
-					</h3>
-					<p
-						class="tw:md:text-lg tw:text-base tw:text-tc-secondary tw:text-center tw:mt-4"
-					>
-						Get in touch with me
-					</p>
-					<form
-						class="tw:space-y-8 tw:flex-auto tw:lg:max-w-228 tw:md:max-w-[36.2rem] tw:w-full tw:mx-auto"
-						aria-label="Contact form"
-						@submit.prevent="onSubmit"
-					>
-						<FormInput
-							name="name"
-							label="Name"
-							placeholder="Enter your name"
-							required
-							autocomplete="name"
-						/>
-						<FormInput
-							name="email"
-							type="email"
-							label="Email"
-							placeholder="Enter your email"
-							required
-							autocomplete="email"
-						/>
-						<FormInput
-							name="project"
-							label="Project"
-							placeholder="Tell me what you want to build"
-							required
-							autocomplete="organization-title"
-						/>
-						<FormInput
-							name="message"
-							type="textarea"
-							label="Message"
-							placeholder="Share the details of your request"
-							required
-						/>
-						<button
-							type="submit"
-							:disabled="isSubmitting"
-							class="tw:w-full tw:min-h-[5.4rem] tw:rounded-3 tw:px-6 tw:text-base tw:font-medium tw:bg-tc-primary tw:text-bc-primary tw:disabled:opacity-60 tw:disabled:cursor-not-allowed tw:cursor-pointer tw:transition-opacity"
+			<section
+				class="tw:h-full tw:overflow-y-auto no-scrollbar tw:w-full"
+				data-lenis-prevent
+			>
+				<div class="tw:min-h-full flex_center">
+					<div class="tw:p-10 tw:w-full">
+						<!-- title -->
+						<h3
+							class="tw:md:text-4xl tw:text-2xl tw:font-semibold tw:text-tc-primary tw:text-center tw:font-verdana"
 						>
-							{{ isSubmitting ? "Sending..." : "Send Message" }}
-						</button>
-					</form>
+							Contact Me
+						</h3>
+						<p
+							class="tw:md:text-lg tw:text-base tw:text-tc-secondary tw:text-center tw:mt-4"
+						>
+							Get in touch with me
+						</p>
+						<form
+							class="tw:space-y-8 tw:flex-auto tw:lg:max-w-228 tw:md:max-w-[36.2rem] tw:w-full tw:mx-auto tw:py-20"
+							aria-label="Contact form"
+							@submit.prevent="onSubmit"
+						>
+							<div class="tw:grid tw:gap-8 tw:sm:grid-cols-2 tw:grid-cols-1">
+								<FormInput
+									name="name"
+									label="Name"
+									placeholder="Enter your name"
+									required
+									autocomplete="name"
+								/>
+								<FormInput
+									name="email"
+									type="email"
+									label="Email"
+									placeholder="Enter your email"
+									required
+									autocomplete="email"
+								/>
+							</div>
+							<FormInput
+								name="project"
+								label="Project"
+								placeholder="Tell me what you want to build"
+								required
+								autocomplete="organization-title"
+							/>
+							<FormInput
+								name="message"
+								type="textarea"
+								label="Message"
+								placeholder="Share the details of your request"
+								required
+							/>
+							<button
+								type="submit"
+								:disabled="isSubmitting"
+								class="tw:w-full tw:min-h-[5.4rem] tw:rounded-3 tw:px-6 tw:text-base tw:font-medium tw:bg-tc-primary tw:text-bc-primary tw:disabled:opacity-60 tw:disabled:cursor-not-allowed tw:cursor-pointer tw:transition-opacity"
+							>
+								{{ isSubmitting ? "Sending..." : "Send Message" }}
+							</button>
+						</form>
+					</div>
 				</div>
 			</section>
 		</SheetContent>
@@ -317,9 +324,8 @@
 	const colorScheme = useCookie<ColorScheme>("colorScheme");
 	const { y: scrollY } = useWindowScroll();
 	const route = useRoute();
-	const { $getState } = useNuxtApp();
+	const { $getState, $showToast } = useNuxtApp();
 	const { public: config } = useRuntimeConfig();
-	const { showSuccess, catchError } = useToast();
 
 	const currentScheme = computed(
 		() => (colorScheme.value ?? "light") as ColorScheme
@@ -385,7 +391,9 @@
 	const setcontactIsOpen = (val?: boolean) => {
 		contactIsOpen.value = typeof val === "boolean" ? val : !contactIsOpen.value;
 		if (!contactIsOpen.value) {
-			resetForm();
+			setTimeout(() => {
+				resetForm();
+			}, 200);
 		}
 	};
 	const onSubmit = handleSubmit(async (values) => {
@@ -417,11 +425,16 @@
 				publicKey
 			);
 
-			showSuccess("Message sent successfully.", "Message Sent");
-			resetForm();
+			$showToast("success", {
+				prop: "Message sent successfully.",
+				header: "Message Sent",
+			});
 			setcontactIsOpen(false);
 		} catch (error) {
-			catchError(error, "Unable to send message");
+			$showToast("error", {
+				prop: "Unable to send message",
+				header: "Error",
+			});
 		}
 	});
 	const handleColorSchemeToggle = () => {

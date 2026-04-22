@@ -8,16 +8,16 @@
 		<label
 			v-if="label"
 			:for="inputId"
-			class="tw:text-bc-1 tw:font-medium tw:text-base"
+			class="tw:text-tc-secondary tw:font-medium tw:text-base"
 		>
 			{{ label }}
 			<span v-if="props.required" class="tw:text-tc-3"> *</span>
 		</label>
 		<div
 			:class="[
-				'tw:flex tw:items-center tw:rounded-3 tw:w-full tw:border-2 tw:min-h-[5.4rem] tw:transition-colors tw:group tw:text-tc-4 tw:*:text-inherit tw:bg-bc-5 tw:focus-within:border-tc-primary',
+				'tw:flex tw:items-center tw:rounded-3 tw:w-full tw:border-2 tw:border-dashed tw:min-h-[5.4rem] tw:transition-colors tw:group tw:text-tc-primary tw:*:text-inherit tw:bg-bc-stroke tw:focus-within:border-bc-1',
 				errorMessage
-					? 'tw:text-dc-1 tw:border-dc-1! tw:bg-dc-2!'
+					? 'tw:text-dc-1 tw:border-bc-2! tw:bg-red-500/10!'
 					: String(value)?.trim()?.length > 0
 					? 'tw:text-tc-primary tw:border-current!'
 					: 'tw:border-bc-5',
@@ -47,7 +47,7 @@
 				:aria-label="label || undefined"
 				:aria-invalid="!!errorMessage"
 				:aria-describedby="errorMessage ? errorId : undefined"
-				class="tw:flex-1 tw:min-w-0 tw:bg-transparent! tw:text-white! tw:placeholder:text-tc-4 tw:text-base tw:outline-none tw:disabled:opacity-50 tw:disabled:cursor-not-allowed tw:h-full tw:px-4 tw:min-h-19 tw:py-4 tw:scroll-py-4 tw:max-h-88 tw:transition-none!"
+				class="tw:flex-1 tw:min-w-0 tw:bg-transparent! tw:placeholder:text-tc-4 tw:text-base tw:outline-none tw:disabled:opacity-50 tw:disabled:cursor-not-allowed tw:h-full tw:px-4 tw:min-h-19 tw:py-4 tw:scroll-py-4 tw:max-h-88 tw:transition-none!"
 				@input="handleChange"
 				@blur="handleBlur"
 				:autocomplete="autocomplete"
@@ -63,7 +63,7 @@
 				:aria-label="label || undefined"
 				:aria-invalid="!!errorMessage"
 				:aria-describedby="errorMessage ? errorId : undefined"
-				class="tw:flex-1 tw:min-w-0 tw:bg-transparent! tw:text-white! tw:placeholder:text-tc-4 tw:text-base tw:outline-none tw:disabled:opacity-50 tw:disabled:cursor-not-allowed tw:h-full tw:px-4"
+				class="tw:flex-1 tw:min-w-0 tw:bg-transparent! tw:placeholder:text-tc-4 tw:text-base tw:outline-none tw:disabled:opacity-50 tw:disabled:cursor-not-allowed tw:h-[5.4rem]! tw:px-4"
 				@input="handleChange"
 				@blur="handleBlur"
 				:autocomplete="autocomplete"

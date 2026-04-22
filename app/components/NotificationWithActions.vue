@@ -3,37 +3,37 @@
 		<!-- Custom layout for HTML body -->
 		<div
 			v-if="item.props?.html"
-			class="Notivue__notification flex items-center!"
+			class="Notivue__notification flex items-center"
 			:data-notivue="item.type"
 			:data-notivue-has-title="Boolean(item.title)"
 		>
 			<Component
 				v-if="iconComponent"
 				:is="iconComponent"
-				class="Notivue__icon flex justify-center items-center overflow-visible shrink-0 w-8 h-8 mx-2.5 my-2.5 ml-2.5 color-inherit"
+				class="Notivue__icon tw:flex tw:justify-center tw:items-center tw:overflow-visible tw:shrink-0 tw:w-8 tw:h-8 tw:mx-2.5 tw:my-2.5 tw:ml-2.5 tw:color-inherit"
 				aria-hidden="true"
 			/>
 			<div
-				class="Notivue__content flex flex-col grow py-2 pr-3"
+				class="Notivue__content tw:flex tw:flex-col tw:grow tw:py-2 tw:pr-3"
 				:aria-live="item.ariaLive"
 				:role="item.ariaRole"
 				aria-atomic="true"
 			>
 				<h3
 					v-if="item.title"
-					class="Notivue__content-title leading-tight font-bold text-base m-0 mb-1"
+					class="Notivue__content-title tw:leading-tight tw:font-bold tw:text-base tw:m-0 tw:mb-1"
 				>
 					{{ item.title }}
 				</h3>
 				<div
-					class="Notivue__content-message max-h-60 overflow-auto leading-normal m-0 p-0 text-sm whitespace-pre-line"
+					class="Notivue__content-message tw:max-h-60 tw:overflow-auto tw:leading-normal tw:m-0 tw:p-0 tw:text-sm tw:whitespace-pre-line"
 					v-html="messageContent"
 				/>
 			</div>
 			<button
 				v-if="item.type !== 'promise'"
 				type="button"
-				class="Notivue__close relative cursor-pointer p-2 my-2.5 mr-2.5 font-bold border-none bg-transparent text-sm leading-none"
+				class="Notivue__close tw:relative tw:cursor-pointer tw:p-2 tw:my-2.5 tw:mr-2.5 tw:font-bold tw:border-none tw:bg-transparent tw:text-sm tw:leading-none"
 				style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)"
 				aria-label="Close"
 				tabindex="-1"
@@ -42,7 +42,7 @@
 				<component
 					v-if="closeIconComponent"
 					:is="closeIconComponent"
-					class="Notivue__close-icon w-8 h-8 flex opacity-65 pointer-events-none"
+					class="Notivue__close-icon tw:w-8 tw:h-8 tw:flex tw:opacity-65 tw:pointer-events-none"
 				/>
 			</button>
 		</div>
@@ -50,7 +50,7 @@
 		<Notification v-else :item="item" />
 		<div
 			v-if="actions.length"
-			class="Notivue__actions flex flex-wrap justify-end items-center gap-2 px-4 pb-3"
+			class="Notivue__actions tw:flex tw:flex-wrap tw:justify-end tw:items-center tw:gap-2 tw:px-4 tw:pb-3"
 			role="group"
 			aria-label="Notification actions"
 		>
@@ -58,7 +58,7 @@
 				v-for="(action, index) in actions"
 				:key="`${action.label}-${index}`"
 				type="button"
-				class="rounded-lg px-3 py-1.5 text-sm font-medium transition-colors hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2"
+				class="!rounded-2 tw:px-3 tw:py-1.5 tw:text-sm tw:font-medium tw:transition-colors tw:hover:opacity-90 tw:focus:outline-none tw:focus:ring-2 tw:focus:ring-offset-2"
 				:class="actionButtonClass"
 				:aria-label="`Action: ${action.label}`"
 				@click="handleActionClick(action)"
@@ -68,6 +68,7 @@
 				{{ action.label }}
 			</button>
 		</div>
+		<NotificationProgress :item="item" />
 	</div>
 </template>
 <script setup lang="ts">
@@ -95,13 +96,14 @@
 
 	const actionButtonClass = computed(() => {
 		const type = props.item.type;
-		if (type === "error") return "bg-red-100 focus:ring-red-500";
-		if (type === "success") return "bg-green-100 focus:ring-green-500";
-		return "bg-primary-7 focus:ring-primary-500";
+		if (type === "error") return "tw:bg-red-100 tw:focus:ring-red-500";
+		if (type === "success") return "tw:bg-green-100 tw:focus:ring-green-500";
+		return "tw:bg-tc-link-2 tw:focus:ring-tc-link-2";
 	});
 
 	const handleActionClick = (action: TypeToastEventAction) => {
 		action.action();
+		console.log("action", action);
 		props.item.clear();
 	};
 </script>

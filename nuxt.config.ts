@@ -66,7 +66,7 @@ export default defineNuxtConfig({
 		defaultLocale: "en",
 	},
 	notivue: {
-		position: "top-center",
+		position: "bottom-right",
 		// Behavior settings
 		pauseOnTabChange: true,
 		pauseOnTouch: true,
