@@ -1,6 +1,6 @@
 
 export default function useToast() {
-  const toast_duration = ref(96000);
+  const toast_duration = ref(6000);
   const permanent = ref(false);
   const reloadData = ref(false);
   const tableLoader = ref(false);

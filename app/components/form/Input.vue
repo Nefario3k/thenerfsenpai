@@ -15,7 +15,7 @@
 		</label>
 		<div
 			:class="[
-				'tw:flex tw:items-center tw:rounded-3 tw:w-full tw:border-2 tw:border-dashed tw:min-h-[5.4rem] tw:transition-colors tw:group tw:text-tc-primary tw:*:text-inherit tw:bg-bc-stroke tw:focus-within:border-bc-1',
+				'tw:flex tw:items-center tw:rounded-3 tw:w-full tw:border-2 tw:border-dashed tw:min-h-[5.4rem] tw:transition-colors tw:group tw:text-tc-primary tw:*:text-inherit tw:bg-bc-stroke tw:focus-within:border-bc-1 tw:overflow-hidden',
 				errorMessage
 					? 'tw:text-dc-1 tw:border-bc-2! tw:bg-red-500/10!'
 					: String(value)?.trim()?.length > 0

@@ -1,39 +1,5 @@
 <template>
 	<section key="home" class="transIn">
-		<!-- trigger notification -->
-		<button
-			@click="
-				$showToast('success', {
-					prop: 'Message sent successfully.',
-					header: 'Message Sent',
-					html: true,
-				})
-			"
-		>
-			Trigger Notification
-		</button>
-		<button
-			@click="
-				$showToast('error', {
-					prop: 'Message sent successfully.',
-					header: 'Message Sent',
-					html: true,
-				})
-			"
-		>
-			Trigger Notification
-		</button>
-		<button
-			@click="
-				$showToast('info', {
-					prop: 'Message sent successfully.',
-					header: 'Message Sent',
-					html: true,
-				})
-			"
-		>
-			Trigger Notification
-		</button>
 		<!-- top section -->
 		<section class="tw:sm:px-12 tw:px-4 tw:pb-12">
 			<div class="tw:flex tw:items-center tw:gap-3 tw:sm:mb-66 tw:mb-60">

@@ -426,14 +426,16 @@
 			);
 
 			$showToast("success", {
-				prop: "Message sent successfully.",
-				header: "Message Sent",
+				prop: "Hi😊, Thanks for contacting me. <br/> I'll get back to you as soon as possible.❤️",
+				header: "Message Received! 🎉",
+				html: true,
 			});
 			setcontactIsOpen(false);
 		} catch (error) {
 			$showToast("error", {
-				prop: "Unable to send message",
-				header: "Error",
+				prop: "Unable to send message. <br/> Please try again later.😔",
+				header: "Error 🫨",
+				html: true,
 			});
 		}
 	});

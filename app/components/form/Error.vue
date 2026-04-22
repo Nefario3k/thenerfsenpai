@@ -1,7 +1,10 @@
 <template>
-	<p v-if="message" :id="id" role="alert" :class="errorClass">
-		{{ message }}
-	</p>
+	<div v-if="message" :id="id" role="alert" :class="errorClass">
+		<SolarDangerTriangle weight="Broken" />
+		<p class="tw:text-sm tw:font-bold tw:font-verdana tw:text-red-500">
+			{{ message }}
+		</p>
+	</div>
 </template>
 
 <script lang="ts" setup>
@@ -21,7 +24,7 @@
 
 	const errorClass = computed(() =>
 		cn(
-			"transIn tw:text-sm tw:font-bold tw:font-verdana tw:text-red-500",
+			"transIn tw:text-sm tw:font-bold tw:font-verdana tw:text-red-500 tw:mt-1 tw:flex tw:items-center tw:gap-2",
 			props.class
 		)
 	);
