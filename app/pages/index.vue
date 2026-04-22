@@ -7,7 +7,7 @@
 					src="https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776844501/DaviesOkpeta_Headshot_2026-02-02_uzyjwo.jpg"
 					width="100%"
 					height="100%"
-					alt="TheNerfSenpai"
+					alt="TheNerfSenpai: Davies Okpeta profile picture"
 					class="tw:sm:w-24 tw:sm:h-24 tw:w-16 tw:h-16 tw:block tw:object-cover tw:object-top tw:rounded-4 tw:aspect-square tw:shrink-0"
 				/>
 				<div>

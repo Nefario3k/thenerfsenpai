@@ -53,7 +53,7 @@
 						src="https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776844501/DaviesOkpeta_Headshot_2026-02-02_uzyjwo.jpg"
 						width="100%"
 						height="100%"
-						alt="TheNerfSenpai"
+						alt="TheNerfSenpai: Davies Okpeta profile picture"
 						class="tw:w-auto tw:h-auto tw:block tw:object-contain tw:object-top tw:rounded-4"
 						v-gsap.from="{
 							opacity: 0,

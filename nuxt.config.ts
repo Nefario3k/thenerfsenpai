@@ -51,6 +51,16 @@ export default defineNuxtConfig({
 		"~/assets/css/main.css",
 		"~/assets/css/transitions.css",
 	],
+	nitro: {
+		routeRules: {
+			"/**": {
+				headers: {
+					"x-powered-by": "",
+					"X-Frame-Options": "DENY",
+				}
+			}
+		}
+	},
 	app: {
 		head: {
 			titleTemplate: "%s | TheNerfSenpai",

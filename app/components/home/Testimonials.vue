@@ -64,7 +64,7 @@
 										<NuxtImg
 											v-if="testimonial.image"
 											:src="testimonial.image"
-											alt=""
+											:alt="`${testimonial.name} profile picture`"
 											width="100"
 											height="100"
 											loading="lazy"
