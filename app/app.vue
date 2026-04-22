@@ -45,11 +45,20 @@
 				</template>
 			</div>
 		</Transition>
+		<NotivueKeyboard v-slot="{ containersTabIndex }">
+			<Notivue v-slot="item" :containers-tab-index="containersTabIndex">
+				<NotivueSwipe :item="item">
+					<NotificationWithActions :item="item" />
+				</NotivueSwipe>
+			</Notivue>
+		</NotivueKeyboard>
 	</lenis>
 </template>
 <script setup lang="ts">
 	const { manifestHref } = useThemeManifest();
 	const { $setState, $getState } = useNuxtApp();
+	const { on } = useEventBus();
+	const { showSuccess, showInfo, catchError } = useToast();
 	useStructuredData();
 
 	const isMounted = ref(false);
@@ -86,6 +95,43 @@
 		imagePreviewDialogRef.value?.focus();
 	});
 	onMounted(() => {
+		// Toast event listeners for global toast functionality
+		on(
+			"success",
+			({
+				prop,
+				header,
+				playAudio,
+				actions,
+				html,
+			}: TypeToastEventData): void => {
+				showSuccess(prop, header || "Success", playAudio, actions, html);
+			}
+		);
+		on(
+			"error",
+			({
+				prop,
+				header,
+				playAudio,
+				actions,
+				html,
+			}: TypeToastEventData): void => {
+				catchError(prop, header || "Error", playAudio, actions, html);
+			}
+		);
+		on(
+			"info",
+			({
+				prop,
+				header,
+				playAudio,
+				actions,
+				html,
+			}: TypeToastEventData): void => {
+				showInfo(prop, header || "Info", playAudio, actions, html);
+			}
+		);
 		$setState("viewportWidth", window.innerWidth);
 		window.addEventListener("resize", updateViewportWidth);
 		window.addEventListener("keydown", onEscapeCloseBackgroundBlur);

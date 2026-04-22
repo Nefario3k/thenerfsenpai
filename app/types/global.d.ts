@@ -1,5 +1,44 @@
 declare global {
+    interface EmailJsResponseStatus {
+        status: number;
+        text: string;
+    }
+
+    interface EmailJsClient {
+        init: (userId: string, origin?: string) => void;
+        send: (
+            serviceId: string,
+            templateId: string,
+            templateParams?: Record<string, unknown>,
+            userId?: string
+        ) => Promise<EmailJsResponseStatus>;
+        sendForm: (
+            serviceId: string,
+            templateId: string,
+            form: HTMLFormElement | string,
+            userId?: string
+        ) => Promise<EmailJsResponseStatus>;
+    }
+
+    interface Window {
+        emailjs?: EmailJsClient;
+    }
+
     type ColorScheme = "light" | "dark";
+
+    interface TypeToastEventAction {
+        label: string;
+        action: () => void;
+    }
+
+    interface TypeToastEventData {
+        prop: unknown;
+        header: string;
+        playAudio?: boolean;
+        actions?: TypeToastEventAction[];
+        /** When true, prop is rendered as HTML via v-html */
+        html?: boolean;
+    }
     interface TypeProjects {
         slug: string;
         title: string;

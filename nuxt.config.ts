@@ -1,4 +1,5 @@
 import tailwindcss from "@tailwindcss/vite";
+import { defineNuxtConfig } from "nuxt/config";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	compatibilityDate: "2025-07-15",
@@ -12,6 +13,9 @@ export default defineNuxtConfig({
 		public: {
 			siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://thenerfsenpai.com",
 			githubLogin: process.env.NUXT_PUBLIC_GITHUB_LOGIN || "",
+			emailjsPublicKey: process.env.NUXT_PUBLIC_EMAILJS_PUBLIC_KEY || "",
+			emailjsServiceId: process.env.NUXT_PUBLIC_EMAILJS_SERVICE_ID || "",
+			emailjsTemplateId: process.env.NUXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
 		},
 	},
 	modules: [
@@ -20,9 +24,12 @@ export default defineNuxtConfig({
 		"@nuxtjs/seo",
 		"@vueuse/nuxt",
 		"@pinia/nuxt",
+		"@vee-validate/nuxt",
+		"@solar-icons/nuxt",
 		"nuxt-lenis",
 		"shadcn-nuxt",
 		"v-gsap-nuxt",
+		"notivue/nuxt",
 	],
 	shadcn: {
 		/**
@@ -38,6 +45,19 @@ export default defineNuxtConfig({
 		 */
 		componentDir: "@/components/ui",
 	},
+	solarIcons: {
+		// Prefix for auto-imported components (default: 'Solar')
+		namePrefix: 'Solar',
+		// Auto-import all icons as components (default: true)
+		autoImport: true,
+		// Inject global provider automatically (default: true)
+		provider: true,
+		// Default icon properties
+		color: 'currentColor',
+		size: 24,
+		weight: 'Linear',
+		mirrored: false,
+	},
 	site: {
 		url: process.env.NUXT_PUBLIC_SITE_URL || "https://thenerfsenpai.com",
 		name: "TheNerfSenpai",
@@ -45,11 +65,40 @@ export default defineNuxtConfig({
 			"Davies Okpeta — Senior Fullstack Web Developer portfolio. React, Next.js, Vue, Nuxt and modern web technologies.",
 		defaultLocale: "en",
 	},
+	notivue: {
+		position: "top-center",
+		// Behavior settings
+		pauseOnTabChange: true,
+		pauseOnTouch: true,
+		pauseOnHover: true,
+		avoidDuplicates: true,
+		limit: Infinity,
+		animations: {
+			enter: "Notivue__enter",
+			leave: "Notivue__leave",
+			clearAll: "Notivue__clearAll",
+		},
+		transition: "transform 0.35s cubic-bezier(0.5, 1, 0.25, 1)",
+		// Theme and styling
+
+		// Features
+		notifications: {
+			global: {
+				duration: 19000,
+			},
+		},
+
+		// Responsive settings
+		teleportTo: "body",
+		enqueue: true,
+	},
 	css: [
 		"~/assets/css/font.css",
 		"~/assets/css/variables.css",
 		"~/assets/css/main.css",
 		"~/assets/css/transitions.css",
+		"notivue/notification.css",
+		"notivue/animations.css",
 	],
 	nitro: {
 		routeRules: {
@@ -110,12 +159,22 @@ export default defineNuxtConfig({
 					media: "(prefers-color-scheme: light)",
 				},
 			],
+			script: [
+				{
+					src: "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js",
+					crossorigin: "anonymous",
+					type: "text/javascript",
+				},
+			],
 		},
+	},
+	build: {
+		transpile: ["vee-validate", "@vee-validate/rules"],
 	},
 	vite: {
 		plugins: [tailwindcss()],
 		optimizeDeps: {
-			include: ["reka-ui", "@phosphor-icons/vue", "clsx", "tailwind-merge"],
+			include: ["reka-ui", "@phosphor-icons/vue", "clsx", "tailwind-merge", "yup"],
 		},
 	},
 	sitemap: {
