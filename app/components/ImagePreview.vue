@@ -26,10 +26,10 @@
 		height: "100%",
 		fit: "cover",
 		quality: "70",
-		preload: false,
+		preload: true,
 		placeholder: true,
 		densities: "x1 x2",
-		loading: "lazy",
+		loading: "eager",
 	});
 	const { $setState } = useNuxtApp();
 
