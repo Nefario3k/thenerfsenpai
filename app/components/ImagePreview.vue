@@ -15,6 +15,7 @@
 		preload?: boolean;
 		placeholder?: boolean;
 		densities?: string;
+		loading?: "lazy" | "eager";
 	}
 
 	const props = withDefaults(defineProps<TypeProps>(), {
@@ -24,10 +25,11 @@
 		width: "100%",
 		height: "100%",
 		fit: "cover",
-		quality: "100",
-		preload: true,
+		quality: "70",
+		preload: false,
 		placeholder: true,
 		densities: "x1 x2",
+		loading: "lazy",
 	});
 	const { $setState } = useNuxtApp();
 

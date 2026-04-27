@@ -18,6 +18,8 @@
 						x: -30,
 						duration: 0.5,
 					}"
+					loading="eager"
+					preload
 				/>
 				<h1
 					v-gsap.from="{
@@ -180,11 +182,10 @@
 				<div
 					v-for="(image, index) in project.images.challenges"
 					:key="`image-${index}`"
-					v-gsap.stagger.whenVisible.once.from="{
+					v-gsap.whenVisible.once.from="{
 						opacity: 0,
-						x: 50,
-						duration: `${(index + 1) * 0.5}`,
-						stagger: `${(index + 1) * 12}`,
+						y: 30,
+						duration: 0.5,
 					}"
 				>
 					<div class="tw:md:h-150 tw:h-96 tw:overflow-hidden tw:shadow">
