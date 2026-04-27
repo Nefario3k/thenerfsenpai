@@ -85,7 +85,7 @@
 	);
 	const lenisOptions = computed(() => ({
 		smooth: !prefersReducedMotion.value,
-		duration: 0.7,
+		duration: 1.2,
 		autoRaf: true,
 		direction: "vertical" as const,
 	}));
