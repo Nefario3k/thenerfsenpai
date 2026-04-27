@@ -13,7 +13,9 @@
 		<section class="tw:sm:py-8 tw:space-y-16">
 			<HorizontalScroll
 				ref="horizontalScrollRef"
+				class="tw:scroll-smooth"
 				aria-label="Testimonials, scroll horizontally to read more"
+				:enable-lenis="false"
 				@metrics="onMetrics"
 			>
 				<div

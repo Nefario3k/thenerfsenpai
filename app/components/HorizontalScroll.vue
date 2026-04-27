@@ -8,6 +8,7 @@
 				(isDragging ? 'tw:cursor-grabbing tw:select-none' : 'tw:cursor-grab'),
 		]"
 		@mousedown="handleDragStart"
+		@click.capture="handleClickCapture"
 		@scroll.passive="emitMetrics"
 	>
 		<div ref="contentRef">
@@ -29,11 +30,14 @@
 		ariaLabel?: string;
 		/** Portion of viewport width used for prev/next `scrollBy` step */
 		scrollStepFraction?: number;
+	/** Enable Lenis-driven horizontal scrolling behavior */
+	enableLenis?: boolean;
 	}
 
 	const props = withDefaults(defineProps<TypeProps>(), {
 		ariaLabel: "Scrollable content",
 		scrollStepFraction: 0.8,
+	enableLenis: true,
 	});
 
 	const emit = defineEmits<{
@@ -46,6 +50,15 @@
 	const isDragging = ref(false);
 	const startX = ref(0);
 	const startScrollLeft = ref(0);
+	const movedDuringDrag = ref(false);
+	const suppressNextClick = ref(false);
+	const SCROLL_EDGE_EPS = 1;
+	const WHEEL_SPEED_MULTIPLIER = 1.8;
+	const DRAG_CLICK_SUPPRESS_PX = 6;
+	const WHEEL_CAPTURE_OPTIONS: AddEventListenerOptions = {
+		passive: false,
+		capture: true,
+	};
 
 	const updateScrollable = () => {
 		const el = sectionRef.value;
@@ -65,18 +78,26 @@
 
 	const handleDragMove = (e: MouseEvent) => {
 		if (!isDragging.value || !sectionRef.value) return;
+		if (Math.abs(e.clientX - startX.value) > DRAG_CLICK_SUPPRESS_PX) {
+			movedDuringDrag.value = true;
+		}
 		const nextScrollLeft = startScrollLeft.value + (startX.value - e.clientX);
 		sectionRef.value.scrollLeft = nextScrollLeft;
-		horizontalLenis?.scrollTo(nextScrollLeft, {
-			immediate: true,
-			lock: true,
-			force: true,
-		});
+		if (props.enableLenis) {
+			horizontalLenis?.scrollTo(nextScrollLeft, {
+				immediate: true,
+				lock: true,
+				force: true,
+			});
+		}
 	};
 
 	const handleDragEnd = () => {
 		if (!isDragging.value) return;
 		isDragging.value = false;
+		if (movedDuringDrag.value) {
+			suppressNextClick.value = true;
+		}
 		window.removeEventListener("mousemove", handleDragMove);
 		window.removeEventListener("mouseup", handleDragEnd);
 	};
@@ -85,17 +106,66 @@
 		if (!isScrollable.value || !sectionRef.value) return;
 		e.preventDefault();
 		isDragging.value = true;
+		movedDuringDrag.value = false;
 		startX.value = e.clientX;
 		startScrollLeft.value = sectionRef.value.scrollLeft;
 		window.addEventListener("mousemove", handleDragMove);
 		window.addEventListener("mouseup", handleDragEnd);
 	};
 
+	const handleClickCapture = (e: MouseEvent) => {
+		if (!suppressNextClick.value) return;
+		e.preventDefault();
+		e.stopPropagation();
+		suppressNextClick.value = false;
+	};
+
+const handleWheel = (e: WheelEvent) => {
+	if (!props.enableLenis) return;
+	const el = sectionRef.value;
+	if (!el || !isScrollable.value) return;
+
+	const scrollDelta =
+		Math.abs(e.deltaY) > Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
+	if (!scrollDelta) return;
+	const boostedDelta = scrollDelta * WHEEL_SPEED_MULTIPLIER;
+
+	const maxScrollLeft = Math.max(0, el.scrollWidth - el.clientWidth);
+	const nextScrollLeft = Math.min(
+		maxScrollLeft,
+		Math.max(0, el.scrollLeft + boostedDelta)
+	);
+	const canScrollHorizontally =
+		Math.abs(nextScrollLeft - el.scrollLeft) > SCROLL_EDGE_EPS;
+
+	// Let page scroll naturally once horizontal bounds are reached.
+	if (!canScrollHorizontally) return;
+
+	e.preventDefault();
+	e.stopPropagation();
+	if (props.enableLenis) {
+		horizontalLenis?.scrollTo(nextScrollLeft, {
+			lock: true,
+			force: true,
+		});
+		return;
+	}
+	el.scrollLeft = nextScrollLeft;
+};
+
 	const scrollByDirection = (direction: -1 | 1) => {
 		const el = sectionRef.value;
 		if (!el) return;
 		const stepPx = Math.max(48, el.clientWidth * props.scrollStepFraction);
-		horizontalLenis?.scrollTo(el.scrollLeft + direction * stepPx);
+	const nextScrollLeft = el.scrollLeft + direction * stepPx;
+	if (props.enableLenis) {
+		horizontalLenis?.scrollTo(nextScrollLeft);
+		return;
+	}
+	el.scrollTo({
+		left: nextScrollLeft,
+		behavior: "smooth",
+	});
 	};
 
 	defineExpose({
@@ -119,19 +189,22 @@
 			const content = contentRef.value;
 			if (!wrapper || !content) return;
 
-			horizontalLenis = new Lenis({
-				wrapper,
-				content,
-				orientation: "horizontal",
-				gestureOrientation: "both",
-				smoothWheel: true,
-				autoRaf: false,
-			});
+			if (props.enableLenis) {
+				horizontalLenis = new Lenis({
+					wrapper,
+					content,
+					orientation: "horizontal",
+					gestureOrientation: "horizontal",
+					smoothWheel: true,
+					autoRaf: false,
+				});
 
-			horizontalLenis.on("scroll", () => {
-				updateScrollable();
-				emitMetrics();
-			});
+				horizontalLenis.on("scroll", () => {
+					updateScrollable();
+					emitMetrics();
+				});
+				wrapper.addEventListener("wheel", handleWheel, WHEEL_CAPTURE_OPTIONS);
+			}
 
 			rafId = window.requestAnimationFrame(raf);
 
@@ -150,6 +223,13 @@
 		if (rafId !== null) {
 			window.cancelAnimationFrame(rafId);
 			rafId = null;
+		}
+		if (props.enableLenis) {
+			sectionRef.value?.removeEventListener(
+				"wheel",
+				handleWheel,
+				WHEEL_CAPTURE_OPTIONS
+			);
 		}
 		window.removeEventListener("mousemove", handleDragMove);
 		window.removeEventListener("mouseup", handleDragEnd);

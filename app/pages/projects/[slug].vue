@@ -6,7 +6,7 @@
 		>
 			<!-- logo -->
 			<div
-				class="tw:flex tw:gap-3 tw:sm:items-center tw:items-start tw:sm:flex-row flex-col"
+				class="tw:flex tw:gap-3 tw:sm:items-center tw:items-start tw:sm:flex-row tw:flex-col"
 			>
 				<ImagePreview
 					v-if="project.images.icon"

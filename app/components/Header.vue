@@ -175,7 +175,7 @@
 							class="tw:flex tw:flex-col tw:justify-between tw:gap-2.5 tw:h-full tw:overflow-hidden"
 						>
 							<nav
-								class="tw:flex-auto tw:px-6 tw:py-11 tw:overflow-y-auto tw:w-full useCubicNestedTransition"
+								class="tw:flex-auto tw:px-6 tw:py-11 tw:overflow-y-auto tw:w-full useCubicNestedTransition tw:mt-10"
 								aria-label="Mobile navigation"
 							>
 								<ul class="tw:flex tw:flex-col tw:w-full tw:-mt-4">
@@ -209,7 +209,7 @@
 													link?.action?.();
 												}
 											"
-											class="tw:font-medium tw:hover:text-tc-link tw:gap-1 tw:block tw:w-full tw:hover:text-4xl tw:py-4 tw:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-white tw:focus-visible:ring-offset-2 tw:focus-visible:rounded-2 tw:border-b tw:border-bc-stroke tw:border-solid tw:text-tc-primary tw:text-2xl tw:cursor-pointer"
+											class="tw:font-medium tw:hover:text-tc-link tw:gap-1 tw:block tw:w-full tw:hover:text-4xl tw:py-4 tw:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-white tw:focus-visible:ring-offset-2 tw:focus-visible:rounded-2 tw:border-b tw:border-bc-stroke tw:border-solid tw:text-tc-primary tw:text-2xl tw:cursor-pointer tw:text-left"
 										>
 											{{ link.label }}
 										</button>
