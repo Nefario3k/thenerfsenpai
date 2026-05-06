@@ -40,9 +40,7 @@
 						<NuxtImg
 							:src="item.images.icon"
 							:alt="`${item.title} banner image`"
-							class="tw:w-auto tw:h-auto tw:object-contain tw:object-top tw:md:scale-100 tw:md:group-hover:scale-105"
-							widths="320 480 640 768 1024 1280"
-							sizes="(min-width: 1024px) 45vw, (min-width: 640px) 48vw, 96vw"
+							class="tw:w-auto! tw:h-auto! tw:object-contain tw:object-top tw:md:scale-100 tw:md:group-hover:scale-105 tw:max-w-[75%] tw:max-h-[75%] tw:min-w-[30%] tw:min-h-[30%]"
 							fit="contain"
 							quality="50"
 							format="webp"
