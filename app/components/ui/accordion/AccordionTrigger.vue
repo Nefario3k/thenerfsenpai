@@ -2,7 +2,6 @@
 	import type { AccordionTriggerProps } from "reka-ui";
 	import type { HTMLAttributes } from "vue";
 	import { reactiveOmit } from "@vueuse/core";
-	import { PhCaretDown } from "@phosphor-icons/vue";
 	import { AccordionHeader, AccordionTrigger } from "reka-ui";
 	import { cn } from "@/lib/utils";
 
@@ -27,9 +26,9 @@
 		>
 			<slot />
 			<slot name="icon">
-				<PhCaretDown
+				<SolarAltArrowDown
 					class="tw:text-muted-foreground tw:pointer-events-none tw:size-6 tw:shrink-0 tw:translate-y-0.5 tw:transition-transform tw:duration-200"
-					weight="bold"
+					weight="BoldDuotone"
 				/>
 			</slot>
 		</AccordionTrigger>

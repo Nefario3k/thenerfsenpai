@@ -1,620 +1,620 @@
 {
-  "description": "Inventory of removed v-gsap directives, options, and exact tags from Vue files.",
-  "files": [
-    {
-      "file": "app/components/Footer.vue",
-      "totalInFile": 6,
-      "integrations": [
-        {
-          "directive": "v-gsap.whenVisible.reverse.from",
-          "count": 1,
-          "options": [
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0.5, y: -30, duration: 0.5, }"
-            }
-          ],
-          "occurrences": [
-            {
-              "line": 4,
-              "tagName": "NuxtLink",
-              "tag": "<NuxtLink\n\t\t\tto=\"/\"\n\t\t\taria-label=\"TheNerfSenpai home\"\n\t\t\tclass=\"tw:w-full tw:sm:h-118 tw:h-60 tw:bg-no-repeat tw:bg-contain tw:bg-center tw:bg-(image:--lg-logo) tw:border-none tw:outline-none tw:focus-visible:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-tc-link tw:focus-visible:ring-offset-2 tw:focus-visible:ring-offset-bc-primary tw:rounded-sm tw:block tw:sm:mb-12 tw:mb-8\"\n\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\topacity: 0.5,\n\t\t\t\ty: -30,\n\t\t\t\tduration: 0.5,\n\t\t\t}\"\n\t\t/>",
-              "payload": "{ opacity: 0.5, y: -30, duration: 0.5, }"
-            }
-          ]
-        },
-        {
-          "directive": "v-gsap.from",
-          "count": 5,
-          "options": [
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0.5, x: -30, duration: 0.3, }"
-            },
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0.5, x: -30, duration: 0.5, }"
-            },
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0.5, x: -30, duration: 0.8, }"
-            },
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0.5, y: -30, duration: 0.5, }"
-            },
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0.5, x: 30, duration: 0.5, }"
-            }
-          ],
-          "occurrences": [
-            {
-              "line": 20,
-              "tagName": "li",
-              "tag": "<li\n\t\t\t\t\tv-gsap.from=\"{\n\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\tduration: 0.3,\n\t\t\t\t\t}\"\n\t\t\t\t>",
-              "payload": "{ opacity: 0.5, x: -30, duration: 0.3, }"
-            },
-            {
-              "line": 52,
-              "tagName": "li",
-              "tag": "<li\n\t\t\t\t\tv-gsap.from=\"{\n\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t}\"\n\t\t\t\t>",
-              "payload": "{ opacity: 0.5, x: -30, duration: 0.5, }"
-            },
-            {
-              "line": 84,
-              "tagName": "li",
-              "tag": "<li\n\t\t\t\t\tv-gsap.from=\"{\n\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\tduration: 0.8,\n\t\t\t\t\t}\"\n\t\t\t\t>",
-              "payload": "{ opacity: 0.5, x: -30, duration: 0.8, }"
-            },
-            {
-              "line": 116,
-              "tagName": "span",
-              "tag": "<span\n\t\t\t\tv-gsap.from=\"{\n\t\t\t\t\topacity: 0.5,\n\t\t\t\t\ty: -30,\n\t\t\t\t\tduration: 0.5,\n\t\t\t\t}\"\n\t\t\t\tclass=\"tw:text-xs\"\n\t\t\t\t>",
-              "payload": "{ opacity: 0.5, y: -30, duration: 0.5, }"
-            },
-            {
-              "line": 125,
-              "tagName": "time",
-              "tag": "<time\n\t\t\t\tv-gsap.from=\"{\n\t\t\t\t\topacity: 0.5,\n\t\t\t\t\tx: 30,\n\t\t\t\t\tduration: 0.5,\n\t\t\t\t}\"\n\t\t\t\tclass=\"tw:text-xs tw:tabular-nums\"\n\t\t\t\t:datetime=\"timeIso || undefined\"\n\t\t\t\t>",
-              "payload": "{ opacity: 0.5, x: 30, duration: 0.5, }"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "file": "app/components/about/GitHubContributions.vue",
-      "totalInFile": 3,
-      "integrations": [
-        {
-          "directive": "v-gsap.whenVisible.reverse.from",
-          "count": 3,
-          "options": [
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0.5, x: -30, duration: 0.5, stagger: 0.1, }"
-            },
-            {
-              "uses": 2,
-              "payload": "{ opacity: 0.5, x: -30, duration: 0.5, }"
-            }
-          ],
-          "occurrences": [
-            {
-              "line": 53,
-              "tagName": "div",
-              "tag": "<div\n\t\t\t\t\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t\t\t\t\t\t\tstagger: 0.1,\n\t\t\t\t\t\t\t\t\t\t}\"\n\t\t\t\t\t\t\t\t\t\t:class=\"[\n\t\t\t\t\t\t\t\t\t\t\t'tw:aspect-square tw:min-h-[10px] tw:rounded-[2px] tw:cursor-pointer',\n\t\t\t\t\t\t\t\t\t\t\tlevelClass(cell.level),\n\t\t\t\t\t\t\t\t\t\t]\"\n\t\t\t\t\t\t\t\t\t>",
-              "payload": "{ opacity: 0.5, x: -30, duration: 0.5, stagger: 0.1, }"
-            },
-            {
-              "line": 78,
-              "tagName": "div",
-              "tag": "<div\n\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t}\"\n\t\t\t\t\tclass=\"tw:flex tw:shrink-0 tw:flex-col tw:gap-2 tw:lg:items-end tw:font-verdana tw:text-xs tw:text-tc-secondary\"\n\t\t\t\t>",
-              "payload": "{ opacity: 0.5, x: -30, duration: 0.5, }"
-            },
-            {
-              "line": 103,
-              "tagName": "p",
-              "tag": "<p\n\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\topacity: 0.5,\n\t\t\t\t\tx: -30,\n\t\t\t\t\tduration: 0.5,\n\t\t\t\t}\"\n\t\t\t\tclass=\"tw:text-sm tw:text-tc-secondary tw:font-verdana\"\n\t\t\t>",
-              "payload": "{ opacity: 0.5, x: -30, duration: 0.5, }"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "file": "app/components/home/Facts.vue",
-      "totalInFile": 2,
-      "integrations": [
-        {
-          "directive": "v-gsap.whenVisible.reverse.from",
-          "count": 2,
-          "options": [
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0, x: -30, duration: 0.5, }"
-            },
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0, y: 30, duration: 0.9, }"
-            }
-          ],
-          "occurrences": [
-            {
-              "line": 6,
-              "tagName": "h2",
-              "tag": "<h2\n\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\topacity: 0,\n\t\t\t\t\tx: -30,\n\t\t\t\t\tduration: 0.5,\n\t\t\t\t}\"\n\t\t\t\tclass=\"tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:shrink-0 tw:md:sticky tw:md:top-56 tw:md:left-0\"\n\t\t\t>",
-              "payload": "{ opacity: 0, x: -30, duration: 0.5, }"
-            },
-            {
-              "line": 18,
-              "tagName": "p",
-              "tag": "<p\n\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\topacity: 0,\n\t\t\t\t\ty: 30,\n\t\t\t\t\tduration: 0.9,\n\t\t\t\t}\"\n\t\t\t\tclass=\"tw:text-normal tw:sm:text-lg tw:text-sm tw:text-tc-primary\"\n\t\t\t>",
-              "payload": "{ opacity: 0, y: 30, duration: 0.9, }"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "file": "app/components/home/Focus.vue",
-      "totalInFile": 2,
-      "integrations": [
-        {
-          "directive": "v-gsap.whenVisible.reverse.from",
-          "count": 2,
-          "options": [
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0, x: -30, duration: 0.5, }"
-            },
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0.5, y: 30, duration: 0.5, }"
-            }
-          ],
-          "occurrences": [
-            {
-              "line": 6,
-              "tagName": "h2",
-              "tag": "<h2\n\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\topacity: 0,\n\t\t\t\t\tx: -30,\n\t\t\t\t\tduration: 0.5,\n\t\t\t\t}\"\n\t\t\t\tclass=\"tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:shrink-0 tw:md:sticky tw:md:top-56 tw:md:left-0\"\n\t\t\t>",
-              "payload": "{ opacity: 0, x: -30, duration: 0.5, }"
-            },
-            {
-              "line": 18,
-              "tagName": "p",
-              "tag": "<p\n\t\t\t\tv-for=\"(element, index) in focusElements\"\n\t\t\t\t:key=\"element\"\n\t\t\t\t:class=\"`tw:text-medium tw:sm:text-4xl tw:text-8 tw:text-tc-primary ${\n\t\t\t\t\tindex !== 0\n\t\t\t\t\t\t? 'tw:sm:pt-8 tw:pt-4 tw:border-t-3 tw:border-solid tw:border-bc-tertiary'\n\t\t\t\t\t\t: ''\n\t\t\t\t}`\"\n\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\topacity: 0.5,\n\t\t\t\t\ty: 30,\n\t\t\t\t\tduration: 0.5,\n\t\t\t\t}\"\n\t\t\t>",
-              "payload": "{ opacity: 0.5, y: 30, duration: 0.5, }"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "file": "app/components/home/Testimonials.vue",
-      "totalInFile": 2,
-      "integrations": [
-        {
-          "directive": "v-gsap.whenVisible.reverse.from",
-          "count": 2,
-          "options": [
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0, x: -30, duration: 0.5, }"
-            },
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0, x: 30, duration: 1, stagger: 0.1, }"
-            }
-          ],
-          "occurrences": [
-            {
-              "line": 3,
-              "tagName": "h2",
-              "tag": "<h2\n\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\topacity: 0,\n\t\t\t\tx: -30,\n\t\t\t\tduration: 0.5,\n\t\t\t}\"\n\t\t\tclass=\"tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:mb-4 tw:sm:px-12 tw:px-4\"\n\t\t>",
-              "payload": "{ opacity: 0, x: -30, duration: 0.5, }"
-            },
-            {
-              "line": 22,
-              "tagName": "article",
-              "tag": "<article\n\t\t\t\t\t\tv-for=\"(testimonial, testimonialIndex) in testimonials\"\n\t\t\t\t\t\t:key=\"testimonial.name\"\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\tx: 30,\n\t\t\t\t\t\t\tduration: 1,\n\t\t\t\t\t\t\tstagger: 0.1,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t\tclass=\"tw:md:h-200 tw:h-148\"\n\t\t\t\t\t>",
-              "payload": "{ opacity: 0, x: 30, duration: 1, stagger: 0.1, }"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "file": "app/components/project/Wrapper.vue",
-      "totalInFile": 1,
-      "integrations": [
-        {
-          "directive": "v-gsap.whenVisible.reverse.from",
-          "count": 1,
-          "options": [
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0, scale: 0.9, duration: 0.8, }"
-            }
-          ],
-          "occurrences": [
-            {
-              "line": 24,
-              "tagName": "NuxtLink",
-              "tag": "<NuxtLink\n\t\t\t\t\t:to=\"`/projects/${item.slug}`\"\n\t\t\t\t\t:aria-label=\"`View project: ${item.title}`\"\n\t\t\t\t\ttitle=\"View Project\"\n\t\t\t\t\tclass=\"tw:bg-bc-primary-2 tw:sm:h-[51.2rem] tw:h-152 tw:w-full tw:md:p-8 tw:p-4 tw:relative tw:group tw:cursor-pointer tw:overflow-hidden\"\n\t\t\t\t\t@click=\"$scrollPageToTop()\"\n\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\tscale: 0.9,\n\t\t\t\t\t\tduration: 0.8,\n\t\t\t\t\t}\"\n\t\t\t\t>",
-              "payload": "{ opacity: 0, scale: 0.9, duration: 0.8, }"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "file": "app/pages/about.vue",
-      "totalInFile": 12,
-      "integrations": [
-        {
-          "directive": "v-gsap.splitText.words.from",
-          "count": 1,
-          "options": [
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0, x: -30, stagger: 0.1, }"
-            }
-          ],
-          "occurrences": [
-            {
-              "line": 7,
-              "tagName": "h1",
-              "tag": "<h1\n\t\t\t\tv-gsap.splitText.words.from=\"{\n\t\t\t\t\topacity: 0,\n\t\t\t\t\tx: -30,\n\t\t\t\t\tstagger: 0.1,\n\t\t\t\t}\"\n\t\t\t\tclass=\"tw:sm:text-[5.4rem] tw:text-8 tw:font-normal tw:font-zalando tw:leading-tight\"\n\t\t\t>",
-              "payload": "{ opacity: 0, x: -30, stagger: 0.1, }"
-            }
-          ]
-        },
-        {
-          "directive": "v-gsap.from",
-          "count": 3,
-          "options": [
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0, x: -30, duration: 0.5, }"
-            },
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0, x: -30, duration: 0.9, }"
-            },
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0, scale: 1.5, duration: 1, }"
-            }
-          ],
-          "occurrences": [
-            {
-              "line": 26,
-              "tagName": "p",
-              "tag": "<p\n\t\t\t\t\t\t\tv-gsap.from=\"{\n\t\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t\t\t}\"\n\t\t\t\t\t\t\tclass=\"tw:font-medium tw:text-lg\"\n\t\t\t\t\t\t>",
-              "payload": "{ opacity: 0, x: -30, duration: 0.5, }"
-            },
-            {
-              "line": 36,
-              "tagName": "p",
-              "tag": "<p\n\t\t\t\t\t\t\tv-gsap.from=\"{\n\t\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\t\t\tduration: 0.9,\n\t\t\t\t\t\t\t}\"\n\t\t\t\t\t\t\tclass=\"tw:font-medium tw:text-base tw:text-tc-secondary\"\n\t\t\t\t\t\t>",
-              "payload": "{ opacity: 0, x: -30, duration: 0.9, }"
-            },
-            {
-              "line": 52,
-              "tagName": "NuxtImg",
-              "tag": "<NuxtImg\n\t\t\t\t\t\tsrc=\"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776844501/DaviesOkpeta_Headshot_2026-02-02_uzyjwo.jpg\"\n\t\t\t\t\t\twidth=\"100%\"\n\t\t\t\t\t\theight=\"100%\"\n\t\t\t\t\t\talt=\"TheNerfSenpai: Davies Okpeta profile picture\"\n\t\t\t\t\t\tclass=\"tw:w-auto tw:h-auto tw:block tw:object-contain tw:object-top tw:rounded-4\"\n\t\t\t\t\t\tv-gsap.from=\"{\n\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\tscale: 1.5,\n\t\t\t\t\t\t\tduration: 1,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t/>",
-              "payload": "{ opacity: 0, scale: 1.5, duration: 1, }"
-            }
-          ]
-        },
-        {
-          "directive": "v-gsap.whenVisible.reverse.from",
-          "count": 8,
-          "options": [
-            {
-              "uses": 5,
-              "payload": "{ opacity: 0.5, y: 30, duration: 0.5, }"
-            },
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0.5, x: 30, duration: 0.5, stagger: 0.1, }"
-            },
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0.5, y: 30, duration: 0.5, stagger: 0.1, }"
-            },
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0.5, x: -30, duration: 0.5, }"
-            }
-          ],
-          "occurrences": [
-            {
-              "line": 70,
-              "tagName": "h2",
-              "tag": "<h2\n\t\t\t\t\tclass=\"tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary\"\n\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t}\"\n\t\t\t\t>",
-              "payload": "{ opacity: 0.5, y: 30, duration: 0.5, }"
-            },
-            {
-              "line": 80,
-              "tagName": "div",
-              "tag": "<div\n\t\t\t\t\tclass=\"tw:sm:text-xl tw:text-base tw:font-normal tw:text-tc-secondary tw:font-verdana\"\n\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t}\"\n\t\t\t\t>",
-              "payload": "{ opacity: 0.5, y: 30, duration: 0.5, }"
-            },
-            {
-              "line": 187,
-              "tagName": "h2",
-              "tag": "<h2\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t\tclass=\"tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:md:sticky tw:md:top-56 tw:md:left-0\"\n\t\t\t\t\t>",
-              "payload": "{ opacity: 0.5, y: 30, duration: 0.5, }"
-            },
-            {
-              "line": 199,
-              "tagName": "div",
-              "tag": "<div\n\t\t\t\t\t\tv-for=\"(element, index) in techStack\"\n\t\t\t\t\t\t:key=\"element.title\"\n\t\t\t\t\t\t:class=\"`tw:space-y-4 ${\n\t\t\t\t\t\t\tindex !== 0\n\t\t\t\t\t\t\t\t? 'tw:-mt-4 tw:sm:pt-8 tw:pt-4 tw:border-t-3 tw:border-solid tw:border-bc-tertiary'\n\t\t\t\t\t\t\t\t: ''\n\t\t\t\t\t\t}`\"\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t>",
-              "payload": "{ opacity: 0.5, y: 30, duration: 0.5, }"
-            },
-            {
-              "line": 220,
-              "tagName": "p",
-              "tag": "<p\n\t\t\t\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\t\t\t\t\tx: 30,\n\t\t\t\t\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t\t\t\t\t\tstagger: 0.1,\n\t\t\t\t\t\t\t\t\t}\"\n\t\t\t\t\t\t\t\t\tclass=\"tw:text-sm tw:text-tc-secondary tw:font-verdana tw:pb-4\"\n\t\t\t\t\t\t\t\t>",
-              "payload": "{ opacity: 0.5, x: 30, duration: 0.5, stagger: 0.1, }"
-            },
-            {
-              "line": 243,
-              "tagName": "h2",
-              "tag": "<h2\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t\tclass=\"tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:md:sticky tw:md:top-56 tw:md:left-0\"\n\t\t\t\t\t>",
-              "payload": "{ opacity: 0.5, y: 30, duration: 0.5, }"
-            },
-            {
-              "line": 261,
-              "tagName": "AccordionItem",
-              "tag": "<AccordionItem\n\t\t\t\t\t\t\tv-for=\"(job, index) in careerHistory\"\n\t\t\t\t\t\t\t:key=\"`${job.company}-${job.role}-${index}`\"\n\t\t\t\t\t\t\t:value=\"index.toString()\"\n\t\t\t\t\t\t\t:class=\"`tw:border-b-0 ${\n\t\t\t\t\t\t\t\tindex !== 0\n\t\t\t\t\t\t\t\t\t? `tw:-mt-4 tw:sm:pt-8 tw:pt-4 tw:border-t-3 tw:border-solid ${\n\t\t\t\t\t\t\t\t\t\t\tindex.toString() ===\n\t\t\t\t\t\t\t\t\t\t\t(parseInt(openedProject) + 1).toString()\n\t\t\t\t\t\t\t\t\t\t\t\t? 'tw:border-tc-link'\n\t\t\t\t\t\t\t\t\t\t\t\t: 'tw:border-bc-tertiary'\n\t\t\t\t\t\t\t\t\t  }`\n\t\t\t\t\t\t\t\t\t: ''\n\t\t\t\t\t\t\t}`\"\n\t\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t\t\t\tstagger: 0.1,\n\t\t\t\t\t\t\t}\"\n\t\t\t\t\t\t>",
-              "payload": "{ opacity: 0.5, y: 30, duration: 0.5, stagger: 0.1, }"
-            },
-            {
-              "line": 335,
-              "tagName": "h2",
-              "tag": "<h2\n\t\t\t\t\tclass=\"tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary\"\n\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t}\"\n\t\t\t\t>",
-              "payload": "{ opacity: 0.5, x: -30, duration: 0.5, }"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "file": "app/pages/index.vue",
-      "totalInFile": 1,
-      "integrations": [
-        {
-          "directive": "v-gsap.splitText.words.from",
-          "count": 1,
-          "options": [
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0, x: -30, stagger: 0.1, }"
-            }
-          ],
-          "occurrences": [
-            {
-              "line": 21,
-              "tagName": "h1",
-              "tag": "<h1\n\t\t\t\tv-gsap.splitText.words.from=\"{\n\t\t\t\t\topacity: 0,\n\t\t\t\t\tx: -30,\n\t\t\t\t\tstagger: 0.1,\n\t\t\t\t}\"\n\t\t\t\tclass=\"tw:sm:text-[5.4rem] tw:text-8 tw:font-normal tw:font-zalando tw:leading-tight tw:max-w-7xl\"\n\t\t\t>",
-              "payload": "{ opacity: 0, x: -30, stagger: 0.1, }"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "file": "app/pages/projects/index.vue",
-      "totalInFile": 1,
-      "integrations": [
-        {
-          "directive": "v-gsap.splitText.words.from",
-          "count": 1,
-          "options": [
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0, x: -30, stagger: 0.1, }"
-            }
-          ],
-          "occurrences": [
-            {
-              "line": 5,
-              "tagName": "h1",
-              "tag": "<h1\n\t\t\t\tv-gsap.splitText.words.from=\"{\n\t\t\t\t\topacity: 0,\n\t\t\t\t\tx: -30,\n\t\t\t\t\tstagger: 0.1,\n\t\t\t\t}\"\n\t\t\t\tclass=\"tw:sm:text-[5.4rem] tw:text-8 tw:font-normal tw:font-zalando tw:leading-tight\"\n\t\t\t>",
-              "payload": "{ opacity: 0, x: -30, stagger: 0.1, }"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "file": "app/pages/projects/[slug].vue",
-      "totalInFile": 20,
-      "integrations": [
-        {
-          "directive": "v-gsap.from",
-          "count": 2,
-          "options": [
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0, x: -30, duration: 0.5, }"
-            },
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0, x: -30, duration: 0.9, }"
-            }
-          ],
-          "occurrences": [
-            {
-              "line": 11,
-              "tagName": "ImagePreview",
-              "tag": "<ImagePreview\n\t\t\t\t\tv-if=\"project.images.icon\"\n\t\t\t\t\t:src=\"project.images.icon\"\n\t\t\t\t\t:alt=\"`${project.title} logo`\"\n\t\t\t\t\tclass=\"tw:w-auto tw:min-w-10 tw:h-full tw:max-h-20 tw:object-contain tw:object-center tw:shrink-0\"\n\t\t\t\t\tv-gsap.from=\"{\n\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t}\"\n\t\t\t\t\tloading=\"eager\"\n\t\t\t\t\tpreload\n\t\t\t\t/>",
-              "payload": "{ opacity: 0, x: -30, duration: 0.5, }"
-            },
-            {
-              "line": 24,
-              "tagName": "h1",
-              "tag": "<h1\n\t\t\t\t\tv-gsap.from=\"{\n\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\tduration: 0.9,\n\t\t\t\t\t}\"\n\t\t\t\t\tclass=\"tw:sm:text-[6.4rem] tw:text-8 tw:font-normal tw:font-zalando tw:leading-tight\"\n\t\t\t\t>",
-              "payload": "{ opacity: 0, x: -30, duration: 0.9, }"
-            }
-          ]
-        },
-        {
-          "directive": "v-gsap.whenVisible.once.from",
-          "count": 5,
-          "options": [
-            {
-              "uses": 3,
-              "payload": "{ opacity: 0, scale: 1.5, duration: 0.8, }"
-            },
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0, x: -30, duration: `${(index + 1) * 0.3}`, }"
-            },
-            {
-              "uses": 1,
-              "payload": "{ opacity: 0, y: 30, duration: 0.5, }"
-            }
-          ],
-          "occurrences": [
-            {
-              "line": 39,
-              "tagName": "ImagePreview",
-              "tag": "<ImagePreview\n\t\t\t\t\t:src=\"project.images.banner\"\n\t\t\t\t\t:alt=\"`${project.title} banner image`\"\n\t\t\t\t\tclass=\"tw:w-full tw:h-full tw:object-cover tw:object-top\"\n\t\t\t\t\tv-gsap.whenVisible.once.from=\"{\n\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\tscale: 1.5,\n\t\t\t\t\t\tduration: 0.8,\n\t\t\t\t\t}\"\n\t\t\t\t/>",
-              "payload": "{ opacity: 0, scale: 1.5, duration: 0.8, }"
-            },
-            {
-              "line": 56,
-              "tagName": "div",
-              "tag": "<div\n\t\t\t\t\t\t\tclass=\"tw:flex tw:flex-col\"\n\t\t\t\t\t\t\tv-gsap.whenVisible.once.from=\"{\n\t\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\t\t\tduration: `${(index + 1) * 0.3}`,\n\t\t\t\t\t\t\t}\"\n\t\t\t\t\t\t>",
-              "payload": "{ opacity: 0, x: -30, duration: `${(index + 1) * 0.3}`, }"
-            },
-            {
-              "line": 123,
-              "tagName": "ImagePreview",
-              "tag": "<ImagePreview\n\t\t\t\t\t:src=\"project.images.intro\"\n\t\t\t\t\t:alt=\"`${project.title} intro image`\"\n\t\t\t\t\tclass=\"tw:w-full tw:h-full tw:object-cover tw:object-top\"\n\t\t\t\t\tv-gsap.whenVisible.once.from=\"{\n\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\tscale: 1.5,\n\t\t\t\t\t\tduration: 0.8,\n\t\t\t\t\t}\"\n\t\t\t\t/>",
-              "payload": "{ opacity: 0, scale: 1.5, duration: 0.8, }"
-            },
-            {
-              "line": 182,
-              "tagName": "div",
-              "tag": "<div\n\t\t\t\t\tv-for=\"(image, index) in project.images.challenges\"\n\t\t\t\t\t:key=\"`image-${index}`\"\n\t\t\t\t\tv-gsap.whenVisible.once.from=\"{\n\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t}\"\n\t\t\t\t>",
-              "payload": "{ opacity: 0, y: 30, duration: 0.5, }"
-            },
-            {
-              "line": 231,
-              "tagName": "ImagePreview",
-              "tag": "<ImagePreview\n\t\t\t\t\t:src=\"project.images.technology\"\n\t\t\t\t\t:alt=\"`${project.title} technology image`\"\n\t\t\t\t\tclass=\"tw:w-full tw:h-full tw:object-cover tw:object-top\"\n\t\t\t\t\tv-gsap.whenVisible.once.from=\"{\n\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\tscale: 1.5,\n\t\t\t\t\t\tduration: 0.8,\n\t\t\t\t\t}\"\n\t\t\t\t/>",
-              "payload": "{ opacity: 0, scale: 1.5, duration: 0.8, }"
-            }
-          ]
-        },
-        {
-          "directive": "v-gsap.whenVisible.reverse.from",
-          "count": 13,
-          "options": [
-            {
-              "uses": 3,
-              "payload": "{ opacity: 0, x: -30, duration: 0.5, }"
-            },
-            {
-              "uses": 10,
-              "payload": "{ opacity: 0, y: 30, duration: 0.9, }"
-            }
-          ],
-          "occurrences": [
-            {
-              "line": 95,
-              "tagName": "p",
-              "tag": "<p\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t\tclass=\"tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:shrink-0 tw:md:sticky tw:md:top-56 tw:md:left-0\"\n\t\t\t\t\t>",
-              "payload": "{ opacity: 0, x: -30, duration: 0.5, }"
-            },
-            {
-              "line": 107,
-              "tagName": "p",
-              "tag": "<p\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\tduration: 0.9,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t\tclass=\"tw:text-normal tw:sm:text-lg tw:text-sm tw:text-tc-secondary tw:first-letter:uppercase\"\n\t\t\t\t\t>",
-              "payload": "{ opacity: 0, y: 30, duration: 0.9, }"
-            },
-            {
-              "line": 137,
-              "tagName": "p",
-              "tag": "<p\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t\tclass=\"tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:shrink-0 tw:md:sticky tw:md:top-56 tw:md:left-0\"\n\t\t\t\t\t>",
-              "payload": "{ opacity: 0, x: -30, duration: 0.5, }"
-            },
-            {
-              "line": 149,
-              "tagName": "p",
-              "tag": "<p\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\tduration: 0.9,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t\tclass=\"tw:text-normal tw:sm:text-lg tw:text-sm tw:text-tc-primary tw:first-letter:uppercase\"\n\t\t\t\t\t>",
-              "payload": "{ opacity: 0, y: 30, duration: 0.9, }"
-            },
-            {
-              "line": 160,
-              "tagName": "li",
-              "tag": "<li\n\t\t\t\t\t\t\tv-for=\"challenge in project.challenge.contents\"\n\t\t\t\t\t\t\t:key=\"challenge\"\n\t\t\t\t\t\t\tclass=\"tw:text-sm tw:text-tc-secondary tw:first-letter:uppercase\"\n\t\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\t\tduration: 0.9,\n\t\t\t\t\t\t\t}\"\n\t\t\t\t\t\t>",
-              "payload": "{ opacity: 0, y: 30, duration: 0.9, }"
-            },
-            {
-              "line": 203,
-              "tagName": "p",
-              "tag": "<p\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t\tclass=\"tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:shrink-0 tw:md:sticky tw:md:top-56 tw:md:left-0\"\n\t\t\t\t\t>",
-              "payload": "{ opacity: 0, x: -30, duration: 0.5, }"
-            },
-            {
-              "line": 215,
-              "tagName": "p",
-              "tag": "<p\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\tduration: 0.9,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t\tclass=\"tw:text-normal tw:sm:text-lg tw:text-sm tw:text-tc-secondary tw:first-letter:uppercase\"\n\t\t\t\t\t>",
-              "payload": "{ opacity: 0, y: 30, duration: 0.9, }"
-            },
-            {
-              "line": 252,
-              "tagName": "p",
-              "tag": "<p\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\tduration: 0.9,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t\tclass=\"tw:text-normal tw:sm:text-lg tw:text-sm tw:text-tc-primary tw:first-letter:uppercase\"\n\t\t\t\t\t>",
-              "payload": "{ opacity: 0, y: 30, duration: 0.9, }"
-            },
-            {
-              "line": 262,
-              "tagName": "p",
-              "tag": "<p\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\tduration: 0.9,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t\tclass=\"tw:text-normal tw:sm:text-lg tw:text-sm tw:text-tc-primary tw:first-letter:uppercase\"\n\t\t\t\t\t>",
-              "payload": "{ opacity: 0, y: 30, duration: 0.9, }"
-            },
-            {
-              "line": 273,
-              "tagName": "li",
-              "tag": "<li\n\t\t\t\t\t\t\tv-for=\"deliverable in project.solution.deliverables\"\n\t\t\t\t\t\t\t:key=\"deliverable\"\n\t\t\t\t\t\t\tclass=\"tw:text-sm tw:text-tc-secondary tw:first-letter:uppercase\"\n\t\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\t\tduration: 0.9,\n\t\t\t\t\t\t\t}\"\n\t\t\t\t\t\t>",
-              "payload": "{ opacity: 0, y: 30, duration: 0.9, }"
-            },
-            {
-              "line": 286,
-              "tagName": "p",
-              "tag": "<p\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\tduration: 0.9,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t\tclass=\"tw:text-normal tw:sm:text-lg tw:text-sm tw:text-tc-primary tw:first-letter:uppercase\"\n\t\t\t\t\t>",
-              "payload": "{ opacity: 0, y: 30, duration: 0.9, }"
-            },
-            {
-              "line": 297,
-              "tagName": "li",
-              "tag": "<li\n\t\t\t\t\t\t\tv-for=\"impact in project.solution.impact\"\n\t\t\t\t\t\t\t:key=\"impact\"\n\t\t\t\t\t\t\tclass=\"tw:text-sm tw:text-tc-secondary tw:first-letter:uppercase\"\n\t\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\t\tduration: 0.9,\n\t\t\t\t\t\t\t}\"\n\t\t\t\t\t\t>",
-              "payload": "{ opacity: 0, y: 30, duration: 0.9, }"
-            },
-            {
-              "line": 318,
-              "tagName": "h2",
-              "tag": "<h2\n\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\topacity: 0,\n\t\t\t\t\ty: 30,\n\t\t\t\t\tduration: 0.9,\n\t\t\t\t}\"\n\t\t\t\tclass=\"tw:sm:px-12 tw:px-4 tw:py-4 tw:text-sm tw:text-tc-secondary tw:font-medium\"\n\t\t\t>",
-              "payload": "{ opacity: 0, y: 30, duration: 0.9, }"
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "totalsByVariant": {
-    "v-gsap.whenVisible.reverse.from": 32,
-    "v-gsap.from": 10,
-    "v-gsap.whenVisible.once.from": 5,
-    "v-gsap.splitText.words.from": 3
-  },
-  "overallDirectiveOccurrencesRemoved": 50
+	"description": "Inventory of removed v-gsap directives, options, and exact tags from Vue files.",
+	"files": [
+		{
+			"file": "app/components/Footer.vue",
+			"totalInFile": 6,
+			"integrations": [
+				{
+					"directive": "v-gsap.whenVisible.reverse.from",
+					"count": 1,
+					"options": [
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0.5, y: -30, duration: 0.5, }"
+						}
+					],
+					"occurrences": [
+						{
+							"line": 4,
+							"tagName": "NuxtLink",
+							"tag": "<NuxtLink\n\t\t\tto=\"/\"\n\t\t\taria-label=\"TheNerfSenpai home\"\n\t\t\tclass=\"tw:w-full tw:sm:h-118 tw:h-60 tw:bg-no-repeat tw:bg-contain tw:bg-center tw:bg-(image:--lg-logo) tw:border-none tw:outline-none tw:focus-visible:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-tc-link tw:focus-visible:ring-offset-2 tw:focus-visible:ring-offset-bc-primary tw:rounded-sm tw:block tw:sm:mb-12 tw:mb-8\"\n\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\topacity: 0.5,\n\t\t\t\ty: -30,\n\t\t\t\tduration: 0.5,\n\t\t\t}\"\n\t\t/>",
+							"payload": "{ opacity: 0.5, y: -30, duration: 0.5, }"
+						}
+					]
+				},
+				{
+					"directive": "v-gsap.from",
+					"count": 5,
+					"options": [
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0.5, x: -30, duration: 0.3, }"
+						},
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0.5, x: -30, duration: 0.5, }"
+						},
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0.5, x: -30, duration: 0.8, }"
+						},
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0.5, y: -30, duration: 0.5, }"
+						},
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0.5, x: 30, duration: 0.5, }"
+						}
+					],
+					"occurrences": [
+						{
+							"line": 20,
+							"tagName": "li",
+							"tag": "<li\n\t\t\t\t\tv-gsap.from=\"{\n\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\tduration: 0.3,\n\t\t\t\t\t}\"\n\t\t\t\t>",
+							"payload": "{ opacity: 0.5, x: -30, duration: 0.3, }"
+						},
+						{
+							"line": 52,
+							"tagName": "li",
+							"tag": "<li\n\t\t\t\t\tv-gsap.from=\"{\n\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t}\"\n\t\t\t\t>",
+							"payload": "{ opacity: 0.5, x: -30, duration: 0.5, }"
+						},
+						{
+							"line": 84,
+							"tagName": "li",
+							"tag": "<li\n\t\t\t\t\tv-gsap.from=\"{\n\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\tduration: 0.8,\n\t\t\t\t\t}\"\n\t\t\t\t>",
+							"payload": "{ opacity: 0.5, x: -30, duration: 0.8, }"
+						},
+						{
+							"line": 116,
+							"tagName": "span",
+							"tag": "<span\n\t\t\t\tv-gsap.from=\"{\n\t\t\t\t\topacity: 0.5,\n\t\t\t\t\ty: -30,\n\t\t\t\t\tduration: 0.5,\n\t\t\t\t}\"\n\t\t\t\tclass=\"tw:text-xs\"\n\t\t\t\t>",
+							"payload": "{ opacity: 0.5, y: -30, duration: 0.5, }"
+						},
+						{
+							"line": 125,
+							"tagName": "time",
+							"tag": "<time\n\t\t\t\tv-gsap.from=\"{\n\t\t\t\t\topacity: 0.5,\n\t\t\t\t\tx: 30,\n\t\t\t\t\tduration: 0.5,\n\t\t\t\t}\"\n\t\t\t\tclass=\"tw:text-xs tw:tabular-nums\"\n\t\t\t\t:datetime=\"timeIso || undefined\"\n\t\t\t\t>",
+							"payload": "{ opacity: 0.5, x: 30, duration: 0.5, }"
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "app/components/about/GitHubContributions.vue",
+			"totalInFile": 3,
+			"integrations": [
+				{
+					"directive": "v-gsap.whenVisible.reverse.from",
+					"count": 3,
+					"options": [
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0.5, x: -30, duration: 0.5, stagger: 0.1, }"
+						},
+						{
+							"uses": 2,
+							"payload": "{ opacity: 0.5, x: -30, duration: 0.5, }"
+						}
+					],
+					"occurrences": [
+						{
+							"line": 53,
+							"tagName": "div",
+							"tag": "<div\n\t\t\t\t\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t\t\t\t\t\t\tstagger: 0.1,\n\t\t\t\t\t\t\t\t\t\t}\"\n\t\t\t\t\t\t\t\t\t\t:class=\"[\n\t\t\t\t\t\t\t\t\t\t\t'tw:aspect-square tw:min-h-[10px] tw:rounded-[2px] tw:cursor-pointer',\n\t\t\t\t\t\t\t\t\t\t\tlevelClass(cell.level),\n\t\t\t\t\t\t\t\t\t\t]\"\n\t\t\t\t\t\t\t\t\t>",
+							"payload": "{ opacity: 0.5, x: -30, duration: 0.5, stagger: 0.1, }"
+						},
+						{
+							"line": 78,
+							"tagName": "div",
+							"tag": "<div\n\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t}\"\n\t\t\t\t\tclass=\"tw:flex tw:shrink-0 tw:flex-col tw:gap-2 tw:lg:items-end tw:font-verdana tw:text-xs tw:text-tc-secondary\"\n\t\t\t\t>",
+							"payload": "{ opacity: 0.5, x: -30, duration: 0.5, }"
+						},
+						{
+							"line": 103,
+							"tagName": "p",
+							"tag": "<p\n\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\topacity: 0.5,\n\t\t\t\t\tx: -30,\n\t\t\t\t\tduration: 0.5,\n\t\t\t\t}\"\n\t\t\t\tclass=\"tw:text-sm tw:text-tc-secondary tw:font-verdana\"\n\t\t\t>",
+							"payload": "{ opacity: 0.5, x: -30, duration: 0.5, }"
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "app/components/home/Facts.vue",
+			"totalInFile": 2,
+			"integrations": [
+				{
+					"directive": "v-gsap.whenVisible.reverse.from",
+					"count": 2,
+					"options": [
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0, x: -30, duration: 0.5, }"
+						},
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0, y: 30, duration: 0.9, }"
+						}
+					],
+					"occurrences": [
+						{
+							"line": 6,
+							"tagName": "h2",
+							"tag": "<h2\n\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\topacity: 0,\n\t\t\t\t\tx: -30,\n\t\t\t\t\tduration: 0.5,\n\t\t\t\t}\"\n\t\t\t\tclass=\"tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:shrink-0 tw:md:sticky tw:md:top-56 tw:md:left-0\"\n\t\t\t>",
+							"payload": "{ opacity: 0, x: -30, duration: 0.5, }"
+						},
+						{
+							"line": 18,
+							"tagName": "p",
+							"tag": "<p\n\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\topacity: 0,\n\t\t\t\t\ty: 30,\n\t\t\t\t\tduration: 0.9,\n\t\t\t\t}\"\n\t\t\t\tclass=\"tw:text-normal tw:sm:text-lg tw:text-sm tw:text-tc-primary\"\n\t\t\t>",
+							"payload": "{ opacity: 0, y: 30, duration: 0.9, }"
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "app/components/home/Focus.vue",
+			"totalInFile": 2,
+			"integrations": [
+				{
+					"directive": "v-gsap.whenVisible.reverse.from",
+					"count": 2,
+					"options": [
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0, x: -30, duration: 0.5, }"
+						},
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0.5, y: 30, duration: 0.5, }"
+						}
+					],
+					"occurrences": [
+						{
+							"line": 6,
+							"tagName": "h2",
+							"tag": "<h2\n\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\topacity: 0,\n\t\t\t\t\tx: -30,\n\t\t\t\t\tduration: 0.5,\n\t\t\t\t}\"\n\t\t\t\tclass=\"tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:shrink-0 tw:md:sticky tw:md:top-56 tw:md:left-0\"\n\t\t\t>",
+							"payload": "{ opacity: 0, x: -30, duration: 0.5, }"
+						},
+						{
+							"line": 18,
+							"tagName": "p",
+							"tag": "<p\n\t\t\t\tv-for=\"(element, index) in focusElements\"\n\t\t\t\t:key=\"element\"\n\t\t\t\t:class=\"`tw:text-medium tw:sm:text-4xl tw:text-8 tw:text-tc-primary ${\n\t\t\t\t\tindex !== 0\n\t\t\t\t\t\t? 'tw:sm:pt-8 tw:pt-4 tw:border-t-3 tw:border-solid tw:border-bc-tertiary'\n\t\t\t\t\t\t: ''\n\t\t\t\t}`\"\n\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\topacity: 0.5,\n\t\t\t\t\ty: 30,\n\t\t\t\t\tduration: 0.5,\n\t\t\t\t}\"\n\t\t\t>",
+							"payload": "{ opacity: 0.5, y: 30, duration: 0.5, }"
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "app/components/home/Testimonials.vue",
+			"totalInFile": 2,
+			"integrations": [
+				{
+					"directive": "v-gsap.whenVisible.reverse.from",
+					"count": 2,
+					"options": [
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0, x: -30, duration: 0.5, }"
+						},
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0, x: 30, duration: 1, stagger: 0.1, }"
+						}
+					],
+					"occurrences": [
+						{
+							"line": 3,
+							"tagName": "h2",
+							"tag": "<h2\n\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\topacity: 0,\n\t\t\t\tx: -30,\n\t\t\t\tduration: 0.5,\n\t\t\t}\"\n\t\t\tclass=\"tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:mb-4 tw:sm:px-12 tw:px-4\"\n\t\t>",
+							"payload": "{ opacity: 0, x: -30, duration: 0.5, }"
+						},
+						{
+							"line": 22,
+							"tagName": "article",
+							"tag": "<article\n\t\t\t\t\t\tv-for=\"(testimonial, testimonialIndex) in testimonials\"\n\t\t\t\t\t\t:key=\"testimonial.name\"\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\tx: 30,\n\t\t\t\t\t\t\tduration: 1,\n\t\t\t\t\t\t\tstagger: 0.1,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t\tclass=\"tw:md:h-200 tw:h-148\"\n\t\t\t\t\t>",
+							"payload": "{ opacity: 0, x: 30, duration: 1, stagger: 0.1, }"
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "app/components/project/Wrapper.vue",
+			"totalInFile": 1,
+			"integrations": [
+				{
+					"directive": "v-gsap.whenVisible.reverse.from",
+					"count": 1,
+					"options": [
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0, scale: 0.9, duration: 0.8, }"
+						}
+					],
+					"occurrences": [
+						{
+							"line": 24,
+							"tagName": "NuxtLink",
+							"tag": "<NuxtLink\n\t\t\t\t\t:to=\"`/projects/${item.slug}`\"\n\t\t\t\t\t:aria-label=\"`View project: ${item.title}`\"\n\t\t\t\t\ttitle=\"View Project\"\n\t\t\t\t\tclass=\"tw:bg-bc-primary-2 tw:sm:h-[51.2rem] tw:h-152 tw:w-full tw:md:p-8 tw:p-4 tw:relative tw:group tw:cursor-pointer tw:overflow-hidden\"\n\t\t\t\t\t@click=\"$scrollPageToTop()\"\n\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\tscale: 0.9,\n\t\t\t\t\t\tduration: 0.8,\n\t\t\t\t\t}\"\n\t\t\t\t>",
+							"payload": "{ opacity: 0, scale: 0.9, duration: 0.8, }"
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "app/pages/about.vue",
+			"totalInFile": 12,
+			"integrations": [
+				{
+					"directive": "v-gsap.splitText.words.from",
+					"count": 1,
+					"options": [
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0, x: -30, stagger: 0.1, }"
+						}
+					],
+					"occurrences": [
+						{
+							"line": 7,
+							"tagName": "h1",
+							"tag": "<h1\n\t\t\t\tv-gsap.splitText.words.from=\"{\n\t\t\t\t\topacity: 0,\n\t\t\t\t\tx: -30,\n\t\t\t\t\tstagger: 0.1,\n\t\t\t\t}\"\n\t\t\t\tclass=\"tw:sm:text-[5.4rem] tw:text-8 tw:font-normal tw:font-zalando tw:leading-tight\"\n\t\t\t>",
+							"payload": "{ opacity: 0, x: -30, stagger: 0.1, }"
+						}
+					]
+				},
+				{
+					"directive": "v-gsap.from",
+					"count": 3,
+					"options": [
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0, x: -30, duration: 0.5, }"
+						},
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0, x: -30, duration: 0.9, }"
+						},
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0, scale: 1.5, duration: 1, }"
+						}
+					],
+					"occurrences": [
+						{
+							"line": 26,
+							"tagName": "p",
+							"tag": "<p\n\t\t\t\t\t\t\tv-gsap.from=\"{\n\t\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t\t\t}\"\n\t\t\t\t\t\t\tclass=\"tw:font-medium tw:text-lg\"\n\t\t\t\t\t\t>",
+							"payload": "{ opacity: 0, x: -30, duration: 0.5, }"
+						},
+						{
+							"line": 36,
+							"tagName": "p",
+							"tag": "<p\n\t\t\t\t\t\t\tv-gsap.from=\"{\n\t\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\t\t\tduration: 0.9,\n\t\t\t\t\t\t\t}\"\n\t\t\t\t\t\t\tclass=\"tw:font-medium tw:text-base tw:text-tc-secondary\"\n\t\t\t\t\t\t>",
+							"payload": "{ opacity: 0, x: -30, duration: 0.9, }"
+						},
+						{
+							"line": 52,
+							"tagName": "NuxtImg",
+							"tag": "<img\n\t\t\t\t\t\tsrc=\"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776844501/DaviesOkpeta_Headshot_2026-02-02_uzyjwo.jpg\"\n\t\t\t\t\t\twidth=\"100%\"\n\t\t\t\t\t\theight=\"100%\"\n\t\t\t\t\t\talt=\"TheNerfSenpai: Davies Okpeta profile picture\"\n\t\t\t\t\t\tclass=\"tw:w-auto tw:h-auto tw:block tw:object-contain tw:object-top tw:rounded-4\"\n\t\t\t\t\t\tv-gsap.from=\"{\n\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\tscale: 1.5,\n\t\t\t\t\t\t\tduration: 1,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t/>",
+							"payload": "{ opacity: 0, scale: 1.5, duration: 1, }"
+						}
+					]
+				},
+				{
+					"directive": "v-gsap.whenVisible.reverse.from",
+					"count": 8,
+					"options": [
+						{
+							"uses": 5,
+							"payload": "{ opacity: 0.5, y: 30, duration: 0.5, }"
+						},
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0.5, x: 30, duration: 0.5, stagger: 0.1, }"
+						},
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0.5, y: 30, duration: 0.5, stagger: 0.1, }"
+						},
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0.5, x: -30, duration: 0.5, }"
+						}
+					],
+					"occurrences": [
+						{
+							"line": 70,
+							"tagName": "h2",
+							"tag": "<h2\n\t\t\t\t\tclass=\"tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary\"\n\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t}\"\n\t\t\t\t>",
+							"payload": "{ opacity: 0.5, y: 30, duration: 0.5, }"
+						},
+						{
+							"line": 80,
+							"tagName": "div",
+							"tag": "<div\n\t\t\t\t\tclass=\"tw:sm:text-xl tw:text-base tw:font-normal tw:text-tc-secondary tw:font-verdana\"\n\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t}\"\n\t\t\t\t>",
+							"payload": "{ opacity: 0.5, y: 30, duration: 0.5, }"
+						},
+						{
+							"line": 187,
+							"tagName": "h2",
+							"tag": "<h2\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t\tclass=\"tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:md:sticky tw:md:top-56 tw:md:left-0\"\n\t\t\t\t\t>",
+							"payload": "{ opacity: 0.5, y: 30, duration: 0.5, }"
+						},
+						{
+							"line": 199,
+							"tagName": "div",
+							"tag": "<div\n\t\t\t\t\t\tv-for=\"(element, index) in techStack\"\n\t\t\t\t\t\t:key=\"element.title\"\n\t\t\t\t\t\t:class=\"`tw:space-y-4 ${\n\t\t\t\t\t\t\tindex !== 0\n\t\t\t\t\t\t\t\t? 'tw:-mt-4 tw:sm:pt-8 tw:pt-4 tw:border-t-3 tw:border-solid tw:border-bc-tertiary'\n\t\t\t\t\t\t\t\t: ''\n\t\t\t\t\t\t}`\"\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t>",
+							"payload": "{ opacity: 0.5, y: 30, duration: 0.5, }"
+						},
+						{
+							"line": 220,
+							"tagName": "p",
+							"tag": "<p\n\t\t\t\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\t\t\t\t\tx: 30,\n\t\t\t\t\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t\t\t\t\t\tstagger: 0.1,\n\t\t\t\t\t\t\t\t\t}\"\n\t\t\t\t\t\t\t\t\tclass=\"tw:text-sm tw:text-tc-secondary tw:font-verdana tw:pb-4\"\n\t\t\t\t\t\t\t\t>",
+							"payload": "{ opacity: 0.5, x: 30, duration: 0.5, stagger: 0.1, }"
+						},
+						{
+							"line": 243,
+							"tagName": "h2",
+							"tag": "<h2\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t\tclass=\"tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:md:sticky tw:md:top-56 tw:md:left-0\"\n\t\t\t\t\t>",
+							"payload": "{ opacity: 0.5, y: 30, duration: 0.5, }"
+						},
+						{
+							"line": 261,
+							"tagName": "AccordionItem",
+							"tag": "<AccordionItem\n\t\t\t\t\t\t\tv-for=\"(job, index) in careerHistory\"\n\t\t\t\t\t\t\t:key=\"`${job.company}-${job.role}-${index}`\"\n\t\t\t\t\t\t\t:value=\"index.toString()\"\n\t\t\t\t\t\t\t:class=\"`tw:border-b-0 ${\n\t\t\t\t\t\t\t\tindex !== 0\n\t\t\t\t\t\t\t\t\t? `tw:-mt-4 tw:sm:pt-8 tw:pt-4 tw:border-t-3 tw:border-solid ${\n\t\t\t\t\t\t\t\t\t\t\tindex.toString() ===\n\t\t\t\t\t\t\t\t\t\t\t(parseInt(openedProject) + 1).toString()\n\t\t\t\t\t\t\t\t\t\t\t\t? 'tw:border-tc-link'\n\t\t\t\t\t\t\t\t\t\t\t\t: 'tw:border-bc-tertiary'\n\t\t\t\t\t\t\t\t\t  }`\n\t\t\t\t\t\t\t\t\t: ''\n\t\t\t\t\t\t\t}`\"\n\t\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t\t\t\tstagger: 0.1,\n\t\t\t\t\t\t\t}\"\n\t\t\t\t\t\t>",
+							"payload": "{ opacity: 0.5, y: 30, duration: 0.5, stagger: 0.1, }"
+						},
+						{
+							"line": 335,
+							"tagName": "h2",
+							"tag": "<h2\n\t\t\t\t\tclass=\"tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary\"\n\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\topacity: 0.5,\n\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t}\"\n\t\t\t\t>",
+							"payload": "{ opacity: 0.5, x: -30, duration: 0.5, }"
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "app/pages/index.vue",
+			"totalInFile": 1,
+			"integrations": [
+				{
+					"directive": "v-gsap.splitText.words.from",
+					"count": 1,
+					"options": [
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0, x: -30, stagger: 0.1, }"
+						}
+					],
+					"occurrences": [
+						{
+							"line": 21,
+							"tagName": "h1",
+							"tag": "<h1\n\t\t\t\tv-gsap.splitText.words.from=\"{\n\t\t\t\t\topacity: 0,\n\t\t\t\t\tx: -30,\n\t\t\t\t\tstagger: 0.1,\n\t\t\t\t}\"\n\t\t\t\tclass=\"tw:sm:text-[5.4rem] tw:text-8 tw:font-normal tw:font-zalando tw:leading-tight tw:max-w-7xl\"\n\t\t\t>",
+							"payload": "{ opacity: 0, x: -30, stagger: 0.1, }"
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "app/pages/projects/index.vue",
+			"totalInFile": 1,
+			"integrations": [
+				{
+					"directive": "v-gsap.splitText.words.from",
+					"count": 1,
+					"options": [
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0, x: -30, stagger: 0.1, }"
+						}
+					],
+					"occurrences": [
+						{
+							"line": 5,
+							"tagName": "h1",
+							"tag": "<h1\n\t\t\t\tv-gsap.splitText.words.from=\"{\n\t\t\t\t\topacity: 0,\n\t\t\t\t\tx: -30,\n\t\t\t\t\tstagger: 0.1,\n\t\t\t\t}\"\n\t\t\t\tclass=\"tw:sm:text-[5.4rem] tw:text-8 tw:font-normal tw:font-zalando tw:leading-tight\"\n\t\t\t>",
+							"payload": "{ opacity: 0, x: -30, stagger: 0.1, }"
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "app/pages/projects/[slug].vue",
+			"totalInFile": 20,
+			"integrations": [
+				{
+					"directive": "v-gsap.from",
+					"count": 2,
+					"options": [
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0, x: -30, duration: 0.5, }"
+						},
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0, x: -30, duration: 0.9, }"
+						}
+					],
+					"occurrences": [
+						{
+							"line": 11,
+							"tagName": "ImagePreview",
+							"tag": "<ImagePreview\n\t\t\t\t\tv-if=\"project.images.icon\"\n\t\t\t\t\t:src=\"project.images.icon\"\n\t\t\t\t\t:alt=\"`${project.title} logo`\"\n\t\t\t\t\tclass=\"tw:w-auto tw:min-w-10 tw:h-full tw:max-h-20 tw:object-contain tw:object-center tw:shrink-0\"\n\t\t\t\t\tv-gsap.from=\"{\n\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t}\"\n\t\t\t\t\tloading=\"eager\"\n\t\t\t\t\tpreload\n\t\t\t\t/>",
+							"payload": "{ opacity: 0, x: -30, duration: 0.5, }"
+						},
+						{
+							"line": 24,
+							"tagName": "h1",
+							"tag": "<h1\n\t\t\t\t\tv-gsap.from=\"{\n\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\tduration: 0.9,\n\t\t\t\t\t}\"\n\t\t\t\t\tclass=\"tw:sm:text-[6.4rem] tw:text-8 tw:font-normal tw:font-zalando tw:leading-tight\"\n\t\t\t\t>",
+							"payload": "{ opacity: 0, x: -30, duration: 0.9, }"
+						}
+					]
+				},
+				{
+					"directive": "v-gsap.whenVisible.once.from",
+					"count": 5,
+					"options": [
+						{
+							"uses": 3,
+							"payload": "{ opacity: 0, scale: 1.5, duration: 0.8, }"
+						},
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0, x: -30, duration: `${(index + 1) * 0.3}`, }"
+						},
+						{
+							"uses": 1,
+							"payload": "{ opacity: 0, y: 30, duration: 0.5, }"
+						}
+					],
+					"occurrences": [
+						{
+							"line": 39,
+							"tagName": "ImagePreview",
+							"tag": "<ImagePreview\n\t\t\t\t\t:src=\"project.images.banner\"\n\t\t\t\t\t:alt=\"`${project.title} banner image`\"\n\t\t\t\t\tclass=\"tw:w-full tw:h-full tw:object-cover tw:object-top\"\n\t\t\t\t\tv-gsap.whenVisible.once.from=\"{\n\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\tscale: 1.5,\n\t\t\t\t\t\tduration: 0.8,\n\t\t\t\t\t}\"\n\t\t\t\t/>",
+							"payload": "{ opacity: 0, scale: 1.5, duration: 0.8, }"
+						},
+						{
+							"line": 56,
+							"tagName": "div",
+							"tag": "<div\n\t\t\t\t\t\t\tclass=\"tw:flex tw:flex-col\"\n\t\t\t\t\t\t\tv-gsap.whenVisible.once.from=\"{\n\t\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\t\t\tduration: `${(index + 1) * 0.3}`,\n\t\t\t\t\t\t\t}\"\n\t\t\t\t\t\t>",
+							"payload": "{ opacity: 0, x: -30, duration: `${(index + 1) * 0.3}`, }"
+						},
+						{
+							"line": 123,
+							"tagName": "ImagePreview",
+							"tag": "<ImagePreview\n\t\t\t\t\t:src=\"project.images.intro\"\n\t\t\t\t\t:alt=\"`${project.title} intro image`\"\n\t\t\t\t\tclass=\"tw:w-full tw:h-full tw:object-cover tw:object-top\"\n\t\t\t\t\tv-gsap.whenVisible.once.from=\"{\n\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\tscale: 1.5,\n\t\t\t\t\t\tduration: 0.8,\n\t\t\t\t\t}\"\n\t\t\t\t/>",
+							"payload": "{ opacity: 0, scale: 1.5, duration: 0.8, }"
+						},
+						{
+							"line": 182,
+							"tagName": "div",
+							"tag": "<div\n\t\t\t\t\tv-for=\"(image, index) in project.images.challenges\"\n\t\t\t\t\t:key=\"`image-${index}`\"\n\t\t\t\t\tv-gsap.whenVisible.once.from=\"{\n\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t}\"\n\t\t\t\t>",
+							"payload": "{ opacity: 0, y: 30, duration: 0.5, }"
+						},
+						{
+							"line": 231,
+							"tagName": "ImagePreview",
+							"tag": "<ImagePreview\n\t\t\t\t\t:src=\"project.images.technology\"\n\t\t\t\t\t:alt=\"`${project.title} technology image`\"\n\t\t\t\t\tclass=\"tw:w-full tw:h-full tw:object-cover tw:object-top\"\n\t\t\t\t\tv-gsap.whenVisible.once.from=\"{\n\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\tscale: 1.5,\n\t\t\t\t\t\tduration: 0.8,\n\t\t\t\t\t}\"\n\t\t\t\t/>",
+							"payload": "{ opacity: 0, scale: 1.5, duration: 0.8, }"
+						}
+					]
+				},
+				{
+					"directive": "v-gsap.whenVisible.reverse.from",
+					"count": 13,
+					"options": [
+						{
+							"uses": 3,
+							"payload": "{ opacity: 0, x: -30, duration: 0.5, }"
+						},
+						{
+							"uses": 10,
+							"payload": "{ opacity: 0, y: 30, duration: 0.9, }"
+						}
+					],
+					"occurrences": [
+						{
+							"line": 95,
+							"tagName": "p",
+							"tag": "<p\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t\tclass=\"tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:shrink-0 tw:md:sticky tw:md:top-56 tw:md:left-0\"\n\t\t\t\t\t>",
+							"payload": "{ opacity: 0, x: -30, duration: 0.5, }"
+						},
+						{
+							"line": 107,
+							"tagName": "p",
+							"tag": "<p\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\tduration: 0.9,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t\tclass=\"tw:text-normal tw:sm:text-lg tw:text-sm tw:text-tc-secondary tw:first-letter:uppercase\"\n\t\t\t\t\t>",
+							"payload": "{ opacity: 0, y: 30, duration: 0.9, }"
+						},
+						{
+							"line": 137,
+							"tagName": "p",
+							"tag": "<p\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t\tclass=\"tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:shrink-0 tw:md:sticky tw:md:top-56 tw:md:left-0\"\n\t\t\t\t\t>",
+							"payload": "{ opacity: 0, x: -30, duration: 0.5, }"
+						},
+						{
+							"line": 149,
+							"tagName": "p",
+							"tag": "<p\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\tduration: 0.9,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t\tclass=\"tw:text-normal tw:sm:text-lg tw:text-sm tw:text-tc-primary tw:first-letter:uppercase\"\n\t\t\t\t\t>",
+							"payload": "{ opacity: 0, y: 30, duration: 0.9, }"
+						},
+						{
+							"line": 160,
+							"tagName": "li",
+							"tag": "<li\n\t\t\t\t\t\t\tv-for=\"challenge in project.challenge.contents\"\n\t\t\t\t\t\t\t:key=\"challenge\"\n\t\t\t\t\t\t\tclass=\"tw:text-sm tw:text-tc-secondary tw:first-letter:uppercase\"\n\t\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\t\tduration: 0.9,\n\t\t\t\t\t\t\t}\"\n\t\t\t\t\t\t>",
+							"payload": "{ opacity: 0, y: 30, duration: 0.9, }"
+						},
+						{
+							"line": 203,
+							"tagName": "p",
+							"tag": "<p\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\tx: -30,\n\t\t\t\t\t\t\tduration: 0.5,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t\tclass=\"tw:sm:text-base tw:text-sm tw:font-bold tw:text-tc-primary tw:shrink-0 tw:md:sticky tw:md:top-56 tw:md:left-0\"\n\t\t\t\t\t>",
+							"payload": "{ opacity: 0, x: -30, duration: 0.5, }"
+						},
+						{
+							"line": 215,
+							"tagName": "p",
+							"tag": "<p\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\tduration: 0.9,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t\tclass=\"tw:text-normal tw:sm:text-lg tw:text-sm tw:text-tc-secondary tw:first-letter:uppercase\"\n\t\t\t\t\t>",
+							"payload": "{ opacity: 0, y: 30, duration: 0.9, }"
+						},
+						{
+							"line": 252,
+							"tagName": "p",
+							"tag": "<p\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\tduration: 0.9,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t\tclass=\"tw:text-normal tw:sm:text-lg tw:text-sm tw:text-tc-primary tw:first-letter:uppercase\"\n\t\t\t\t\t>",
+							"payload": "{ opacity: 0, y: 30, duration: 0.9, }"
+						},
+						{
+							"line": 262,
+							"tagName": "p",
+							"tag": "<p\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\tduration: 0.9,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t\tclass=\"tw:text-normal tw:sm:text-lg tw:text-sm tw:text-tc-primary tw:first-letter:uppercase\"\n\t\t\t\t\t>",
+							"payload": "{ opacity: 0, y: 30, duration: 0.9, }"
+						},
+						{
+							"line": 273,
+							"tagName": "li",
+							"tag": "<li\n\t\t\t\t\t\t\tv-for=\"deliverable in project.solution.deliverables\"\n\t\t\t\t\t\t\t:key=\"deliverable\"\n\t\t\t\t\t\t\tclass=\"tw:text-sm tw:text-tc-secondary tw:first-letter:uppercase\"\n\t\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\t\tduration: 0.9,\n\t\t\t\t\t\t\t}\"\n\t\t\t\t\t\t>",
+							"payload": "{ opacity: 0, y: 30, duration: 0.9, }"
+						},
+						{
+							"line": 286,
+							"tagName": "p",
+							"tag": "<p\n\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\tduration: 0.9,\n\t\t\t\t\t\t}\"\n\t\t\t\t\t\tclass=\"tw:text-normal tw:sm:text-lg tw:text-sm tw:text-tc-primary tw:first-letter:uppercase\"\n\t\t\t\t\t>",
+							"payload": "{ opacity: 0, y: 30, duration: 0.9, }"
+						},
+						{
+							"line": 297,
+							"tagName": "li",
+							"tag": "<li\n\t\t\t\t\t\t\tv-for=\"impact in project.solution.impact\"\n\t\t\t\t\t\t\t:key=\"impact\"\n\t\t\t\t\t\t\tclass=\"tw:text-sm tw:text-tc-secondary tw:first-letter:uppercase\"\n\t\t\t\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\t\ty: 30,\n\t\t\t\t\t\t\t\tduration: 0.9,\n\t\t\t\t\t\t\t}\"\n\t\t\t\t\t\t>",
+							"payload": "{ opacity: 0, y: 30, duration: 0.9, }"
+						},
+						{
+							"line": 318,
+							"tagName": "h2",
+							"tag": "<h2\n\t\t\t\tv-gsap.whenVisible.reverse.from=\"{\n\t\t\t\t\topacity: 0,\n\t\t\t\t\ty: 30,\n\t\t\t\t\tduration: 0.9,\n\t\t\t\t}\"\n\t\t\t\tclass=\"tw:sm:px-12 tw:px-4 tw:py-4 tw:text-sm tw:text-tc-secondary tw:font-medium\"\n\t\t\t>",
+							"payload": "{ opacity: 0, y: 30, duration: 0.9, }"
+						}
+					]
+				}
+			]
+		}
+	],
+	"totalsByVariant": {
+		"v-gsap.whenVisible.reverse.from": 32,
+		"v-gsap.from": 10,
+		"v-gsap.whenVisible.once.from": 5,
+		"v-gsap.splitText.words.from": 3
+	},
+	"overallDirectiveOccurrencesRemoved": 50
 }

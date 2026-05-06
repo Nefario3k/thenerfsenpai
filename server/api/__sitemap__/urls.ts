@@ -1,4 +1,3 @@
-import { defineSitemapEventHandler } from "#imports";
 import { PROJECT_SLUGS } from "~~/shared/projectSlugs";
 
 export default defineSitemapEventHandler(() => {

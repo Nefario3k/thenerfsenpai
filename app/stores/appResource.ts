@@ -12,16 +12,16 @@ export const useMyAppResourceStore = defineStore("myAppResourceStore", {
 					"Digital infrastructure enabling Nigerian students to access federal education loans—secure financial data handling and nationwide integration with universities.",
 				images: {
 					banner:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743773/banner_ucog8u.jpg",
-					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/v1776743773/logo_wo90r6.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743773/banner_ucog8u.jpg",
+					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743773/logo_wo90r6.png",
 					intro:
 						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743767/1_wlvjew.png",
 					challenges: [
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743768/2_jdnccr.jpg",
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743771/3_x82mdd.jpg",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743768/2_jdnccr.jpg",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743771/3_x82mdd.jpg",
 					],
 					technology:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743772/4_lu49fk.jpg",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743772/4_lu49fk.jpg",
 				},
 				challenge: {
 					title:
@@ -67,13 +67,13 @@ export const useMyAppResourceStore = defineStore("myAppResourceStore", {
 					"Academic and administrative systems for universities and polytechnics. Our platforms manage student applications, records, course delivery, and payments, serving tens of thousands of students annually.",
 				images: {
 					banner:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743828/banner_zjjhpj.png",
-					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/v1776743801/logo_d7htys.svg",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743828/banner_zjjhpj.png",
+					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743801/logo_d7htys.svg",
 					intro:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743816/1_fi5o3x.jpg",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743816/1_fi5o3x.jpg",
 					challenges: [
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743840/2_go3nqn.png",
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743824/4_pi56uu.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743840/2_go3nqn.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743824/4_pi56uu.png",
 					],
 					technology:
 						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743848/3_hgoqpf.jpg",
@@ -123,15 +123,15 @@ export const useMyAppResourceStore = defineStore("myAppResourceStore", {
 				images: {
 					banner:
 						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743942/banner_lokkfl.png",
-					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/v1776743907/logo_avbvss.png",
+					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743907/logo_avbvss.png",
 					intro:
 						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743914/1_ed9riu.png",
 					challenges: [
 						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743907/2_lcw4jp.png",
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743955/3_rabrsv.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743955/3_rabrsv.png",
 					],
 					technology:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743939/4_q2ov7l.jpg",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743939/4_q2ov7l.jpg",
 				},
 				challenge: {
 					title:
@@ -179,16 +179,16 @@ export const useMyAppResourceStore = defineStore("myAppResourceStore", {
 					"Omnichannel customer-support CRM that pulls social, chat, and email into one Nuxt dashboard—tickets, routing, automations, and team analytics so agents respond faster with clearer context. Public experience at asterlio.com; authenticated product workspace at dev-app.asterlio.com.",
 				images: {
 					banner:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743466/banner_cc5bbs.png",
-					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/v1776743461/logo_vthc9n.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743466/banner_cc5bbs.png",
+					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743461/logo_vthc9n.png",
 					intro:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743464/1_bmjsec.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743464/1_bmjsec.png",
 					challenges: [
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743467/2_fepxro.png",
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743467/3_czhewm.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743467/2_fepxro.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743467/3_czhewm.png",
 					],
 					technology:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743465/4_yfmoip.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743465/4_yfmoip.png",
 				},
 				challenge: {
 					title:
@@ -234,16 +234,16 @@ export const useMyAppResourceStore = defineStore("myAppResourceStore", {
 					"Digital wallet and networking platform that keeps professional contacts in one place. It brings digital business cards, NFC cards, email signatures, and virtual backgrounds into a single workflow so users can create, update, and share their presence without scattered tools or lost leads—built for fast, consistent connection anywhere.",
 				images: {
 					banner:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743726/banner_yxv9g8.png",
-					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/v1776743714/logo_n9pbdr.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743726/banner_yxv9g8.png",
+					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743714/logo_n9pbdr.png",
 					intro:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743713/1_q95duu.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743713/1_q95duu.png",
 					challenges: [
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743719/2_zamk6r.png",
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743721/3_fryg92.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743719/2_zamk6r.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743721/3_fryg92.png",
 					],
 					technology:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743725/4_dzfl5y.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743725/4_dzfl5y.png",
 				},
 				challenge: {
 					title:
@@ -288,16 +288,16 @@ export const useMyAppResourceStore = defineStore("myAppResourceStore", {
 					"Nigerian fintech and e-commerce app for savings, loans, and investments. Users manage money and goals in one simple flow, with higher-yield savings and credit where available. The Jolly plan ties in everyday groceries and household goods to ease food inflation pressure and support disciplined spending.",
 				images: {
 					banner:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743905/banner_pl6qpc.jpg",
-					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/v1776743906/logo_k0n9qn.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743905/banner_pl6qpc.jpg",
+					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743906/logo_k0n9qn.png",
 					intro:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743902/1_yuz76v.jpg",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743902/1_yuz76v.jpg",
 					challenges: [
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743903/2_gzzr3p.jpg",
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743902/3_w259a3.jpg",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743903/2_gzzr3p.jpg",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743902/3_w259a3.jpg",
 					],
 					technology:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743904/4_ujh6f5.jpg",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743904/4_ujh6f5.jpg",
 				},
 				challenge: {
 					title:
@@ -343,16 +343,16 @@ export const useMyAppResourceStore = defineStore("myAppResourceStore", {
 					"UAE-focused listing platform for renting, leasing, and buying property—with no commission to users. It brings sale, purchase, and rental flows together so people can discover and compare homes in one place, with an emphasis on quality listings, a polished experience, and straightforward search and discovery.",
 				images: {
 					banner:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743978/banner_apdaso.jpg",
-					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/v1776743986/logo_l0njei.jpg",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743978/banner_apdaso.jpg",
+					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743986/logo_l0njei.jpg",
 					intro:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743972/1_dtvywr.jpg",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743972/1_dtvywr.jpg",
 					challenges: [
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743977/2_mhem0b.jpg",
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743975/3_ummvhx.jpg",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743977/2_mhem0b.jpg",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743975/3_ummvhx.jpg",
 					],
 					technology:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743977/4_liiwza.jpg",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743977/4_liiwza.jpg",
 				},
 				challenge: {
 					title:
@@ -398,12 +398,12 @@ export const useMyAppResourceStore = defineStore("myAppResourceStore", {
 					"Modern utility web app for paying bills in one place—tokens, airtime, data, cable, and education pins—with secure wallet funding and real-time delivery. The experience is built around a single, clean dashboard for purchases, wallet top-ups, and account management, with security measures including two-factor authentication and protected payments.",
 				images: {
 					banner:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743920/banner_ot3g5s.jpg",
-					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/v1776743912/logo_hjkxyu.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743920/banner_ot3g5s.jpg",
+					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743912/logo_hjkxyu.png",
 					intro:
 						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743947/3_wwj2he.png",
 					challenges: [
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743913/1_vpwvrf.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743913/1_vpwvrf.png",
 						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743920/2_s1pbpd.png",
 					],
 					technology:
@@ -452,16 +452,16 @@ export const useMyAppResourceStore = defineStore("myAppResourceStore", {
 					"Digital group savings for families, friends, and coworkers—inspired by rotating savings circles (susu, partner, tanda) with clear schedules, transparent balances, and direct bank rails instead of informal cash handling. Marketing and education live at safecirclecapital.com; members run circles in a Next.js app at app.safecirclecapital.com, including login with phone or email, Google, and Apple.",
 				images: {
 					banner:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743921/banner_lg2eg0.png",
-					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/v1776743920/logo_x8iwgn.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743921/banner_lg2eg0.png",
+					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743920/logo_x8iwgn.png",
 					intro:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743931/1_kqwbbd.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743931/1_kqwbbd.png",
 					challenges: [
 						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743948/2_zfs3ll.png",
 						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743934/3_dn1vuy.png",
 					],
 					technology:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743918/4_bh9mso.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743918/4_bh9mso.png",
 				},
 				challenge: {
 					title:
@@ -507,15 +507,15 @@ export const useMyAppResourceStore = defineStore("myAppResourceStore", {
 				images: {
 					banner:
 						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743821/banner_xrpoow.png",
-					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/v1776743798/logo_dwq4gr.png",
+					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743798/logo_dwq4gr.png",
 					intro:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743801/1_jmz0sa.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743801/1_jmz0sa.png",
 					challenges: [
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743809/2_rflile.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743809/2_rflile.png",
 						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743834/3_ehpjav.png",
 					],
 					technology:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743803/4_ngyin2.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743803/4_ngyin2.png",
 				},
 				challenge: {
 					title:
@@ -560,16 +560,16 @@ export const useMyAppResourceStore = defineStore("myAppResourceStore", {
 					"Premium Nigerian digital learning for JSS1-SS3: 45+ curriculum-aligned subjects, 120+ interactive e-Textbooks, 50,000+ CBT-style practice items, smart progress analytics, and exam tracks for WAEC, NECO, JAMB, and BECE—studiable across devices with account sync. Marketing and acquisition live on successbox.ng; learners continue on a React web app at successbox.ng/login with email/password, remember-me, Google and Facebook sign-in, and password recovery.",
 				images: {
 					banner:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743991/banner_pansnv.png",
-					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/v1776743985/logo_ab48es.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743991/banner_pansnv.png",
+					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743985/logo_ab48es.png",
 					intro:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743992/1_pdz37i.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743992/1_pdz37i.png",
 					challenges: [
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743982/2_rvbenx.png",
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743991/3_hrmqnn.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743982/2_rvbenx.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743991/3_hrmqnn.png",
 					],
 					technology:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743986/4_lp9psn.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743986/4_lp9psn.png",
 				},
 				challenge: {
 					title:
@@ -614,16 +614,16 @@ export const useMyAppResourceStore = defineStore("myAppResourceStore", {
 					"Travel technology stack that opens inventory to agencies, tour operators, and fintechs: REST developer APIs, smart booking widget, white-label OTA, B2B agent tooling, and corporate travel—combining Amadeus Enterprise with Tiqwa's consolidator layer for SOTO and African local airline coverage. Public platform story at tiqwa.com; next-generation Anchor onboarding and account creation at https://v2.tiqwa.com/create-account.",
 				images: {
 					banner:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743992/banner_jf7nlb.png",
-					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/v1776743974/logo_l1t9u9.ico",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743992/banner_jf7nlb.png",
+					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743974/logo_l1t9u9.ico",
 					intro:
 						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743971/1_r8gdfl.png",
 					challenges: [
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743971/2_kldbdk.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743971/2_kldbdk.png",
 						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743987/3_fnxp1k.png",
 					],
 					technology:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743972/4_r27rct.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743972/4_r27rct.png",
 				},
 				challenge: {
 					title:
@@ -671,15 +671,15 @@ export const useMyAppResourceStore = defineStore("myAppResourceStore", {
 				images: {
 					banner:
 						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743744/banner_h3my6g.png",
-					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/v1776743732/logo_jttetg.png",
+					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743732/logo_jttetg.png",
 					intro:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743752/1_drjrat.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743752/1_drjrat.png",
 					challenges: [
 						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743740/2_at3sdk.png",
 						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743732/3_oxtivt.png",
 					],
 					technology:
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743746/4_falyls.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743746/4_falyls.png",
 				},
 				challenge: {
 					title:
@@ -727,11 +727,11 @@ export const useMyAppResourceStore = defineStore("myAppResourceStore", {
 				images: {
 					banner:
 						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743815/banner_vvmp4j.png",
-					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/v1776743809/logo_z5masn.png",
+					icon: "https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743809/logo_z5masn.png",
 					intro:
 						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743836/1_b25l2z.png",
 					challenges: [
-						"https://res.cloudinary.com/da7ucu50f/image/upload/v1776743805/2_zy0att.png",
+						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743805/2_zy0att.png",
 						"https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776743855/3_dkqfdt.png",
 					],
 					technology:

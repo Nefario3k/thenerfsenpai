@@ -35,19 +35,19 @@
 				>
 					<!-- image section -->
 					<section
-						class="tw:w-full tw:sm:h-[30.7rem] tw:h-86 tw:overflow-hidden tw:mb-5 useNestedTransition"
+						class="tw:w-full tw:sm:h-[30.7rem] tw:h-86 tw:overflow-hidden tw:mb-5 useNestedTransition flex_center"
 					>
 						<NuxtImg
-							:src="item.images.banner"
+							:src="item.images.icon"
 							:alt="`${item.title} banner image`"
-							class="tw:w-full! tw:h-full! tw:object-cover tw:object-top tw:md:scale-100 tw:md:group-hover:scale-105"
+							class="tw:w-auto tw:h-auto tw:object-contain tw:object-top tw:md:scale-100 tw:md:group-hover:scale-105"
 							widths="320 480 640 768 1024 1280"
 							sizes="(min-width: 1024px) 45vw, (min-width: 640px) 48vw, 96vw"
-							fit="cover"
+							fit="contain"
 							quality="50"
 							format="webp"
 							placeholder
-							preload
+							loading="lazy"
 						/>
 					</section>
 					<!-- title section -->

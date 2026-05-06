@@ -2,7 +2,6 @@
 	import type { DialogContentEmits, DialogContentProps } from "reka-ui";
 	import type { HTMLAttributes } from "vue";
 	import { reactiveOmit } from "@vueuse/core";
-	import { PhX } from "@phosphor-icons/vue";
 	import {
 		DialogClose,
 		DialogContent,
@@ -57,7 +56,10 @@
 			<DialogClose
 				class="tw:ring-offset-background tw:focus:ring-ring tw:data-[state=open]:bg-secondary tw:absolute tw:top-4 tw:right-4 tw:rounded-xs tw:focus:ring-2 tw:focus:ring-offset-2 tw:focus:outline-hidden tw:disabled:pointer-events-none tw:hover:rotate-180 tw:hover:scale-125 useNestedTransition tw:hover:*:text-tc-link tw:cursor-pointer"
 			>
-				<PhX class="tw:size-6 tw:block tw:text-tc-primary" weight="bold" />
+				<SolarCloseSquare
+					class="tw:size-6 tw:block tw:text-tc-primary"
+					weight="Broken"
+				/>
 				<span class="tw:sr-only">Close</span>
 			</DialogClose>
 		</DialogContent>

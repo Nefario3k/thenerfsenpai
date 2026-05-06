@@ -3,7 +3,7 @@ import { defineNuxtConfig } from "nuxt/config";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	compatibilityDate: "2025-07-15",
-	devtools: { enabled: true },
+	devtools: { enabled: false },
 	devServer: {
 		host: "0.0.0.0",
 		port: parseInt(process.env.PORT || "8500"),
@@ -174,7 +174,7 @@ export default defineNuxtConfig({
 	vite: {
 		plugins: [tailwindcss()],
 		optimizeDeps: {
-			include: ["reka-ui", "@phosphor-icons/vue", "clsx", "tailwind-merge", "yup", "lenis"],
+			include: ["reka-ui", "clsx", "tailwind-merge", "yup", "lenis"],
 		},
 	},
 	sitemap: {

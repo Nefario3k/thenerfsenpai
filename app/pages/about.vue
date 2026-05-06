@@ -49,7 +49,7 @@
 				<div
 					class="tw:overflow-hidden tw:w-full tw:md:h-[73.3rem] tw:h-[44.3rem] tw:block tw:rounded-4"
 				>
-					<NuxtImg
+					<img
 						src="https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776844501/DaviesOkpeta_Headshot_2026-02-02_uzyjwo.jpg"
 						width="100%"
 						height="100%"
