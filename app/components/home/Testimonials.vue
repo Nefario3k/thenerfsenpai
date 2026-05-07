@@ -365,7 +365,7 @@
 			name: "Ibidapo Adeolu",
 			role: "Software Developer/Engineer",
 			image:
-				"https://media.licdn.com/dms/image/v2/D4D03AQENjmZD0c4UlA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1667416179452?e=1778112000&v=beta&t=s1n2r01LFc6Nm-ZY7_aFoz61CiusiZdppHbDGocFogE",
+				"https://media.licdn.com/dms/image/v2/D4D03AQENjmZD0c4UlA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1667416179452?e=1779926400&v=beta&t=WxUdD-ZRWz5PiANfQKPENEWjWOhffpT-gs-YboEkwcY",
 			quote:
 				"I had the pleasure of working with Davies for two years+, and I can confidently say that he is one of the most dedicated and talented frontend developers I've collaborated with. <br/><br/>He is a fast learner, highly detail-oriented, and always brings smart, efficient solutions to the table. His ability to quickly adapt to new technologies and frameworks makes him a valuable asset to any team. I highly recommend him!",
 			link: "https://www.linkedin.com/in/ibidapo-adeolu-19066b66/",
@@ -374,7 +374,7 @@
 			name: "Adebimpe Adeniyi",
 			role: "Manual QA Engineer | High Software Quality & Content Review | SDLC & STLC | Test Case Design & Evaluation Specialist",
 			image:
-				"https://media.licdn.com/dms/image/v2/D4D35AQHwQD5L7VZSeg/profile-framedphoto-shrink_100_100/B4DZoCtGwOJMAs-/0/1760981970319?e=1777050000&v=beta&t=ymFgtcg_6ZS5MnZADfGZ7lM4Ev3PLctXUp8NJlmn3f8",
+				"https://media.licdn.com/dms/image/v2/D4D35AQHwQD5L7VZSeg/profile-framedphoto-shrink_800_800/B4DZoCtGwOJMAo-/0/1760981970319?e=1778720400&v=beta&t=mBq0Naf9jZECUISZwgQEfm88yQj2ds9LlqN8rnMBw6U",
 			quote:
 				"I've had the pleasure of working with Davies, and he's one of those developers you can always count on. He's skilled, pays attention to detail, and tackles challenges head-on without losing focus. <br/><br/>Beyond his technical abilities, he's a great team player, easy to work with, reliable, and always willing to help. Any team would be lucky to have him!",
 			link: "https://www.linkedin.com/in/adebimpe-adeniyi/",
@@ -383,7 +383,7 @@
 			name: "Jude Onohwosafe",
 			role: "Senior Software Engineer | Fintech Co-Founder (Utilify) | Scalable Systems Architect | AI Researcher",
 			image:
-				"https://media.licdn.com/dms/image/v2/D4D03AQGwqDW8dL3zYA/profile-displayphoto-scale_100_100/B4DZzXI2kNHwAg-/0/1773135948896?e=1778112000&v=beta&t=U5x8bigBR8iXUt0vx95BhH7a-bIn5PQCSMby_dsVH84",
+				"https://media.licdn.com/dms/image/v2/D4D03AQGwqDW8dL3zYA/profile-displayphoto-crop_800_800/B4DZzXI2kNHwAM-/0/1773135948803?e=1779926400&v=beta&t=tinhPhcubWH1VqkNguckFkGIEgnqlAEUdhJ4hH8YrBc",
 			quote:
 				"Davies is a skilled and dedicated front-end developer. He creates clean, responsive, and user-friendly websites using modern web technologies.<br/><br/>He's also a quick learner, a great problem solver, and a team player. If you need a reliable front-end developer, I highly recommend him!",
 			link: "https://www.linkedin.com/in/jude-onohwosafe/",
@@ -392,7 +392,7 @@
 			name: "Kenneth Chidera Eze",
 			role: "Founder @dekenlab, Product Designer | Product Manager | AWS Ambassador | Creating immersive design solutions for Startups and Fintech, Edutech, Ecommerce and SaaS businesses.",
 			image:
-				"https://media.licdn.com/dms/image/v2/D4D03AQHgrvLovlURdg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1702458948592?e=1778112000&v=beta&t=dcNPHURNy98INTZMYxp0EIfw-4GC17b4aBpHOCDxl7Y",
+				"https://media.licdn.com/dms/image/v2/D4D03AQHgrvLovlURdg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1702458948593?e=1779926400&v=beta&t=M90lJYGgAV9sFI4OY_yjsKZnjUPpNq6rCvx8MHwEx2E",
 			quote:
 				"I worked with Davies for over two years, during which he showed apt skills in technology use, attention to details and commitment to his crafted. He demonstrated good work ethics and proper communication skills. No doubt he will thrive and Excel very well anywhere.",
 			link: "https://www.linkedin.com/in/kennethchidera/",
@@ -401,7 +401,7 @@
 			name: "Femi Shotola",
 			role: "Senior Software Engineer - AI Sytems Risk Assessment | FinTech | Cloud | Node JS | Laravel | Vue Js | React | Angular",
 			image:
-				"https://media.licdn.com/dms/image/v2/C4D03AQFlvy6sDgUQdQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1668026353914?e=1778112000&v=beta&t=RY686kxIhhugCFKv4bXg7KLzOvvNNH1vEVGD4MN4cAY",
+				"https://media.licdn.com/dms/image/v2/C4D03AQFlvy6sDgUQdQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1668026353914?e=1779926400&v=beta&t=xdzXtiZLgyFpNVWZUUjSH3UvBevhGb9wYYNUUErokuI",
 			quote: `Where to start? Davies is a gem, a rare asset in the business of building safe, secure and innovative software applications.
 				<br/>
 				Let me list a few of his qualities.
@@ -424,7 +424,7 @@
 			name: "Osaro Igbinovia",
 			role: "Lead Backend Engineer | Distributed Systems | DevOps",
 			image:
-				"https://media.licdn.com/dms/image/v2/D4D03AQEUsxF7sgB74g/profile-displayphoto-scale_100_100/B4DZ0F3Qq.J4Ac-/0/1773919871736?e=1778112000&v=beta&t=kpZ8aZ79runsueNibRqkTXTZE8cBmAwgB1Tpooi9vWQ",
+				"https://media.licdn.com/dms/image/v2/D4D03AQEUsxF7sgB74g/profile-displayphoto-crop_800_800/B4DZ0F3Qq.J4AI-/0/1773919871632?e=1779926400&v=beta&t=se7-Vke7nEJZo6z1H5CWtckgOllB3wos-Ut49E6M33c",
 			quote:
 				"Davies worked on the development of my portfolio website, and I am thoroughly impressed by his expertise and professionalism as a Frontend Engineer. Davies demonstrated exceptional attention to detail, creativity, and a deep understanding of modern web technologies. He ensured the website was not only visually appealing but also highly functional and responsive across all devices. I highly recommend Davies for any Frontend Engineer role.<br/><br/>Davies' ability to translate ideas into a seamless user experience is remarkable, and his collaborative approach made the entire process smooth and efficient. I highly recommend Davies to anyone looking for a skilled and reliable frontend engineer who consistently delivers high-quality results.",
 			link: "https://www.linkedin.com/in/osaroigb",
@@ -433,7 +433,7 @@
 			name: "Chizoba Ugwuoke",
 			role: "Full Stack Developer (PHP/Laravel, Vue/Nuxt, Flutter)",
 			image:
-				"https://media.licdn.com/dms/image/v2/C4D03AQE8hg89J60RKA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1659621232780?e=1778112000&v=beta&t=3RXpPeOl5ijAT2UPCcWpePtxPMVbFPHGWveP4G_gkAY",
+				"https://media.licdn.com/dms/image/v2/C4D03AQE8hg89J60RKA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1659621232780?e=1779926400&v=beta&t=qI16fnT0_4Z23PfcpfO0-aOhhlXqrbDH_38z_cDAwvk",
 			quote:
 				"Davies is a seasoned and dedicated web developer who has a keen interest in details and the timely delivery of assigned tasks.",
 			link: "https://www.linkedin.com/in/chizobam/",
