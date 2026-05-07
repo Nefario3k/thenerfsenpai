@@ -39,7 +39,7 @@
 				<ImagePreview
 					:src="project.images.banner"
 					:alt="`${project.title} banner image`"
-					class="tw:w-full tw:h-full tw:object-cover tw:object-top"
+					class="tw:w-full tw:h-full tw:object-fill tw:object-top"
 					v-gsap.whenVisible.once.from="{
 						opacity: 0,
 						scale: 1.5,

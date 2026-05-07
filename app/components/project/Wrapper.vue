@@ -38,10 +38,10 @@
 						class="tw:w-full tw:sm:h-[30.7rem] tw:h-86 tw:overflow-hidden tw:mb-5 useNestedTransition flex_center"
 					>
 						<NuxtImg
-							:src="item.images.icon"
+							:src="item.images.banner"
 							:alt="`${item.title} banner image`"
-							class="tw:w-auto! tw:h-auto! tw:object-contain tw:object-top tw:md:scale-100 tw:md:group-hover:scale-105 tw:max-w-[75%] tw:max-h-[75%] tw:min-w-[30%] tw:min-h-[30%]"
-							fit="contain"
+							class="tw:w-full! tw:h-full! tw:object-fill tw:object-top tw:md:scale-100 tw:md:group-hover:scale-105"
+							fit="fill"
 							quality="50"
 							format="webp"
 							placeholder

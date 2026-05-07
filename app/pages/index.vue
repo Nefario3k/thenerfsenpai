@@ -4,11 +4,11 @@
 		<section class="tw:sm:px-12 tw:px-4 tw:pb-12">
 			<div class="tw:flex tw:items-center tw:gap-3 tw:sm:mb-66 tw:mb-60">
 				<NuxtImg
-					src="https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/v1776844501/DaviesOkpeta_Headshot_2026-02-02_uzyjwo.jpg"
+					src="https://res.cloudinary.com/da7ucu50f/image/upload/q_auto/f_auto/DaviesOkpeta_Headshot_2026-02-02_uzyjwo.jpg"
 					width="100%"
 					height="100%"
 					alt="TheNerfSenpai: Davies Okpeta profile picture"
-					class="tw:sm:w-24 tw:sm:h-24 tw:w-16 tw:h-16 tw:block tw:object-cover tw:object-top tw:rounded-4 tw:aspect-square tw:shrink-0"
+					class="tw:sm:max-w-24 tw:sm:max-h-24 tw:max-w-16 tw:max-h-16 tw:w-auto! tw:h-auto! tw:block tw:object-cover tw:object-top tw:rounded-4 tw:aspect-square tw:shrink-0"
 				/>
 				<div>
 					<p class="tw:font-medium tw:text-lg">The Nerf Senpai</p>
