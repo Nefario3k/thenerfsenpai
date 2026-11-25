@@ -18,6 +18,22 @@ export const useProfilePageStructuredData = () => {
 	]);
 };
 
+/** Contact page: a ContactPage about the site identity, plus breadcrumbs. */
+export const useContactPageStructuredData = () => {
+	useSchemaOrg([
+		defineWebPage({
+			"@type": "ContactPage",
+			about: { "@id": "#identity" },
+		}),
+		defineBreadcrumb({
+			itemListElement: [
+				{ name: "Home", item: "/" },
+				{ name: "Contact", item: "/contact" },
+			],
+		}),
+	]);
+};
+
 /** Projects listing: a CollectionPage with an ItemList of project detail URLs. */
 export const useProjectListStructuredData = (
 	projects: ComputedRef<TypeProjects[]>

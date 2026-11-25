@@ -166,7 +166,13 @@
 					in frontend or backend development, I’d love to hear from you!
 					<br />
 					<br />
-					<strong>📧 Contact Me</strong>: Reach out via LinkedIn messaging or at
+					<strong>📧 Contact Me</strong>: Reach out via LinkedIn messaging, the
+					<NuxtLink
+						to="/contact"
+						class="tw:text-tc-link tw:underline tw:font-medium tw:rounded-sm tw:focus-visible:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-tc-link tw:focus-visible:ring-offset-2 tw:focus-visible:ring-offset-bc-primary"
+						>contact form</NuxtLink
+					>
+					or at
 					<a
 						href="mailto:thenerfsenpai@gmail.com"
 						class="tw:text-tc-link tw:underline tw:font-medium tw:rounded-sm tw:focus-visible:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-tc-link tw:focus-visible:ring-offset-2 tw:focus-visible:ring-offset-bc-primary"

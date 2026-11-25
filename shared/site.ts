@@ -24,6 +24,13 @@ export const DEFAULT_OG_IMAGE = {
 
 export const TWITTER_HANDLE = "@daviesokpeta";
 
+export const CONTACT_EMAIL = "thenerfsenpai@gmail.com";
+
+/** WhatsApp number in international format, digits only (used for wa.me links). */
+export const WHATSAPP_NUMBER = "2348118968777";
+/** The same number formatted for people to read. */
+export const WHATSAPP_DISPLAY = "+234 811 896 8777";
+
 export const SOCIAL_PROFILES = [
 	"https://github.com/Nefario3k",
 	"https://x.com/daviesokpeta",

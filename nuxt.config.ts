@@ -138,6 +138,7 @@ export default defineNuxtConfig({
 				"/index.md",
 				"/about.md",
 				"/projects.md",
+				"/contact.md",
 				...PROJECTS.map((project) => `/projects/${project.slug}.md`),
 			],
 		},

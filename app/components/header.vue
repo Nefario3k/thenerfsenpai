@@ -42,17 +42,6 @@
 									>
 										{{ link.label }}
 									</NuxtLink>
-									<button
-										v-else
-										:class="` tw:hover:text-tc-link tw:hover:text-lg tw:hover:font-semibold tw:rounded-sm tw:focus-visible:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-tc-link tw:focus-visible:ring-offset-2 tw:focus-visible:ring-offset-bc-primary tw:cursor-pointer tw:text-tc-secondary tw:text-sm tw:font-normal ${
-											contactIsOpen
-												? 'tw:text-tc-link tw:text-lg tw:font-semibold'
-												: 'tw:text-tc-secondary tw:text-sm tw:font-normal'
-										}`"
-										@click="setcontactIsOpen()"
-									>
-										{{ link.label }}
-									</button>
 								</li>
 								<li
 									class="tw:w-1 tw:h-4 tw:border-r tw:border-bc-stroke tw:md:border-dashed tw:border-solid"
@@ -201,18 +190,6 @@
 											}`"
 											>{{ link.label }}</NuxtLink
 										>
-										<button
-											v-else
-											type="button"
-											@click="
-												() => {
-													link?.action?.();
-												}
-											"
-											class="tw:font-medium tw:hover:text-tc-link tw:gap-1 tw:block tw:w-full tw:hover:text-4xl tw:py-4 tw:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-white tw:focus-visible:ring-offset-2 tw:focus-visible:rounded-2 tw:border-b tw:border-bc-stroke tw:border-solid tw:text-tc-primary tw:text-2xl tw:cursor-pointer tw:text-left"
-										>
-											{{ link.label }}
-										</button>
 									</li>
 								</ul>
 							</nav>
@@ -222,84 +199,6 @@
 			</section>
 		</div>
 	</header>
-	<!-- contact sheet -->
-	<Sheet v-model:open="contactIsOpen" @update:open="setcontactIsOpen">
-		<SheetContent
-			class="tw:w-full tw:h-full tw:md:max-h-[calc(100vh-11rem)] tw:max-h-[calc(100vh-6.4rem)] tw:border-none tw:isolate tw:bg-bc-primary/70 tw:backdrop-blur-sm tw:overflow-hidden tw:block!"
-			side="bottom"
-			aria-describedby="contact-me-desc"
-			hide-close-button
-		>
-			<SheetTitle class="tw:sr-only">Contact Me</SheetTitle>
-			<SheetDescription id="contact-me-desc" class="tw:sr-only">
-				Contact me for more information.
-			</SheetDescription>
-			<section
-				class="tw:h-full tw:overflow-y-auto no-scrollbar tw:w-full"
-				data-lenis-prevent
-			>
-				<div class="tw:min-h-full flex_center">
-					<div class="tw:p-10 tw:w-full">
-						<!-- title -->
-						<h3
-							class="tw:md:text-4xl tw:text-2xl tw:font-semibold tw:text-tc-primary tw:text-center tw:font-verdana"
-						>
-							Contact Me
-						</h3>
-						<p
-							class="tw:md:text-lg tw:text-base tw:text-tc-secondary tw:text-center tw:mt-4"
-						>
-							Get in touch with me
-						</p>
-						<form
-							class="tw:space-y-8 tw:flex-auto tw:lg:max-w-228 tw:md:max-w-[36.2rem] tw:w-full tw:mx-auto tw:py-20"
-							aria-label="Contact form"
-							@submit.prevent="onSubmit"
-						>
-							<div class="tw:grid tw:gap-8 tw:sm:grid-cols-2 tw:grid-cols-1">
-								<FormInput
-									name="name"
-									label="Name"
-									placeholder="Enter your name"
-									required
-									autocomplete="name"
-								/>
-								<FormInput
-									name="email"
-									type="email"
-									label="Email"
-									placeholder="Enter your email"
-									required
-									autocomplete="email"
-								/>
-							</div>
-							<FormInput
-								name="project"
-								label="Project"
-								placeholder="Tell me what you want to build"
-								required
-								autocomplete="organization-title"
-							/>
-							<FormInput
-								name="message"
-								type="textarea"
-								label="Message"
-								placeholder="Share the details of your request"
-								required
-							/>
-							<button
-								type="submit"
-								:disabled="isSubmitting"
-								class="tw:w-full tw:min-h-[5.4rem] tw:rounded-3 tw:px-6 tw:text-base tw:font-medium tw:bg-tc-primary tw:text-bc-primary tw:disabled:opacity-60 tw:disabled:cursor-not-allowed tw:cursor-pointer tw:transition-opacity"
-							>
-								{{ isSubmitting ? "Sending..." : "Send Message" }}
-							</button>
-						</form>
-					</div>
-				</div>
-			</section>
-		</SheetContent>
-	</Sheet>
 </template>
 
 <script lang="ts" setup>
@@ -310,22 +209,11 @@
 		SheetTitle,
 		SheetTrigger,
 	} from "@/components/ui/sheet";
-	import { emailValidation } from "@/utils/validations";
-	import { useForm } from "vee-validate";
-	import * as yup from "yup";
-
-	interface TypeContactForm {
-		name: string;
-		email: string;
-		project: string;
-		message: string;
-	}
 
 	const colorScheme = useCookie<ColorScheme>("colorScheme");
 	const { y: scrollY } = useWindowScroll();
 	const route = useRoute();
-	const { $getState, $showToast } = useNuxtApp();
-	const { public: config } = useRuntimeConfig();
+	const { $getState } = useNuxtApp();
 
 	const currentScheme = computed(
 		() => (colorScheme.value ?? "light") as ColorScheme
@@ -333,7 +221,6 @@
 	const hasScrolled = computed(() => scrollY.value > 100);
 
 	const navIsOpen = ref(false);
-	const contactIsOpen = ref(false);
 	const viewportWidth = computed(() => $getState("viewportWidth"));
 
 	const navigationLinks = ref([
@@ -349,18 +236,8 @@
 		},
 		{
 			label: "Contact",
-			to: "/",
-			type: "button",
-			action: () => {
-				if (navIsOpen.value) {
-					setnavIsOpen(false);
-					setTimeout(() => {
-						setcontactIsOpen();
-					}, 400);
-				} else {
-					setcontactIsOpen();
-				}
-			},
+			to: "/contact",
+			type: "link",
 		},
 	]);
 
@@ -369,76 +246,6 @@
 	const setnavIsOpen = (val: boolean) => {
 		navIsOpen.value = val;
 	};
-	const contactValidationSchema = yup.object({
-		name: yup.string().trim().required("Name is required"),
-		email: emailValidation,
-		project: yup.string().trim().required("Project is required"),
-		message: yup
-			.string()
-			.trim()
-			.required("Message is required")
-			.min(10, "Message should be at least 10 characters"),
-	});
-	const { handleSubmit, isSubmitting, resetForm } = useForm<TypeContactForm>({
-		validationSchema: contactValidationSchema,
-		initialValues: {
-			name: "",
-			email: "",
-			project: "",
-			message: "",
-		},
-	});
-	const setcontactIsOpen = (val?: boolean) => {
-		contactIsOpen.value = typeof val === "boolean" ? val : !contactIsOpen.value;
-		if (!contactIsOpen.value) {
-			setTimeout(() => {
-				resetForm();
-			}, 200);
-		}
-	};
-	const onSubmit = handleSubmit(async (values) => {
-		try {
-			const publicKey = String(config.emailjsPublicKey ?? "");
-			const serviceId = String(config.emailjsServiceId ?? "");
-			const templateId = String(config.emailjsTemplateId ?? "");
-
-			if (!publicKey) {
-				throw new Error("EmailJS public key is not configured.");
-			}
-			if (!serviceId || !templateId) {
-				throw new Error("EmailJS service/template is not configured.");
-			}
-			if (!window.emailjs?.send) {
-				throw new Error("Email service is not loaded yet.");
-			}
-
-			await window.emailjs.send(
-				serviceId,
-				templateId,
-				{
-					from_name: values.name,
-					from_email: values.email,
-					project: values.project,
-					message: values.message,
-					reply_to: values.email,
-				},
-				publicKey
-			);
-
-			$showToast("success", {
-				prop: "Hi😊, Thanks for contacting me. <br/> I'll get back to you as soon as possible.❤️",
-				header: "Message Received! 🎉",
-				html: true,
-			});
-			setcontactIsOpen(false);
-		} catch (error) {
-			$showToast("error", {
-				prop: "Unable to send message. <br/> Please try again later.😔",
-				header: "Error 🫨",
-				html: true,
-			});
-		}
-	});
 	const handleColorSchemeToggle = () => {
 		const next: ColorScheme = currentScheme.value === "dark" ? "light" : "dark";
 		colorScheme.value = next;
