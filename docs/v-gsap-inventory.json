@@ -2,7 +2,7 @@
 	"description": "Inventory of removed v-gsap directives, options, and exact tags from Vue files.",
 	"files": [
 		{
-			"file": "app/components/Footer.vue",
+			"file": "app/components/footer.vue",
 			"totalInFile": 6,
 			"integrations": [
 				{
@@ -84,7 +84,7 @@
 			]
 		},
 		{
-			"file": "app/components/about/GitHubContributions.vue",
+			"file": "app/components/about/github-contributions.vue",
 			"totalInFile": 3,
 			"integrations": [
 				{
@@ -124,7 +124,7 @@
 			]
 		},
 		{
-			"file": "app/components/home/Facts.vue",
+			"file": "app/components/home/facts.vue",
 			"totalInFile": 2,
 			"integrations": [
 				{
@@ -158,7 +158,7 @@
 			]
 		},
 		{
-			"file": "app/components/home/Focus.vue",
+			"file": "app/components/home/focus.vue",
 			"totalInFile": 2,
 			"integrations": [
 				{
@@ -192,7 +192,7 @@
 			]
 		},
 		{
-			"file": "app/components/home/Testimonials.vue",
+			"file": "app/components/home/testimonials.vue",
 			"totalInFile": 2,
 			"integrations": [
 				{
@@ -226,7 +226,7 @@
 			]
 		},
 		{
-			"file": "app/components/project/Wrapper.vue",
+			"file": "app/components/project/wrapper.vue",
 			"totalInFile": 1,
 			"integrations": [
 				{

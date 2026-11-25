@@ -119,7 +119,7 @@
 	import type {
 		GitHubContributionDay,
 		GitHubContributionsResponse,
-	} from "../../../shared/githubContributions";
+	} from "../../../shared/github-contributions";
 	import {
 		Tooltip,
 		TooltipContent,

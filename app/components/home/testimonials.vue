@@ -265,7 +265,7 @@
 </template>
 
 <script lang="ts" setup>
-	import type { HorizontalScrollMetrics } from "~/components/HorizontalScroll.vue";
+	import type { HorizontalScrollMetrics } from "~/components/horizontal-scroll.vue";
 	import {
 		Sheet,
 		SheetContent,

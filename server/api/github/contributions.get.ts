@@ -1,5 +1,5 @@
 import { setHeader } from "h3";
-import type { GitHubContributionDay, GitHubContributionsResponse } from "../../../shared/githubContributions";
+import type { GitHubContributionDay, GitHubContributionsResponse } from "../../../shared/github-contributions";
 
 const GITHUB_GRAPHQL = "https://api.github.com/graphql";
 

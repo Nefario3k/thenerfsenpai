@@ -122,7 +122,7 @@
 					</ul>
 				</section>
 				<!-- qrcode -->
-				<SvgQRCode
+				<SvgQrCode
 					class="tw:w-11 tw:h-11 tw:min-w-11 tw:md:block tw:hidden"
 					accessible-label="Scan QR code to chat on WhatsApp"
 				/>

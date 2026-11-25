@@ -1,4 +1,4 @@
-// app/composables/useThemeManifest.ts
+// app/composables/use-theme-manifest.ts
 export const useThemeManifest = () => {
 	const manifestHref = ref("/light/site.webmanifest");
 

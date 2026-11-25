@@ -357,14 +357,14 @@
 </template>
 
 <script lang="ts" setup>
-	import GitHubContributions from "@/components/about/GitHubContributions.vue";
+	import GitHubContributions from "@/components/about/github-contributions.vue";
 	import {
 		Accordion,
 		AccordionContent,
 		AccordionItem,
 		AccordionTrigger,
 	} from "@/components/ui/accordion";
-	import type { GitHubContributionsResponse } from "../../shared/githubContributions";
+	import type { GitHubContributionsResponse } from "../../shared/github-contributions";
 
 	const { $getState } = useNuxtApp();
 
