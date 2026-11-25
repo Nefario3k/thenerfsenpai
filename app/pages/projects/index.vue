@@ -24,11 +24,11 @@
 	const { $getState } = useNuxtApp();
 	const projects = computed(() => $getState("projects"));
 	usePortfolioSeo({
-		title: "Davies Okpeta | Projects",
+		title: "Projects by Davies Okpeta",
 		description:
-			"Projects by Davies Okpeta. Portfolio showcasing work with React, Next.js, Vue, Nuxt and modern web technologies.",
-		ogImage: "/images/dark-lg-logo.png",
+			"Projects by Davies Okpeta across fintech, education, healthcare, power, real estate and e-commerce, with the challenge, solution and technology behind each.",
 	});
+	useProjectListStructuredData(projects);
 </script>
 
 <style></style>

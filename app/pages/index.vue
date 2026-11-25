@@ -58,10 +58,9 @@
 	const { $getState } = useNuxtApp();
 	const projects = computed(() => $getState("projects").slice(0, 4));
 	usePortfolioSeo({
-		title: "Davies Okpeta | Creative Developer",
+		title: "Davies Okpeta, Senior Fullstack Web Developer",
 		description:
-			"Senior Fullstack Web Developer. Portfolio showcasing work with React, Next.js, Vue, Nuxt and modern web technologies.",
-		ogImage: "/images/dark-lg-logo.png",
+			"Davies Okpeta (TheNerfSenpai) is a senior fullstack web developer building mission-critical software with React, Next.js, Vue and Nuxt. See selected projects.",
 	});
 </script>
 

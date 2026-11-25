@@ -1,5 +1,16 @@
 import tailwindcss from "@tailwindcss/vite";
 import { defineNuxtConfig } from "nuxt/config";
+import {
+	PERSON,
+	SITE_DEFAULT_URL,
+	SITE_DESCRIPTION,
+	SITE_KEYWORDS,
+	SITE_NAME,
+	SOCIAL_PROFILES,
+} from "./shared/site";
+import { PROJECTS } from "./shared/projects";
+
+const siteUrl = process.env.NUXT_PUBLIC_SITE_URL || SITE_DEFAULT_URL;
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	compatibilityDate: "2025-07-15",
@@ -11,7 +22,7 @@ export default defineNuxtConfig({
 	runtimeConfig: {
 		githubToken: process.env.NUXT_GITHUB_TOKEN || "",
 		public: {
-			siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://thenerfsenpai.com",
+			siteUrl,
 			githubLogin: process.env.NUXT_PUBLIC_GITHUB_LOGIN || "",
 			emailjsPublicKey: process.env.NUXT_PUBLIC_EMAILJS_PUBLIC_KEY || "",
 			emailjsServiceId: process.env.NUXT_PUBLIC_EMAILJS_SERVICE_ID || "",
@@ -20,7 +31,6 @@ export default defineNuxtConfig({
 	},
 	modules: [
 		"@nuxt/image",
-		"@nuxt/scripts",
 		"@nuxtjs/seo",
 		"@vueuse/nuxt",
 		"@pinia/nuxt",
@@ -59,12 +69,31 @@ export default defineNuxtConfig({
 		mirrored: false,
 	},
 	site: {
-		url: process.env.NUXT_PUBLIC_SITE_URL || "https://thenerfsenpai.com",
-		name: "TheNerfSenpai",
-		description:
-			"Davies Okpeta — Senior Fullstack Web Developer portfolio. React, Next.js, Vue, Nuxt and modern web technologies.",
+		url: siteUrl,
+		name: SITE_NAME,
+		description: SITE_DESCRIPTION,
 		defaultLocale: "en",
 	},
+	schemaOrg: {
+		// The site is about one person: this Person node is the graph's identity,
+		// and WebSite/WebPage nodes link to it as author and publisher.
+		identity: {
+			type: "Person",
+			name: PERSON.name,
+			alternateName: PERSON.alternateName,
+			jobTitle: PERSON.jobTitle,
+			image: PERSON.image,
+			url: siteUrl,
+			sameAs: [...SOCIAL_PROFILES],
+			knowsAbout: [...PERSON.knowsAbout],
+		},
+	},
+	// @nuxtjs/seo 6 sub-modules, matching onl-website-fe:
+	// - aiReady: publishes /llms.txt and an AI Content-Signal line in robots.txt.
+	// - ogImage is off: the site uses a static 1200x630 card (public/og-image.png) and
+	//   project banners, so no runtime image generation or NUXT_APP_SECRET is needed.
+	aiReady: { enabled: true },
+	ogImage: { enabled: false },
 	notivue: {
 		position: "bottom-right",
 		// Behavior settings
@@ -101,6 +130,17 @@ export default defineNuxtConfig({
 		"notivue/animations.css",
 	],
 	nitro: {
+		// Prerender only the Markdown copies of each page. nuxt-ai-ready indexes them at
+		// build time to fill /llms-full.txt; the HTML pages stay server-rendered so the
+		// colour-scheme cookie and the live GitHub data on /about keep working.
+		prerender: {
+			routes: [
+				"/index.md",
+				"/about.md",
+				"/projects.md",
+				...PROJECTS.map((project) => `/projects/${project.slug}.md`),
+			],
+		},
 		routeRules: {
 			"/**": {
 				headers: {
@@ -115,21 +155,13 @@ export default defineNuxtConfig({
 			titleTemplate: "%s | TheNerfSenpai",
 			htmlAttrs: { lang: "en" },
 			meta: [
-				{ charset: "utf-8" },
-				{
-					name: "viewport",
-					content: "width=device-width, initial-scale=1",
-				},
-				{
-					name: "description",
-					content:
-						"Davies Okpeta — Senior Fullstack Web Developer portfolio. React, Next.js, Vue, Nuxt and modern web technologies.",
-				},
-				{
-					name: "keywords",
-					content:
-						"Davies Okpeta, TheNerfSenpai, Fullstack Developer, Senior Web Developer, React, Next.js, Vue, Nuxt, JavaScript, TypeScript, Tailwind CSS, Portfolio",
-				},
+				// charset, viewport and description come from Nuxt and the site config.
+				// Pages override description and keywords through usePortfolioSeo().
+				{ name: "keywords", content: SITE_KEYWORDS },
+				{ name: "author", content: PERSON.name },
+				{ name: "format-detection", content: "telephone=no" },
+				{ name: "theme-color", content: "#f7f8fa", media: "(prefers-color-scheme: light)" },
+				{ name: "theme-color", content: "#08070c", media: "(prefers-color-scheme: dark)" },
 			],
 			link: [
 				// Favicon – inverted
@@ -160,10 +192,14 @@ export default defineNuxtConfig({
 				},
 			],
 			script: [
+				// EmailJS is only needed by the contact form, so keep it off the critical
+				// rendering path. plugins/emailjs.client.ts initialises it on load.
 				{
 					src: "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js",
 					crossorigin: "anonymous",
 					type: "text/javascript",
+					defer: true,
+					tagPosition: "bodyClose",
 				},
 			],
 		},

@@ -17,8 +17,9 @@ export default defineNuxtPlugin(() => {
 
 	if (initializeEmailJs()) return;
 
+	// The SDK is a deferred script (see nuxt.config.ts app.head.script), so it may load after this plugin runs.
 	const emailJsScript = document.querySelector<HTMLScriptElement>(
-		'script[src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"]'
+		'script[src*="@emailjs/browser"]'
 	);
 
 	emailJsScript?.addEventListener("load", initializeEmailJs, { once: true });

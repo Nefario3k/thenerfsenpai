@@ -1,3 +1,5 @@
+import type { Project } from "../../shared/projects";
+
 declare global {
     interface EmailJsResponseStatus {
         status: number;
@@ -39,26 +41,8 @@ declare global {
         /** When true, prop is rendered as HTML via v-html */
         html?: boolean;
     }
-    interface TypeProjects {
-        slug: string;
-        title: string;
-        description: string;
-        images: {
-            banner: string;
-            icon: string;
-            intro: string;
-            challenges: string[];
-            technology: string;
-        };
-        challenge: { title: string; contents: string[] };
-        solution: { title: string; deliverables: string[]; impact: string[] };
-        technology: string;
-        link: string;
-        client: string;
-        type: 'fintech' | 'ecommerce' | 'real estate' | 'healthcare' | 'education' | 'power' | 'productivity';
-        duration: string;
-        year: string;
-    }
+    /** Defined next to the data in shared/projects.ts. */
+    type TypeProjects = Project;
     interface TypeCareerHistory {
         company: string;
         role: string;

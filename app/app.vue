@@ -59,7 +59,6 @@
 	const { $setState, $getState } = useNuxtApp();
 	const { on } = useEventBus();
 	const { showSuccess, showInfo, catchError } = useToast();
-	useStructuredData();
 
 	const isMounted = ref(false);
 	const backgroundBlur = computed(() => $getState("backgroundBlur"));

@@ -384,11 +384,12 @@
 
 	const openedProject = ref<string>("0");
 	usePortfolioSeo({
-		title: "Davies Okpeta | About",
+		title: "About Davies Okpeta",
 		description:
-			"Senior Software Engineer. Portfolio showcasing work with React, Next.js, Vue, Nuxt and modern web technologies.",
-		ogImage: "/images/dark-lg-logo.png",
+			"About Davies Okpeta (TheNerfSenpai): career history, tech stack and GitHub activity of a senior fullstack web developer working with React, Next.js, Vue and Nuxt.",
+		ogType: "profile",
 	});
+	useProfilePageStructuredData();
 </script>
 
 <style></style>

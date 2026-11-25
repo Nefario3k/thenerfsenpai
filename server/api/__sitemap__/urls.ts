@@ -1,7 +1,9 @@
-import { PROJECT_SLUGS } from "~~/shared/projectSlugs";
+import { PROJECTS } from "~~/shared/projects";
 
+/** Project detail pages, with their banner image for image search. */
 export default defineSitemapEventHandler(() => {
-	return PROJECT_SLUGS.map((slug) => ({
-		loc: `/projects/${slug}`,
+	return PROJECTS.map((project) => ({
+		loc: `/projects/${project.slug}`,
+		images: [{ loc: project.images.banner, title: project.title }],
 	}));
 });
