@@ -1,0 +1,6 @@
+allowBuilds:
+  '@parcel/watcher': false
+  esbuild: false
+  sharp: false
+patchedDependencies:
+  nuxt-lenis@3.0.0: patches/nuxt-lenis@3.0.0.patch

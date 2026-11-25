@@ -1,0 +1,56 @@
+diff --git a/dist/runtime/components/Lenis.vue b/dist/runtime/components/Lenis.vue
+index 6e9a110ba5189a02ce770720d4fcabd9b1e5b38f..46709e13faf117cbceb70c99a458fd72f2c66190 100644
+--- a/dist/runtime/components/Lenis.vue
++++ b/dist/runtime/components/Lenis.vue
+@@ -5,7 +5,8 @@
+ </template>
+ 
+ <script setup lang="ts">
+-import { ref, onMounted, onBeforeUnmount } from "vue";
++import { ref, onMounted, onBeforeUnmount, type PropType } from "vue";
++import type { ScrollCallback } from "lenis";
+ import { useNuxtApp } from "#app";
+ 
+ const { $lenis } = useNuxtApp();
+@@ -27,7 +28,8 @@ const props = defineProps({
+          direction: "vertical",
+       }),
+    },
+-   onScroll: Function,
++   // Patched: typed to match Lenis#on("scroll") instead of a bare Function.
++   onScroll: Function as PropType<ScrollCallback>,
+ });
+ 
+ const lenisContainer = ref<HTMLElement | null>(null);
+diff --git a/dist/runtime/plugin.d.mts b/dist/runtime/plugin.d.mts
+new file mode 100644
+index 0000000000000000000000000000000000000000..a4de524a106d8555b31833111510ef3a2191ef9b
+--- /dev/null
++++ b/dist/runtime/plugin.d.mts
+@@ -0,0 +1,3 @@
++// Patched: TypeScript looks for plugin.d.mts next to plugin.mjs, so expose the types here.
++export * from "./plugin.js";
++export { default } from "./plugin.js";
+diff --git a/dist/runtime/plugin.d.ts b/dist/runtime/plugin.d.ts
+index 5c329c58a17cf76b3b372fb6f9f77f6853a22c13..c358b15a954bf2a72a4fae4a263327137eecd36c 100644
+--- a/dist/runtime/plugin.d.ts
++++ b/dist/runtime/plugin.d.ts
+@@ -1,5 +1,6 @@
++import type { Plugin } from "nuxt/app";
++import type Lenis from "lenis";
+ import type { LenisOptions, Scrolling } from "lenis";
+-import { Lenis } from "#imports";
+ export type ScrollState = {
+     scroll: number;
+     animatedScroll: number;
+@@ -23,5 +24,9 @@ export interface LenisPlugin {
+     destroyLenis: (id: string) => void;
+     getScrollState: (id?: string) => ScrollState | null;
+ }
+-declare const _default: any;
++// Patched: typed so Nuxt can merge `$lenis` into NuxtApp (upstream declares `any`,
++// which erases every plugin injection from the generated types).
++declare const _default: Plugin<{
++    lenis: LenisPlugin;
++}>;
+ export default _default;
