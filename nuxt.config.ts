@@ -130,6 +130,12 @@ export default defineNuxtConfig({
 		"notivue/animations.css",
 	],
 	nitro: {
+		// Bundle pinia into the server build. Left external, Nitro traces pinia's
+		// CommonJS build (pinia.prod.cjs), which require()s vue, but ships vue as an
+		// ESM-only stub, so every SSR request on Vercel fails with ERR_REQUIRE_ESM.
+		externals: {
+			inline: ["pinia"],
+		},
 		// Prerender only the Markdown copies of each page. nuxt-ai-ready indexes them at
 		// build time to fill /llms-full.txt; the HTML pages stay server-rendered so the
 		// colour-scheme cookie and the live GitHub data on /about keep working.
