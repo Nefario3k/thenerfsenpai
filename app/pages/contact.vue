@@ -73,6 +73,25 @@
 						</a>
 					</li>
 				</ul>
+				<!-- resume -->
+				<a
+					:href="RESUME_DOWNLOAD_URL"
+					aria-label="Download Davies Okpeta's resume (PDF)"
+					class="tw:group tw:mt-10 tw:flex tw:items-center tw:justify-between tw:gap-4 tw:rounded-3 tw:border-2 tw:border-dashed tw:border-bc-stroke tw:hover:border-tc-link tw:px-5 tw:py-4 tw:focus-visible:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-tc-link tw:focus-visible:ring-offset-2 tw:focus-visible:ring-offset-bc-primary useNestedTransition"
+				>
+					<span class="tw:flex tw:flex-col tw:gap-1">
+						<span class="tw:text-sm tw:text-tc-secondary">Resume</span>
+						<span
+							class="tw:text-base tw:font-medium tw:text-tc-primary tw:group-hover:text-tc-link useNestedTransition"
+						>
+							Download PDF
+						</span>
+					</span>
+					<SolarDownloadMinimalistic
+						aria-hidden="true"
+						class="tw:w-6 tw:h-6 tw:shrink-0 tw:text-tc-primary tw:group-hover:text-tc-link useNestedTransition"
+					/>
+				</a>
 				<!-- WhatsApp: a QR code only helps when the visitor is on another screen -->
 				<figure class="tw:md:flex tw:hidden tw:items-center tw:gap-4 tw:mt-10">
 					<SvgQrCode
@@ -93,6 +112,7 @@
 <script lang="ts" setup>
 	import {
 		CONTACT_EMAIL,
+		RESUME_DOWNLOAD_URL,
 		SOCIAL_PROFILES,
 		WHATSAPP_DISPLAY,
 		WHATSAPP_NUMBER,

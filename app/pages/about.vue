@@ -43,6 +43,22 @@
 						>
 							Creative Developer
 						</p>
+						<a
+							:href="RESUME_DOWNLOAD_URL"
+							aria-label="Download Davies Okpeta's resume (PDF)"
+							v-gsap.from="{
+								opacity: 0,
+								x: -30,
+								duration: 1.1,
+							}"
+							class="tw:group tw:mt-6 tw:inline-flex tw:items-center tw:gap-2 tw:text-base tw:font-medium tw:text-tc-link tw:rounded-sm tw:focus-visible:outline-none tw:focus-visible:ring-2 tw:focus-visible:ring-tc-link tw:focus-visible:ring-offset-2 tw:focus-visible:ring-offset-bc-primary"
+						>
+							Download resume (PDF)
+							<SolarDownloadMinimalistic
+								aria-hidden="true"
+								class="tw:w-5 tw:h-5 tw:shrink-0"
+							/>
+						</a>
 					</div>
 				</div>
 				<!-- image -->
@@ -371,6 +387,7 @@
 		AccordionTrigger,
 	} from "@/components/ui/accordion";
 	import type { GitHubContributionsResponse } from "../../shared/github-contributions";
+	import { RESUME_DOWNLOAD_URL } from "~~/shared/site";
 
 	const { $getState } = useNuxtApp();
 

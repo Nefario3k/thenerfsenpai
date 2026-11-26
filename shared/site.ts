@@ -31,6 +31,16 @@ export const WHATSAPP_NUMBER = "2348118968777";
 /** The same number formatted for people to read. */
 export const WHATSAPP_DISPLAY = "+234 811 896 8777";
 
+const RESUME_BASE = "https://res.cloudinary.com/da7ucu50f/image/upload";
+const RESUME_ASSET = "v1795650819/davies-okpeta-developer-resume_pspx9l.pdf";
+/** Opens the resume PDF in the browser. */
+export const RESUME_URL = `${RESUME_BASE}/${RESUME_ASSET}`;
+/**
+ * Downloads the resume as "Davies-Okpeta-Resume.pdf". Cloudinary's fl_attachment flag
+ * sets Content-Disposition; the HTML `download` attribute is ignored cross-origin.
+ */
+export const RESUME_DOWNLOAD_URL = `${RESUME_BASE}/fl_attachment:Davies-Okpeta-Resume/${RESUME_ASSET}`;
+
 export const SOCIAL_PROFILES = [
 	"https://github.com/Nefario3k",
 	"https://x.com/daviesokpeta",
