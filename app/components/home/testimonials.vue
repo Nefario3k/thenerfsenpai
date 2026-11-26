@@ -111,7 +111,7 @@
 			<div class="tw:flex tw:items-center tw:gap-5 tw:sm:px-12 tw:px-4">
 				<!-- scroll location -->
 				<div
-					class="tw:relative tw:flex-auto tw:h-[3px] tw:bg-bc-secondary tw:overflow-hidden tw:rounded-3"
+					class="tw:relative tw:flex-auto tw:h-0.75 tw:bg-bc-secondary tw:overflow-hidden tw:rounded-3"
 				>
 					<div
 						class="tw:absolute tw:top-0 tw:h-full tw:bg-tc-link tw:rounded-3 tw:min-w-px tw:transition-none!"
@@ -290,7 +290,7 @@
 	};
 
 	const scrollRange = computed(() =>
-		Math.max(0, metrics.value.scrollWidth - metrics.value.clientWidth)
+		Math.max(0, metrics.value.scrollWidth - metrics.value.clientWidth),
 	);
 
 	const isScrollable = computed(() => scrollRange.value > SCROLL_EPS);
@@ -310,13 +310,13 @@
 	});
 
 	const canScrollPrev = computed(
-		() => isScrollable.value && metrics.value.scrollLeft > SCROLL_EPS
+		() => isScrollable.value && metrics.value.scrollLeft > SCROLL_EPS,
 	);
 
 	const canScrollNext = computed(
 		() =>
 			isScrollable.value &&
-			metrics.value.scrollLeft < scrollRange.value - SCROLL_EPS
+			metrics.value.scrollLeft < scrollRange.value - SCROLL_EPS,
 	);
 
 	const scrollPrev = () => {
@@ -352,7 +352,7 @@
 
 	const onTestimonialCardKeydown = (
 		event: KeyboardEvent,
-		testimonial: TypeTestimonial
+		testimonial: TypeTestimonial,
 	) => {
 		if (event.key === "Enter" || event.key === " ") {
 			event.preventDefault();
